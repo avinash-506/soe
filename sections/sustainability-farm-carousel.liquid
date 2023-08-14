@@ -1,0 +1,173 @@
+
+<div class="uk-slider-container-offset" uk-slider>
+<div class="uk-position-relative uk-visible-toggle uk-dark uk-padding-small uk-margin-large-top" tabindex="-1" uk-slider="center: true">
+
+    <ul class="uk-slider-items uk-grid uk-grid-match" uk-height-viewport="offset-top: true; offset-bottom: 30">
+        <li class="uk-width-1-1">
+             <div class="traceability" style="margin-top:0px;">
+         <h4 style="color:black;" class="uk-margin-remove  uk-padding-small uk-hidden@m ">{{ section.settings['head1'] }}</h4>
+      <div class="uk-child-width-expand@m" uk-grid style="margin:auto; ">
+
+         <div class="farm-desk uk-flex uk-flex-center uk-padding-remove uk-visible@s">
+             <img src="{{ section.settings['img1'] | img_url : 'master' }}" loading="lazy" class="uk-flex uk-flex-center" />
+           
+             
+           </div>
+
+         <div class=" uk-flex uk-flex-center uk-padding-remove uk-hidden@s">
+             <img src="{{ section.settings['img1mob'] | img_url : 'master' }}" loading="lazy" class="uk-flex uk-flex-center" />
+           
+             
+           </div>
+         <div class=" uk-grid-item-match uk-padding-remove" style="color:black ">
+
+           
+           
+            <div  class=" " style="margin:auto;">
+                  <h4 style="color:black;" class="uk-padding-remove-bottom uk-margin-remove uk-padding-small uk-visible@m ">{{ section.settings['head1'] }}</h4>
+          <div class="uk-padding-small"> {{ section.settings['content1'] }}</div>
+            </div>
+       
+         
+         
+          
+        </div>
+      
+       
+    </div>
+
+  </div>
+        </li>
+        <li class="uk-width-1-1">
+                <div class="traceability" style="margin-top:0px;">
+       <h4 style="color:black;" class="uk-margin-remove  uk-padding-small uk-hidden@m ">{{ section.settings['head2'] }} </h4>
+      <div class="uk-child-width-expand@m" uk-grid style="margin:auto; ">
+
+         <div class="farm-desk uk-flex uk-flex-center uk-padding-remove uk-visible@s">
+             <img src="{{ section.settings['img2'] | img_url : 'master' }}"  class="uk-flex uk-flex-center" />
+           
+             
+           </div>
+
+         <div class=" uk-flex uk-flex-center uk-padding-remove uk-hidden@s">
+             <img loading="lazy" src="{{ section.settings['img2mob'] | img_url : 'master' }}" alt="" class="uk-flex uk-flex-center" />
+           
+             
+           </div>
+         <div class=" uk-grid-item-match uk-padding-remove" style="color:black ">
+
+           
+           
+            <div  class=" " style="margin:auto;">
+                   <h4 style="color:black;" class="uk-padding-remove-bottom uk-margin-remove  uk-padding-small uk-visible@m ">{{ section.settings['head2'] }} </h4>
+            <div class="uk-padding-small"> {{ section.settings['content2'] }}</div>
+            </div>
+       
+         
+         
+          
+        </div>
+      
+       
+    </div>
+
+  </div>
+        </li>
+       
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+</div>
+     <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+</div>
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": [
+      {
+        "type":"text",
+        "id":"head1",
+        "label":"head1"
+      },
+      {
+        "type":"text",
+        "id":"content1",
+        "label":"content1"
+      },
+      {
+        "type":"text",
+        "id":"head2",
+        "label":"head2"
+      },
+      {
+        "type":"text",
+        "id":"content2",
+        "label":"content2"
+      },
+      {
+        "type":"image_picker",
+        "id":"img1",
+        "label":"img1"
+        
+      },
+      {
+        "type":"image_picker",
+        "id":"img1mob",
+        "label":"img1 for small screen"
+        
+      },
+      {
+        "type":"image_picker",
+        "id":"img2",
+        "label":"img2"
+        
+      },
+      {
+        "type":"image_picker",
+        "id":"img2mob",
+        "label":"img2 for small screen"
+        
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+/*   @media (min-width: 600px) {
+.farm-tab{
+  display:block !important;;
+  
+}
+    .farm-desk{
+      display:none !important;
+    }
+}
+  @media (max-width: 920px) {
+.farm-tab{
+  display:block !important;;
+  
+}
+    .farm-desk{
+      display:none !important;
+    }
+} */
+
+/*    @media (max-width: 900px) {
+.farm-tab{
+  display:block !important;;
+  
+}
+    .farm-desk{
+      display:none !important;
+    }
+} */
+
+
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

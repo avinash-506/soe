@@ -1,0 +1,554 @@
+<div class=" uk-section uk-position-relative uk-visible@m " style="padding-bottom:0;">
+  <div class="uk-container">
+    <h2 class="uk-text-center" style="">
+      {{ section.settings['main-heading'] }} <img style="width: 40px; margin-left: 14px" loading="lazy" src="{{ 'bestForYouIcon.svg' | asset_url }}">
+    </h2>
+
+    <div>
+      <ul class="uk-flex scrollno uk-flex-center@m uk-overflow-auto" style="flex-wrap:nowrap" uk-tab>
+        <li><a href="#">{{ section.settings['tab-1'] }}</a></li>
+        <li><a href="#" style="padding-right: 5px 46px">{{ section.settings['tab-2'] }}</a></li>
+        <li><a href="#">{{ section.settings['tab-3'] }}</a></li>
+      </ul>
+
+      <ul class="uk-switcher uk-margin">
+        <li>
+          <div class="uk-child-width-1-3@m uk-overflow-auto" uk-grid>
+              <div>
+              <div>
+                <div
+                  class="uk-cover-container uk-border-rounded image-container uk-inline uk-transition-toggle"
+                  style="height: 400px; width:426px; position:relative;">
+                        <img src="{{ section.settings['img-1'] | img_url:'master' }}" alt={{ section.settings.img-alt1 }} loading="lazy" uk-cover class="printed-top">
+                        <div class="uk-position-cover uk-overlay uk-flex uk-flex-center uk-flex-middle uk-transition-fade">
+                          <div class="uk-position-center uk-text-center">
+                              <a
+                                href="{{ section.settings['url-p-1'] }}"
+                                class="uk-button uk-button-primary "
+                                style="padding: 0 15px;"
+                                >Shop Product</a
+                              >
+                              <br>
+                              <a href="{{ section.settings['url-o-1'] }}" class="uk-button uk-button-primary uk-margin-top"
+                                style="padding: 0 15px;"
+                                >Shop Ocassion</a
+                              >
+                          </div>
+                        </div>
+                      </div>
+                <h3 style="color:black !important; margin: 10px 0px;">{{ section.settings['heading-1'] }}</h3>
+                <p style="color: #6E6E6E !important; margin-top:0px; ">{{ section.settings['sub-heading-1'] }}</p>
+                
+              </div>
+            </div>
+            
+            <div>
+              <div>
+                <div
+                  class="uk-cover-container uk-border-rounded image-container uk-inline uk-transition-toggle"
+                  style="height: 400px; width:426px; position:relative;"
+                >
+                        <img src="{{ section.settings['img-2'] | img_url:'master' }}"  alt={{ section.settings.img-alt2 }} loading="lazy" uk-cover class="printed-top">
+                        <div class="uk-position-cover uk-overlay uk-flex uk-flex-center uk-flex-middle uk-transition-fade">
+                          <div class="uk-position-center uk-text-center">
+                              <a
+                                href="{{ section.settings['url-p-2'] }}"
+                                class="uk-button uk-button-primary "
+                                style="padding: 0 15px;"
+                                >Shop Product</a
+                              >
+                              <br>
+                              <a href="{{ section.settings['url-o-2'] }}" class="uk-button uk-button-primary uk-margin-top"
+                                style="padding: 0 15px;"
+                                >Shop Ocassion</a
+                              >
+                          </div>
+                        </div>
+                </div>
+                <h3 style="color:black !important; margin: 10px 0px;">{{ section.settings['heading-2'] }}</h3>
+                <p style="color: #6E6E6E !important; margin-top:0px; ">{{ section.settings['sub-heading-2'] }}</p>
+                
+              </div>
+            </div>
+            <div>
+              <div>
+                <div
+                  class="uk-cover-container uk-border-rounded image-container uk-inline uk-transition-toggle"
+                  style="height: 400px; width:426px; position:relative;"
+                >
+                        <img src="{{ section.settings['img-3'] | img_url:'master' }}"  alt={{ section.settings.img-alt3 }} loading="lazy" uk-cover class="printed-top">
+                        <div class="uk-position-cover uk-overlay uk-flex uk-flex-center uk-flex-middle uk-transition-fade">
+                          <div class="uk-position-center uk-text-center">
+                              <a
+                                href="{{ section.settings['url-p-3'] }}"
+                                class="uk-button uk-button-primary "
+                                style="padding: 0 15px;"
+                                >Shop Product</a
+                              >
+                              <br>
+                              <a href="{{ section.settings['url-o-3'] }}" class="uk-button uk-button-primary uk-margin-top"
+                                style="padding: 0 15px;"
+                                >Shop Ocassion</a
+                              >
+                          </div>
+                        </div>
+                </div>
+                <h3 style="color:black !important; margin: 10px 0px;">{{ section.settings['heading-3'] }}</h3>
+                <p style="color: #6E6E6E !important; margin-top:0px; ">{{ section.settings['sub-heading-3'] }}</p>
+                
+              </div>
+            </div>
+        </li>
+
+
+
+      
+        <li>
+          <div class="uk-child-width-1-3@m uk-overflow-auto" uk-grid>
+              <div>
+              <div>
+                <div
+                  class="uk-cover-container uk-border-rounded image-container uk-inline uk-transition-toggle"
+                  style="height: 400px; width:426px; position:relative;"
+                >
+                        <img src="{{ section.settings['img-4'] | img_url:'master' }}" loading="lazy"  alt={{ section.settings.img-alt4 }} uk-cover class="printed-top">
+                        <div class="uk-position-cover uk-overlay uk-flex uk-flex-center uk-flex-middle uk-transition-fade">
+                          <div class="uk-position-center uk-text-center">
+                              <a
+                                href="{{ section.settings['url-p-4'] }}"
+                                class="uk-button uk-button-primary "
+                                style="padding: 0 15px;"
+                                >Shop Product</a
+                              >
+                              <br>
+                              <a href="{{ section.settings['url-o-4'] }}" class="uk-button uk-button-primary uk-margin-top"
+                                style="padding: 0 15px;"
+                                >Shop Ocassion</a
+                              >
+                          </div>
+                        </div>
+                </div>
+                <h3 style="color:black !important; margin: 10px 0px;">{{ section.settings['heading-4'] }}</h3>
+                <p style="color: #6E6E6E !important; margin-top:0px; ">{{ section.settings['sub-heading-4'] }}</p>
+                
+              </div>
+            </div>
+             <div>
+              <div>
+                <div
+                  class="uk-cover-container uk-border-rounded image-container uk-inline uk-transition-toggle"
+                  style="height: 400px; width:426px; position:relative;"
+                >
+                        <img src="{{ section.settings['img-5'] | img_url:'master' }}" loading="lazy"  alt={{ section.settings.img-alt5 }} uk-cover class="printed-top">
+                        <div class="uk-position-cover uk-overlay uk-flex uk-flex-center uk-flex-middle uk-transition-fade">
+                          <div class="uk-position-center uk-text-center">
+                              <a
+                                href="{{ section.settings['url-p-5'] }}"
+                                class="uk-button uk-button-primary "
+                                style="padding: 0 15px;"
+                                >Shop Product</a
+                              >
+                              <br>
+                              <a href="{{ section.settings['url-o-5'] }}" class="uk-button uk-button-primary uk-margin-top"
+                                style="padding: 0 15px;"
+                                >Shop Ocassion</a
+                              >
+                          </div>
+                        </div>
+                </div>
+                <h3 style="color:black !important; margin: 10px 0px;">{{ section.settings['heading-5'] }}</h3>
+                <p style="color: #6E6E6E !important; margin-top:0px; ">{{ section.settings['sub-heading-5'] }}</p>
+                
+              </div>
+            </div>
+            <div>
+              <div>
+                <div
+                  class="uk-cover-container uk-border-rounded image-container uk-inline uk-transition-toggle"
+                  style="height: 400px; width:426px; position:relative;"
+                >
+                        <img src="{{ section.settings['img-6'] | img_url:'master' }}" loading="lazy"  alt={{ section.settings.img-alt6 }} uk-cover class="printed-top">
+                  <div class="uk-position-cover uk-overlay uk-flex uk-flex-center uk-flex-middle uk-transition-fade">
+                          <div class="uk-position-center uk-text-center">
+                              <a
+                                href="{{ section.settings['url-p-6'] }}"
+                                class="uk-button uk-button-primary "
+                                style="padding: 0 15px;"
+                                >Shop Product</a
+                              >
+                              <br>
+                              <a href="{{ section.settings['url-o-6'] }}" class="uk-button uk-button-primary uk-margin-top"
+                                style="padding: 0 15px;"
+                                >Shop Ocassion</a
+                              >
+                          </div>
+                        </div>
+                </div>
+                <h3 style="color:black !important; margin: 10px 0px;">{{ section.settings['heading-6'] }}</h3>
+                <p style="color: #6E6E6E !important; margin-top:0px; ">{{ section.settings['sub-heading-6'] }}</p>
+                
+              </div>
+            </div>
+        </li>
+
+
+            
+        <li>
+          <div class="uk-child-width-1-3@m uk-overflow-auto" uk-grid>
+              <div>
+              <div>
+                <div
+                  class="uk-cover-container uk-border-rounded image-container uk-inline uk-transition-toggle"
+                  style="height: 400px; width:426px; position:relative;"
+                >
+                        <img src="{{ section.settings['img-7'] | img_url:'master' }}" loading="lazy" alt={{ section.settings.img-alt7 }} uk-cover class="printed-top">
+                  <div class="uk-position-cover uk-overlay uk-flex uk-flex-center uk-flex-middle uk-transition-fade">
+                          <div class="uk-position-center uk-text-center">
+                              <a
+                                href="{{ section.settings['url-p-7'] }}"
+                                class="uk-button uk-button-primary "
+                                style="padding: 0 15px;"
+                                >Shop Product</a
+                              >
+                              <br>
+                              <a href="{{ section.settings['url-o-7' ]}}" class="uk-button uk-button-primary uk-margin-top"
+                                style="padding: 0 15px;"
+                                >Shop Ocassion</a
+                              >
+                          </div>
+                        </div>
+                </div>
+                <h3 style="color:black !important; margin: 10px 0px;">{{ section.settings['heading-7'] }}</h3>
+                <p style="color: #6E6E6E !important; margin-top:0px; ">{{ section.settings['sub-heading-7'] }}</p>
+                
+              </div>
+            </div>
+            <div>
+              <div>
+                <div
+                  class="uk-cover-container uk-border-rounded image-container uk-inline uk-transition-toggle"
+                  style="height: 400px; width:426px; position:relative;"
+                >
+                        <img src="{{ section.settings['img-8'] | img_url:'master' }}" loading="lazy" alt={{ section.settings.img-alt8 }} uk-cover class="printed-top">
+                  <div class="uk-position-cover uk-overlay uk-flex uk-flex-center uk-flex-middle uk-transition-fade">
+                          <div class="uk-position-center uk-text-center">
+                              <a
+                                href="{{ section.settings['url-p-8'] }}"
+                                class="uk-button uk-button-primary "
+                                style="padding: 0 15px;"
+                                >Shop Product</a
+                              >
+                              <br>
+                              <a href="{{ section.settings['url-o-8'] }}" class="uk-button uk-button-primary uk-margin-top"
+                                style="padding: 0 15px;"
+                                >Shop Ocassion</a
+                              >
+                          </div>
+                        </div>
+                </div>
+                <h3 style="color:black !important; margin: 10px 0px;">{{ section.settings['heading-8'] }}</h3>
+                <p style="color: #6E6E6E !important; margin-top:0px; ">{{ section.settings['sub-heading-8'] }}</p>
+                
+              </div>
+            </div>
+            <div>
+              <div>
+                <div
+                  class="uk-cover-container uk-border-rounded image-container uk-inline uk-transition-toggle"
+                  style="height: 400px; width:426px; position:relative;"
+                >
+                        <img src="{{ section.settings['img-9'] | img_url:'master' }}" loading="lazy" alt={{ section.settings.img-alt9 }} uk-cover class="printed-top">
+                  <div class="uk-position-cover uk-overlay uk-flex uk-flex-center uk-flex-middle uk-transition-fade">
+                          <div class="uk-position-center uk-text-center">
+                              <a
+                                href="{{ section.settings['url-p-9'] }}"
+                                class="uk-button uk-button-primary "
+                                style="padding: 0 15px;"
+                                >Shop Product</a
+                              >
+                              <br>
+                              <a href="{{ section.settings['url-o-9'] }}" class="uk-button uk-button-primary uk-margin-top"
+                                style="padding: 0 15px;"
+                                >Shop Ocassion</a
+                              >
+                          </div>
+                        </div>
+                </div>
+                <h3 style="color:black !important; margin: 10px 0px;">{{ section.settings['heading-9'] }}</h3>
+                <p style="color: #6E6E6E !important; margin-top:0px; ">{{ section.settings['sub-heading-9'] }}</p>
+                
+              </div>
+            </div>
+        </li>
+      </ul>
+
+
+            
+    </div>
+  </div>
+</div>
+
+<!-- For Small Screens -->
+
+<div class="uk-section uk-position-relative uk-hidden@m" style="padding-bottom:0px">
+  <div class="uk-container">
+    <h2 class="">
+      {{ section.settings['main-heading'] }} <img style="width: 35px; margin-left: 14px" loading="lazy" src="{{ 'bestForYouIcon.svg' | asset_url }}">
+    </h2>
+
+    <div>
+<!--       <ul class="uk-flex scrollno uk-overflow-auto uk-text-small" style="flex-wrap:nowrap" uk-tab>
+        <li ><a href="#" class="" id="elevated-tab-1" style="padding: 5px 3px; font-weight:600; font-size: 14px!important; font-family: 'Jost', sans-serif !important;">{{ section.settings['tab-1'] }}</a></li>
+        <li ><a href="#" class="" id="elevated-tab-2" style="padding: 5px 3px; font-weight:600; font-size: 14px!important; font-family: 'Jost', sans-serif !important;">{{ section.settings['tab-2'] }}</a></li>
+        <li ><a href="#" class="" id="elevated-tab-3" style="padding: 5px 3px; font-weight:600; font-size: 14px!important; font-family: 'Jost', sans-serif !important;">{{ section.settings['tab-3'] }}</a></li>
+      </ul> -->
+
+<!--       uk-text-small" style="flex-wrap:nowrap" uk-tab>
+        <li ><a href="#" class="" id="elevated-tab-1" " -->
+
+      <ul class="scrollno uk-flex uk-overflow-auto uk-text-small" id="tab-index" style="flex-wrap:nowrap" uk-tab>
+        <li><a href="#" class="tab-link" style="padding: 5px 3px; font-weight:600; font-size: 14px!important; font-family: 'Jost', sans-serif !important;" data-tab="tab1">Workday Wardrobe</a></li>
+        <li><a href="#" class="tab-link" style="padding: 5px 3px; font-weight:600; font-size: 14px!important; font-family: 'Jost', sans-serif !important;" data-tab="tab2">Vacay Vibes</a></li>
+        <li><a href="#" class="tab-link" style="padding: 5px 3px; font-weight:600; font-size: 14px!important; font-family: 'Jost', sans-serif !important;" data-tab="tab3">Evening Edit</a></li>
+      </ul>
+
+<!--       <ul class="uk-switcher uk-margin">
+        <li> -->
+          <div class=" uk-position-relative uk-visible-toggle uk-light" id="my-slider-1" tabindex="-1" uk-slider>
+
+            <ul class="uk-slider-items uk-grid">
+                <li class="uk-width-4-5"  data-tab="tab1">
+                    <div class="">
+                        <img src="{{ section.settings['img-m-1'] | img_url:'master' }}" loading="lazy" alt={{ section.settings.img-alt1 }}  class="printed-top">
+                        <h3 style="color:black; margin: 10px 0px;">{{ section.settings['heading-1'] }}</h3>
+                        <p style="color: #6E6E6E; margin-top:0px; ">{{ section.settings['sub-heading-1'] }}</p>
+                        <div class="uk-text-center">
+                          <a href="{{ section.settings['url-p-1' ]}}" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" style="background-color:black; color:white; font-weight:bolder;">Shop Product</a>
+                          <a href="{{ section.settings['url-o-1' ]}}" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" style="background-color:black; color:white; font-weight:bolder;">Shop Ocassion</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="uk-width-4-5"  data-tab="tab1">
+                    <div class="">
+                      <img src="{{ section.settings['img-m-2'] | img_url:'master' }}" loading="lazy" alt={{ section.settings.img-alt2 }}  class="printed-top">
+                        <h3 style="color:black; margin: 10px 0px;">{{ section.settings['heading-2'] }}</h3>
+                        <p style="color: #6E6E6E; margin-top:0px; ">{{ section.settings['sub-heading-2'] }}</p>
+                        <div class="uk-text-center">
+                          <a href="{{ section.settings['url-p-2'] }}" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" style="background-color:black; color:white; font-weight:bolder;">Shop Product</a>
+                          <a href="{{ section.settings['url-o-2'] }}" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" style="background-color:black; color:white; font-weight:bolder;">Shop Ocassion</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="uk-width-4-5" id="elevated-card-3"  data-tab="tab1">
+                    <div class="">
+                    <img src="{{ section.settings['img-m-3'] | img_url:'master' }}" loading="lazy" alt={{ section.settings.img-alt3 }}  class="printed-top">
+                        <h3 style="color:black; margin: 10px 0px;">{{ section.settings['heading-3'] }}</h3>
+                        <p style="color: #6E6E6E; margin-top:0px; ">{{ section.settings['sub-heading-3'] }}</p>
+                        <div class="uk-text-center">
+                          <a href="{{ section.settings['url-p-3'] }}" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" style="background-color:black; color:white; font-weight:bolder;">Shop Product</a>
+                          <a href="{{ section.settings['url-o-3'] }}" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" style="background-color:black; color:white; font-weight:bolder;">Shop Ocassion</a>
+                        </div>
+                    </div>
+                </li>
+<!--             </ul>
+        
+            <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous" style="color:black"></a>
+            <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next" style="color:black"></a>
+        
+        </div>
+        </li> -->
+
+<!--         <li>
+          <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+
+            <ul class="uk-slider-items uk-grid"> -->
+                <li class="uk-width-4-5" id="elevated-card-4"  data-tab="tab2">
+                    <div class="">
+                        <img src="{{ section.settings['img-m-4'] | img_url:'master' }}" loading="lazy" alt={{ section.settings.img-alt4 }}  class="printed-top">
+                        <h3 style="color:black; margin: 10px 0px;">{{ section.settings['heading-4'] }}</h3>
+                        <p style="color: #6E6E6E; margin-top:0px; ">{{ section.settings['sub-heading-4'] }}</p>
+                        <div class="uk-text-center">
+                          <a href="{{ section.settings['url-p-4'] }}" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" style="background-color:black; color:white; font-weight:bolder;">Shop Product</a>
+                          <a href="{{ section.settings['url-o-4'] }}" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" style="background-color:black; color:white; font-weight:bolder;">Shop Ocassion</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="uk-width-4-5" data-tab="tab2">
+                    <div class="">
+                        <img src="{{ section.settings['img-m-5'] | img_url:'master' }}" loading="lazy" alt={{ section.settings.img-alt5 }}  class="printed-top">
+                        <h3 style="color:black; margin: 10px 0px;">{{ section.settings['heading-5'] }}</h3>
+                        <p style="color: #6E6E6E; margin-top:0px; ">{{ section.settings['sub-heading-5'] }}</p>
+                        <div class="uk-text-center">
+                          <a href="{{ section.settings['url-p-5'] }}l" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" style="background-color:black; color:white; font-weight:bolder;">Shop Product</a>
+                          <a href="{{ section.settings['url-o-5'] }}" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" style="background-color:black; color:white; font-weight:bolder;">Shop Ocassion</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="uk-width-4-5" id="elevated-card-6" data-tab="tab2">
+                    <div class="">
+                        <img src="{{ section.settings['img-m-6'] | img_url:'master' }}" loading="lazy" alt={{ section.settings.img-alt6 }}   class="printed-top">
+                       <h3 style="color:black !important; margin: 10px 0px;">{{ section.settings['heading-6'] }}</h3>
+                <p style="color: #6E6E6E !important; margin-top:0px; ">{{ section.settings['sub-heading-6'] }}</p>
+                        <div class="uk-text-center">
+                          <a href="{{ section.settings['url-p-6'] }}" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" style="background-color:black; color:white; font-weight:bolder;">Shop Product</a>
+                          <a href="{{ section.settings['url-o-6'] }}" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" style="background-color:black; color:white; font-weight:bolder;">Shop Ocassion</a>
+                        </div>
+                    </div>
+                </li>
+<!--             </ul>
+        
+            <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous" style="color:black"></a>
+            <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next" style="color:black"></a>
+        
+        </div>
+        </li> -->
+<!-- 
+        <li>
+          <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+
+            <ul class="uk-slider-items uk-grid"> -->
+                <li class="uk-width-4-5" id="elevated-card-7" data-tab="tab3">
+                    <div class="">
+                        <img src="{{ section.settings['img-m-7'] | img_url:'master' }}" loading="lazy" alt={{ section.settings.img-alt7 }}  class="printed-top">
+                        <h3 style="color:black; margin: 10px 0px;">{{ section.settings['heading-7'] }}</h3>
+                        <p style="color: #6E6E6E; margin-top:0px; ">{{ section.settings['sub-heading-7'] }}</p>
+                        <div class="uk-text-center">
+                          <a href="{{ section.settings['url-p-7'] }}" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" style="background-color:black; color:white; font-weight:bolder;">Shop Product</a>
+                          <a href="{{ section.settings['url-o-7'] }}" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" style="background-color:black; color:white; font-weight:bolder;">Shop Ocassion</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="uk-width-4-5" data-tab="tab3">
+                    <div class="">
+                        <img src="{{ section.settings['img-m-8'] | img_url:'master' }}" loading="lazy" alt={{ section.settings.img-alt8 }} class="printed-top">
+                        <h3 style="color:black; margin: 10px 0px;">{{ section.settings['heading-8'] }}</h3>
+                        <p style="color: #6E6E6E; margin-top:0px; ">{{ section.settings['sub-heading-8'] }}</p>
+                        <div class="uk-text-center">
+                          <a href="{{ section.settings['url-p-8'] }}" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" style="background-color:black; color:white; font-weight:bolder;">Shop Product</a>
+                          <a href="{{ section.settings['url-o-8'] }}" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" style="background-color:black; color:white; font-weight:bolder;">Shop Ocassion</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="uk-width-4-5" data-tab="tab3">
+                    <div class="">
+                        <img src="{{ section.settings['img-m-9'] | img_url:'master' }}" loading="lazy" alt={{ section.settings.img-alt9 }}  class="printed-top">
+                        <h3 style="color:black; margin: 10px 0px;">{{ section.settings['heading-9'] }}</h3>
+                        <p style="color: #6E6E6E; margin-top:0px; ">{{ section.settings['sub-heading-9'] }}</p>
+                        <div class="uk-text-center">
+                          <a href="{{ section.settings['url-p-9'] }}" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" style="background-color:black; color:white; font-weight:bolder;">Shop Product</a>
+                          <a href="{{ section.settings['url-o-9'] }}" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" style="background-color:black; color:white; font-weight:bolder;">Shop Ocassion</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        
+            <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous" style="color:black"></a>
+            <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next" style="color:black"></a>
+        
+        </div>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Elevated Must Haves",
+  "settings": [
+    { "type": "text", "id": "main-heading", "label": "Heading" }, 
+    { "type": "text", "id": "tab-1", "label": "Tab 1 Name" },
+    { "type": "text", "id": "tab-2", "label": "Tab 2 Name" },
+    { "type": "text", "id": "tab-3", "label": "Tab 3 Name" },
+
+    
+    { "type": "image_picker", "id": "img-1", "label": "Product Image web 1" },
+    { "type": "image_picker", "id": "img-m-1", "label": "Product Image mob 1" },
+    { "type": "text", "id": "img-alt1", "label": "img alt" },
+    { "type": "text", "id": "heading-1", "label": "Product 1 Name" },
+    { "type": "text", "id": "sub-heading-1", "label": "Product Sub Title 1" },
+    { "type": "url", "id": "url-p-1", "label": "Product Target 1" },
+    { "type": "url", "id": "url-o-1", "label": "Ocassion Target 1" },
+
+    { "type": "image_picker", "id": "img-2", "label": "Product Image web 2" },
+      { "type": "image_picker", "id": "img-m-2", "label": "Product Image mob 2" },
+     { "type": "text", "id": "img-alt2", "label": "img alt" },
+    { "type": "text", "id": "heading-2", "label": "Product 2 Name" },
+    { "type": "text", "id": "sub-heading-2", "label": "Product Sub Title 2" },
+    { "type": "url", "id": "url-p-2", "label": "Product Target2" },
+    { "type": "url", "id": "url-o-2", "label": "Ocassion Target 2" },
+
+    { "type": "image_picker", "id": "img-3", "label": "Product Image web 3" },
+      { "type": "image_picker", "id": "img-m-3", "label": "Product Image mob 3" },
+     { "type": "text", "id": "img-alt3", "label": "img alt" },
+    { "type": "text", "id": "heading-3", "label": "Product 3 Name" },
+    { "type": "text", "id": "sub-heading-3", "label": "Product Sub Title 3" },
+    { "type": "url", "id": "url-p-3", "label": "Product Target 3" },
+    { "type": "url", "id": "url-o-3", "label": "Ocassion Target 3" },
+
+    { "type": "image_picker", "id": "img-4", "label": "Product Image web 4" },
+      { "type": "image_picker", "id": "img-m-4", "label": "Product Image mob 4" },
+     { "type": "text", "id": "img-alt4", "label": "img alt" },
+    { "type": "text", "id": "heading-4", "label": "Product 4 Name" },
+    { "type": "text", "id": "sub-heading-4", "label": "Product Sub Title 4" },
+    { "type": "url", "id": "url-p-4", "label": "Product Target 4" },
+    { "type": "url", "id": "url-o-4", "label": "Ocassion Target 4" },
+
+    { "type": "image_picker", "id": "img-5", "label": "Product Image web 5" },
+      { "type": "image_picker", "id": "img-m-5", "label": "Product Image mob 5" },
+     { "type": "text", "id": "img-alt5", "label": "img alt" },
+    { "type": "text", "id": "heading-5", "label": "Product 5 Name" },
+    { "type": "text", "id": "sub-heading-5", "label": "Product Sub Title 5" },
+    { "type": "url", "id": "url-p-5", "label": "Product Target 5" },
+    { "type": "url", "id": "url-o-5", "label": "Ocassion Target 5" },
+
+    { "type": "image_picker", "id": "img-6", "label": "Product Image web 6" },
+      { "type": "image_picker", "id": "img-m-6", "label": "Product Image mob 6" },
+     { "type": "text", "id": "img-alt6", "label": "img alt" },
+    { "type": "text", "id": "heading-6", "label": "Product 6 Name" },
+    { "type": "text", "id": "sub-heading-6", "label": "Product Sub Title 6" },
+    { "type": "url", "id": "url-p-6", "label": "Product Target 6" },
+    { "type": "url", "id": "url-o-6", "label": "Ocassion Target 6" },
+
+    { "type": "image_picker", "id": "img-7", "label": "Product Image web 7" },
+      { "type": "image_picker", "id": "img-m-7", "label": "Product Image mob 7" },
+     { "type": "text", "id": "img-alt7", "label": "img alt" },
+    { "type": "text", "id": "heading-7", "label": "Product 7 Name" },
+    { "type": "text", "id": "sub-heading-7", "label": "Product Sub Title 7" },
+    { "type": "url", "id": "url-p-7", "label": "Product Target 7" },
+    { "type": "url", "id": "url-o-7", "label": "Ocassion Target 7" },
+
+    { "type": "image_picker", "id": "img-8", "label": "Product Image web 8" },
+      { "type": "image_picker", "id": "img-m-8", "label": "Product Image mob 8" },
+     { "type": "text", "id": "img-alt8", "label": "img alt" },
+    { "type": "text", "id": "heading-8", "label": "Product 8 Name" },
+    { "type": "text", "id": "sub-heading-8", "label": "Product Sub Title 8" },
+    { "type": "url", "id": "url-p-8", "label": "Product Target 8" },
+    { "type": "url", "id": "url-o-8", "label": "Ocassion Target 8" },
+
+    { "type": "image_picker", "id": "img-9", "label": "Product Image web 9" },
+      { "type": "image_picker", "id": "img-m-9", "label": "Product Image mob 9" },
+     { "type": "text", "id": "img-alt9", "label": "img alt" },
+    { "type": "text", "id": "heading-9", "label": "Product 9 Name" },
+    { "type": "text", "id": "sub-heading-9", "label": "Product Sub Title 9" },
+    { "type": "url", "id": "url-p-9", "label": "Product Target 9" },
+    { "type": "url", "id": "url-o-9", "label": "Ocassion Target 9" }
+    
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+  
+{% endstylesheet %}
+
+{% javascript %}
+  var tab1 = document.getElementById("elevated-tab-1");
+  var tab2 = document.getElementById("elevated-tab-2");
+  var tab3 = document.getElementById("elevated-tab-3");
+
+  consloe.log("this index", tab1.index())
+
+  console.log(tab1 , tab2)
+{% endjavascript %}

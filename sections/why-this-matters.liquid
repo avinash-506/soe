@@ -1,0 +1,2276 @@
+<section  class="uk-section uk-position-relative uk-padding-remove">
+  <div class="uk-container">
+    <div >
+      <div id = "why-this-matter-tab"></div>
+      <ul id="why-this-matter-switcher"  class="scrollno uk-flex uk-flex-right@m uk-overflow-auto" style="flex-wrap:nowrap;" uk-tab>
+        <li class="uk-active"><a href="#">Description</a></li>
+        <li><a href="#" style="padding-rigth: 5px 46px">Traceability</a></li>
+<!--         <li><a href="#">Transparency</a></li> -->
+        <li><a href="#">Earth Positive</a></li>
+      </ul>
+     
+      
+      <ul class="uk-switcher uk-margin">
+        <li>
+          <div class="uk-visible@m">
+          
+          <div class="uk-width-1-1@m">
+            <div class="uk-container">
+              <div class="uk-position-relative uk-visible-toggle" tabindex="-1" uk-slideshow="autoplay: true; autoplay-interval: 5000; max-height: 380;">
+                <ul class="uk-slideshow-items">
+                  {% assign beatles = product.metafields.custom.why_we_exist_description.value | split: ", " %}
+          
+                  {% for the_member in beatles %}
+                    
+                  {% assign metafield_description = the_member %}
+            
+          <!-- hemp -->
+         {% if metafield_description contains 'hemp' %}
+          <li>
+          
+            <div class="uk-container ">
+              <div class="uk-grid-column-large uk-child-width-1-2@m" uk-grid>
+                <div>
+                  <div class="uk-border-rounded uk-overflow-hidden">
+                    <img src="{{ 'Hemp.png' | asset_url }}" alt="">
+                  </div>
+                </div>
+                <div class="overflowing-x">
+                  <h2 class=" uk-margin-remove">Hemp</h2>
+                  <p class="uk-margin-remove">
+                      <ul class="custom-list">
+                      <li>Made of 100% hemp, 100% biodegradable</li>
+                      <li>All-season suitability, softens with washing, breathable, lightweight and durable</li>
+                      <li>
+                        Gentle on the environment
+                        <ul class="custom-list">
+                          <li>Requires 1/4 the water needed to grow cotton</li>
+                          <li>Natural and renewable, grows quicker, easier and has a high yield</li>
+                          <li>Naturally resistant to pests, requiring no toxic pesticides or fertilizers</li>
+                          <li>Acts as a natural carbon sink, storing carbon in the soil</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </div>
+            </li>
+          {% endif %}
+
+
+          <!-- versatile -->
+         {% if metafield_description contains 'versatile' %}
+          <li>
+            <div class="uk-container ">
+              <div class="uk-grid-column-large uk-child-width-1-2@m" uk-grid>
+                <div>
+                  <div class="uk-border-rounded uk-overflow-hidden">
+                    <img src="{{ 'Group 44863.png' | asset_url }}" alt="">
+                  </div>
+                </div>
+                <div class="overflowing-x">
+                  <h2 class=" uk-margin-remove ">Versatile</h2>
+                  <p class="uk-margin-remove ">
+                    Our products are designed to effortlessly work together, allowing for endless styling possibilities that transition from day to night, or brunch to the boardroom. They adapt to your every mood and occasion, giving you the freedom to curate looks that are as unique as you are. For instance:
+                    <ul class="custom-list">
+                     <li>Embrace monochromatic elegance by selecting two similar colours from our collection to create a cohesive look that is both stylish and sophisticated.</li>
+                     <li>For a relaxed and casual vibe, pair your favourite tank top with our high-rise flared trousers or wide-legged culottes. It's the perfect combination for running errands or enjoying a laid-back day while maintaining an effortlessly fashionable appearance.</li>
+                     <li>Make a bold statement by opting for a colour-blocked look. Pair two contrasting colours to create a visually striking outfit that exudes confidence and style.</li>
+                     <li>Elevate your style with our selection of neutral tops and bottoms for a polished and refined appearance that never goes out of fashion</li>
+                     <li>Add an element of playfulness and elegance by layering your outfit with our reversible jackets, overlays, or shirts. It's the perfect way to experiment and add versatility to your wardrobe</li>
+                    </ul>                                  
+                  </p>
+                </div>
+              </div>
+            </div>
+           </li>
+          {% endif %}
+
+          <!-- trash -->
+         {% if metafield_description contains 'trash' %}
+          <li>
+            <div class="uk-container ">
+              <div class="uk-grid-column-large uk-child-width-1-2@m" uk-grid>
+                <div>
+                  <div class="uk-border-rounded uk-overflow-hidden">
+                    <img src="{{ 'trashtofash.jpg' | asset_url }}" alt="">
+                  </div>
+                </div>
+                <div class="overflowing-x">
+                  <h2 class=" uk-margin-remove ">Trash to Fash</h2>
+                    <ul class="custom-list">
+                     <li>Repurposes “Pre-Consumer” sample piece cuttings to create one-of-a-kind accessories that add to the versatility of the products.</li>
+                     <li>Embodies the artistry and conscious design of mindful consumption.</li>
+                     <li>Uses hand painting techniques in modern abstract art.</li>
+                    </ul>   
+                </div>
+              </div>
+            </div>
+           </li>
+          {% endif %}
+          
+        <!-- multifuntional -->
+         {% if metafield_description contains 'multifuntional' %}
+          <li>
+            <div class="uk-container ">
+              <div class="uk-grid-column-large uk-child-width-1-2@m" uk-grid>
+                <div>
+                  <div class="uk-border-rounded uk-overflow-hidden">
+                    <img src="{{ 'Group 44862.png' | asset_url }}" alt="">
+                  </div>
+                </div>
+                <div class="overflowing-x">
+                  <h2 class=" uk-margin-remove">Multifuntional</h2>
+                  <p class="uk-margin-remove">
+                      Our products are your canvas for exploring new realms of fashion expression, allowing you to discover new ways to express your unique fashion sensibilities                               
+                        <ul class="custom-list">
+                         <li>For a touch of sophistication in formal settings, pair our light-coloured collared full-sleeve shirts with neutral cotton trousers and a classy pair of Oxford shoes</li>
+                         <li>For a relaxed and casual vibe, opt for our half-sleeve or folded full-sleeve shirts, paired with comfortable hemp or cotton shorts and a pair of loafers. This combination is perfect for vacations or laid-back outings</li>
+                         <li>Indulge in our stylish jackets for relaxed casual evenings, pairing them with light solid t-shirts and denim jeans</li>
+                         <li>For semi-formal occasions, choose our jackets with lustrous full-sleeve shirts to create an ensemble that exudes sophistication. Alternatively, layer the jacket over a crew neck t-shirt and a pair of casual chinos for a casual meeting or a Sunday brunch</li>
+                       </ul>                               
+                  </p>
+                </div>
+              </div>
+            </div>
+           </li>
+          {% endif %}
+          
+                  
+          <!-- organic cotton -->
+          
+          {% if metafield_description contains 'organic-cotton' %}
+            <li>
+            <div class="uk-container ">
+              <div class="uk-grid uk-child-width-1-2@m" uk-grid>
+                <div id="">
+                  <div class="uk-border-rounded uk-overflow-hidden">
+                    <img src="{{ 'Organic-cotton.png' | asset_url }}" alt="">
+                  </div>
+                </div>
+                <div class="overflowing-x">
+                  <h2 class="uk-margin-remove" id="">Organic Cotton</h2>
+                  <p class="uk-margin-remove" id="">
+                    <ul class="custom-list">
+                      <li>Produced using non-genetically modified seeds (GMOs).</li>
+                      <li>
+                        Avoids supporting the unethical GMO cotton industry, which drives up seed prices and pressures
+                        farmers into unmanageable debt.
+                      </li>
+                      <li>
+                        Grown without the use of synthetic chemicals (pesticides, fertilizers)
+                    <ul class="custom-list">
+                          <li>Safer for the farmers and workers.</li>
+                          <li>Does not pollute groundwater systems.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        Still requires a lot of water to grow and process, but is easier on the planet than conventional
+                        cotton.
+                      </li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </div>
+          
+          </li>
+                  {% endif %}
+            
+          <!-- description viscose -->
+          
+          {% if metafield_description contains 'viscose' %}
+            <li>
+            <div class="uk-container ">
+              <div class="uk-grid uk-child-width-1-2@m" uk-grid>
+                <div id="">
+                  <div class="uk-border-rounded uk-overflow-hidden">
+                    <img src="{{ 'Viscose.png' | asset_url }}" alt="">
+                  </div>
+                </div>
+                <div class="overflowing-x">
+                  <h2 class="uk-margin-remove" id="">Viscose</h2>
+                  <p class="uk-margin-remove" id="">
+                     <ul class="custom-list">
+                      <li>Resembles silk and feels like cotton</li>
+                      <li>
+                        Made from Livaeco by Birla Cellulose, derived from the wood pulp of beech or pine trees (not
+                        resource intensive to grow)
+                      </li>
+                      <li>Biodegradable, with a longer degradation period</li>
+                      <li>
+                        Sourced from Forest Stewardship Council (FSC) certified forests, involves no deforestation
+                      </li>
+                      <li>
+                        Chemical-intensive production process, but with a closed loop system to reuse chemicals and
+                        minimise waste and release in effluents
+                      </li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </div>
+              </li>
+          {% endif %}
+          
+          <!-- Gots -->
+          
+          {% if metafield_description contains 'gots' %}
+            <li>
+            <div class="uk-container uk-visible@s">
+              <div class="uk-grid uk-child-width-1-2@m" uk-grid>
+                <div id="">
+                  <div class="uk-border-rounded uk-overflow-hidden">
+                    <img src="{{ 'Gots.png' | asset_url }}" alt="">
+                  </div>
+                </div>
+                <div class="overflowing-x">
+                  <h2 class="uk-margin-remove" style="color:black;" id="">GOTS Certified Facilities</h2>
+                  <p class="uk-margin-remove" id="">
+                    <ul class="custom-list">
+                      GOTS (Global Organic Textile Standard) certified facilities right from spinning to weaving to
+                      dyeing, ensuring.
+
+                      <li>
+                        No harmful chemicals used throughout the production process, from harvesting to finished product
+                      </li>
+                      <li>Workers treated fairly and work under safe conditions</li>
+                      <li>Proper treatment and disposal of wastewater and other waste products</li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            </li>
+          {% endif %}
+          
+          <!-- Trims and Accessories -->
+
+          
+          {% if metafield_description contains 'trims-and-accessories' %}
+            <li>
+            <div class="uk-container">
+              <div class="uk-grid uk-child-width-1-2@m" uk-grid>
+                <div id="">
+                  <div class="uk-border-rounded uk-overflow-hidden">
+                    <img src="{{ 'Corozo-button.png' | asset_url }}" alt="">
+                  </div>
+                </div>
+                <div class="overflowing-x">
+                  <h2 class="uk-margin-remove" id="">Trims and Accessories</h2>
+                  <p class="uk-margin-remove" id="">
+                     <ul class="custom-list">
+                      <li>
+                        OEKO-TEX Certified Corozo Buttons
+                       <ul class="custom-list">
+                          <li>
+                            Renewable: Made from the seeds of the tagua palm tree, grown in South American rainforests
+                          </li>
+                          <li>Biodegradable: naturally breaks down over time without harming the environment</li>
+                          <li>
+                            Chemical-free: made without any harmful chemicals, making them safer for the environment and
+                            the workers
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        GRS (Global Recycling Standard) Recycled Polyester elastics
+                         <ul class="custom-list">
+                          <li>
+                            Made from recycled materials like plastic bottles or industrial waste, reducing the use of
+                            virgin synthetics
+                          </li>
+                          <li>Production requires 59% less energy compared to virgin polyester</li>
+                          <li>
+                            Has relatively lower strength compared to conventional virgin polyester elastics, but
+                            mitigated in design through fabric waistband
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        OCS (Organic Cotton Standard) certified labels
+                         <ul class="custom-list">
+                          <li>Contributes to the circular economy - making it easier to recycle</li>
+                          <li>Compostable like the main fabric</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </div>
+              </li>
+          {% endif %}
+            
+                   {% if metafield_description == blank %}
+                        <div class="uk-container"> This product lacks any descriptive information. </div>
+                     {% endif %}
+                  {% endfor %}
+                </ul>
+                <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+              </div>
+            </div>
+             
+          </div>   
+            
+        </div>
+          
+     <div class="uk-hidden@m">
+         
+           
+          <div class="uk-slider-container-offset" uk-slider>
+
+                <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+            
+                    <ul class="uk-slider-items uk-child-width-1-2@s uk-grid" style="color:black">
+                      {% assign beatles = product.metafields.custom.why_we_exist_description.value | split: ", " %}
+              
+                      {% for member in beatles %}
+                         
+                      {% assign metafield_descriptions = member %}
+                      
+                      {% if metafield_descriptions contains 'hemp' %}
+                        <li>
+                            <div class="uk-container">
+                              <div class="uk-grid-column-large" uk-grid>
+                                <div>
+                                  <h2 class=" uk-margin-remove" style="color:black">Hemp</h2>
+                                  <div class="uk-border-rounded uk-overflow-hidden">
+                                    <img src="{{ 'Hemp.png' | asset_url }}" alt="">
+                                  </div>
+                                </div>
+                                <div class="overflowing-x">
+                                  <p class="uk-margin-remove">
+                                    <ul class="custom-list">
+                                      <li>Made of 100% hemp, 100% biodegradable</li>
+                                      <li>All-season suitability, softens with washing, breathable, lightweight and durable</li>
+                                      <li>
+                                        Gentle on the environment
+                                    <ul class="custom-list">
+                                          <li>Requires 1/4 the water needed to grow cotton</li>
+                                          <li>Natural and renewable, grows quicker, easier and has a high yield</li>
+                                          <li>Naturally resistant to pests, requiring no toxic pesticides or fertilizers</li>
+                                          <li>Acts as a natural carbon sink, storing carbon in the soil</li>
+                                        </ul>
+                                      </li>
+                                    </ul>
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                        </li>
+                      {% endif %}
+
+                      {% if metafield_descriptions contains 'versatile' %}
+                        <li>
+                            <div class="uk-container">
+                              <div class="uk-grid-column-large" uk-grid>
+                                <div>
+                                  <h2 class=" uk-margin-remove" style="color:black">Versatile</h2>
+                                  <div class="uk-border-rounded uk-overflow-hidden">
+                                    <img src="{{ 'Group 44863.png' | asset_url }}" alt="">
+                                  </div>
+                                </div>
+                                <div class="overflowing-x">
+                                  <p class="uk-margin-remove">
+                                    Our products are designed to effortlessly work together, allowing for endless styling possibilities that transition from day to night, or brunch to the boardroom. They adapt to your every mood and occasion, giving you the freedom to curate looks that are as unique as you are. For instance:
+                                    <ul class="custom-list">
+                                     <li>Embrace monochromatic elegance by selecting two similar colours from our collection to create a cohesive look that is both stylish and sophisticated.</li>
+                                     <li>For a relaxed and casual vibe, pair your favourite tank top with our high-rise flared trousers or wide-legged culottes. It's the perfect combination for running errands or enjoying a laid-back day while maintaining an effortlessly fashionable appearance.</li>
+                                     <li>Make a bold statement by opting for a colour-blocked look. Pair two contrasting colours to create a visually striking outfit that exudes confidence and style.</li>
+                                     <li>Elevate your style with our selection of neutral tops and bottoms for a polished and refined appearance that never goes out of fashion</li>
+                                     <li>Add an element of playfulness and elegance by layering your outfit with our reversible jackets, overlays, or shirts. It's the perfect way to experiment and add versatility to your wardrobe</li>
+                                    </ul>
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                        </li>
+                      {% endif %}
+
+                      {% if metafield_descriptions contains 'multifuntional' %}
+                        <li>
+                            <div class="uk-container">
+                              <div class="uk-grid-column-large" uk-grid>
+                                <div>
+                                  <h2 class=" uk-margin-remove" style="color:black">Multifuntional</h2>
+                                  <div class="uk-border-rounded uk-overflow-hidden">
+                                    <img src="{{ 'Group 44862.png' | asset_url }}" alt="">
+                                  </div>
+                                </div>
+                                <div class="overflowing-x">
+                                  <p class="uk-margin-remove">
+                                      Our products are your canvas for exploring new realms of fashion expression, allowing you to discover new ways to express your unique fashion sensibilities                               
+                                      <ul class="custom-list">
+                                     <li>For a touch of sophistication in formal settings, pair our light-coloured collared full-sleeve shirts with neutral cotton trousers and a classy pair of Oxford shoes</li>
+                                     <li>For a relaxed and casual vibe, opt for our half-sleeve or folded full-sleeve shirts, paired with comfortable hemp or cotton shorts and a pair of loafers. This combination is perfect for vacations or laid-back outings</li>
+                                     <li>Indulge in our stylish jackets for relaxed casual evenings, pairing them with light solid t-shirts and denim jeans</li>
+                                     <li>For semi-formal occasions, choose our jackets with lustrous full-sleeve shirts to create an ensemble that exudes sophistication. Alternatively, layer the jacket over a crew neck t-shirt and a pair of casual chinos for a casual meeting or a Sunday brunch</li>
+                                    </ul>
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                        </li>
+                      {% endif %}
+                      
+                       {% if metafield_descriptions contains 'organic-cotton' %}
+                        <li>
+                             <div class="uk-container">
+                                <div class="uk-grid" uk-grid>
+                                  <div id="">
+                                    <h2 class="uk-margin-remove" id="" style="color:black">Organic Cotton</h2>
+                                    <div class="uk-border-rounded uk-overflow-hidden">
+                                      <img src="{{ 'Organic-cotton.png' | asset_url }}" alt="">
+                                    </div>
+                                  </div>
+                                  <div class="overflowing-x">
+                                    <p class="uk-margin-remove" id="">
+                                        <ul class="custom-list">
+                                        <li>Produced using non-genetically modified seeds (GMOs).</li>
+                                        <li>
+                                          Avoids supporting the unethical GMO cotton industry, which drives up seed prices and pressures
+                                          farmers into unmanageable debt.
+                                        </li>
+                                        <li>
+                                          Grown without the use of synthetic chemicals (pesticides, fertilizers)
+                                            <ul class="custom-list">
+                                            <li>Safer for the farmers and workers.</li>
+                                            <li>Does not pollute groundwater systems.</li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          Still requires a lot of water to grow and process, but is easier on the planet than conventional
+                                          cotton.
+                                        </li>
+                                      </ul>
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                        </li>
+                        {% endif %}
+                       {% if metafield_descriptions contains 'viscose' %}
+
+                      <li>
+                            <div class="uk-container">
+                              <div class="uk-grid" uk-grid>
+                                <div id="">
+                                  <h2 class="uk-margin-remove" id="" style="color:black">Viscose</h2>
+                                  <div class="uk-border-rounded uk-overflow-hidden">
+                                    <img src="{{ 'Viscose.png' | asset_url }}" alt="">
+                                  </div>
+                                </div>
+                                <div class="overflowing-x">
+                                  <p class="uk-margin-remove" id="">
+                                      <ul class="custom-list">
+                                      <li>Resembles silk and feels like cotton</li>
+                                      <li>
+                                        Made from Livaeco by Birla Cellulose, derived from the wood pulp of beech or pine trees (not
+                                        resource intensive to grow)
+                                      </li>
+                                      <li>Biodegradable, with a longer degradation period</li>
+                                      <li>
+                                        Sourced from Forest Stewardship Council (FSC) certified forests, involves no deforestation
+                                      </li>
+                                      <li>
+                                        Chemical-intensive production process, but with a closed loop system to reuse chemicals and
+                                        minimise waste and release in effluents
+                                      </li>
+                                    </ul>
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                        </li>
+                         {% endif %}
+                        {% if metafield_descriptions contains 'gots' %}
+                        <li>
+                            <div class="uk-container">
+                              <div class="uk-grid" uk-grid>
+                                <div id="">
+                                  <h2 class="uk-margin-remove" id="" style="color:black">GOTS Certified Facilities</h2>
+                                  <div class="uk-border-rounded uk-overflow-hidden">
+                                    <img src="{{ 'Gots.png' | asset_url }}" alt="">
+                                  </div>
+                                </div>
+                                <div class="overflowing-x">
+                                  <p class="uk-margin-remove" id="">
+                                      <ul class="custom-list">
+                                      GOTS (Global Organic Textile Standard) certified facilities right from spinning to weaving to
+                                      dyeing, ensuring.
+                
+                                      <li>
+                                        No harmful chemicals used throughout the production process, from harvesting to finished product
+                                      </li>
+                                      <li>Workers treated fairly and work under safe conditions</li>
+                                      <li>Proper treatment and disposal of wastewater and other waste products</li>
+                                    </ul>
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        {% endif %}
+                       {% if metafield_descriptions contains 'trims-and-accessories' %}
+                        <li>
+                            <div class="uk-container">
+                                  <div class="uk-grid" uk-grid>
+                                    <div id="">
+                                      <h2 class="uk-margin-remove" style="color:black" id="">Trims and Accessories</h2>
+                                      <div class="uk-border-rounded uk-overflow-hidden">
+                                        <img src="{{ 'Corozo-button.png' | asset_url }}" alt="">
+                                      </div>
+                                    </div>
+                                    <div class="overflowing-x">
+                                      <p class="uk-margin-remove" id="" style="color:black">
+                                          <ul class="custom-list">
+                                          <li>
+                                            OEKO-TEX Certified Corozo Buttons
+                                              <ul class="custom-list">
+                                              <li>
+                                                Renewable: Made from the seeds of the tagua palm tree, grown in South American rainforests
+                                              </li>
+                                              <li>Biodegradable: naturally breaks down over time without harming the environment</li>
+                                              <li>
+                                                Chemical-free: made without any harmful chemicals, making them safer for the environment and
+                                                the workers
+                                              </li>
+                                            </ul>
+                                          </li>
+                                          <li>
+                                            GRS (Global Recycling Standard) Recycled Polyester elastics
+                                              <ul class="custom-list">
+                                              <li>
+                                                Made from recycled materials like plastic bottles or industrial waste, reducing the use of
+                                                virgin synthetics
+                                              </li>
+                                              <li>Production requires 59% less energy compared to virgin polyester</li>
+                                              <li>
+                                                Has relatively lower strength compared to conventional virgin polyester elastics, but
+                                                mitigated in design through fabric waistband
+                                              </li>
+                                            </ul>
+                                          </li>
+                                          <li>
+                                            OCS (Organic Cotton Standard) certified labels
+                                              <ul class="custom-list">
+                                              <li>Contributes to the circular economy - making it easier to recycle</li>
+                                              <li>Compostable like the main fabric</li>
+                                            </ul>
+                                          </li>
+                                        </ul>
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                        </li>
+                      {% endif %}
+                        
+       {% endfor %}
+                    </ul>
+                </div>
+            
+                <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+            
+            </div>
+          </div>
+        </li>
+        
+        
+<!-- Tracebility Block -->
+
+        
+        <li>
+          {% assign metafield_value = product.metafields.custom.traceability.value %}
+
+          <!-- Viscose -->
+
+          {% if metafield_value contains 'viscose' %}
+            <div class="uk-container">
+              <div class="uk-grid-match uk-grid-collapse  uk-visible@m" uk-grid>
+                <div class="uk-width-1-3@s">
+                  <div class="uk-card uk-card-default uk-card-body">
+<!--                     <h3>VISCOSE</h3> -->
+                    <ul uk-switcher="connect: .natural-cellulose" class="uk-list nc-list">
+                      <li class="uk-active">
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-cultivating.svg' | asset_url }}"></span
+                          >Cultivation/Sorting</a
+                        >
+                      </li>
+                      <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-yarn.svg' | asset_url }}"></span
+                          >Yarn</a
+                        >
+                      </li>
+                      <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-fabric.svg' | asset_url }}"></span
+                          >Fabric</a
+                        >
+                      </li>
+                      <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-dyeing.svg' | asset_url }}"></span
+                          >Dyeing</a
+                        >
+                      </li>
+                      <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-cutsew.svg' | asset_url }}"></span>Cut
+                          and sew</a
+                        >
+                      </li>
+{% comment %}                       <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-warehouse.svg' | asset_url }}"></span
+                          >Warehouse</a
+                        >
+                      </li> {% endcomment %}
+                    </ul>
+                  </div>
+                </div>
+                <div class="uk-width-2-3@s">
+                  <div class="uk-card uk-card-default uk-card-body uk-padding-remove">
+                    <ul class="uk-switcher natural-cellulose uk-margin uk-height-1-1">
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Cultivation.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Canada</h2>
+                        </div>
+                      </li>
+
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Yarn.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Pallava Mills, Tamil Nadu</h2>
+                        </div>
+                      </li>
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Fabric.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Dinesh Exports Pvt. Ltd., Tamil Nadu</h2>
+                        </div>
+                      </li>
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Dyeing.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Samurai Textile Processors, Tamil Nadu</h2>
+                        </div>
+                      </li>
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Cut n Sew.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Hyderabad, Telangana</h2>
+                        </div>
+                      </li>
+{% comment %}                       <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Warehouse.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Hyderabad, Telangana, India</h2>
+                        </div>
+                      </li> {% endcomment %}
+                    </ul>
+                  </div>
+                </div>
+{% comment %}               <p class="" style="float:right;color:#777777;margin-top:13px;margin-left:auto;margin-right:0;"><span style="margin-top:-8px;margin-left:-10px;font-size:20px;color:green;position:absolute;"    >*</span>Viscose</p> {% endcomment %}
+              </div>
+
+              <!-- small screen -->
+
+              <div class="uk-margin-small-top uk-container uk-hidden@m">
+                <div class="uk-slider-container-offset" id="my-slider" uk-slider="finite: true ; draggable: false">
+                  <div>
+                    <a style="color:black; "
+                      ><span class=" nc-icon uk-margin-small-right uk-flex"
+                        ><img id="icon1" class="uk-width-1-5" src="{{ 'icon-cultivating.svg' | asset_url }}"
+                        ><img id="icon2" class="uk-width-1-5" src="{{ 'icon-yarn.svg' | asset_url }}"
+                        ><img id="icon3" class="uk-width-1-5" src="{{ 'icon-fiber.svg' | asset_url }}"
+                        ><img id="icon4" class="uk-width-1-5" src="{{ 'icon-dyeing.svg' | asset_url }}">
+                        <img id="icon5" class="uk-width-1-5" src="{{ 'icon-cutsew.svg' | asset_url }}"></span
+                    ></a>
+                  </div>
+                  <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+                    <ul class="uk-slider-items uk-child-width-1-1 uk-grid">
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Cultivation.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                          <div class="uk-position-center uk-position-small uk-text-center uk-light">
+<!--                             <h4 class="" style="color:#353535; margin-bottom:20px">VISCOSE</h4> -->
+                            <h4 class="textWhite uk-margin-remove">Cultivation/Sorting</h4>
+                            <h2 class="textWhite uk-margin-remove">Canada</h2>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Yarn.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                            <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+<!--                             <h4 class="" style="color:#353535; margin-bottom:20px">VISCOSE</h4> -->
+                            <h4 class="textWhite uk-margin-remove">Yarn</h4>
+                            <h2 class="textWhite uk-margin-remove">Pallava Mills, Tamil Nadu</h2>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Fabric.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                            <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+<!--                             <h4 class="" style="color:#353535; margin-bottom:20px">VISCOSE</h4> -->
+                            <h4 class="textWhite uk-margin-remove">Fabric</h4>
+                            <h2 class="textWhite uk-margin-remove">Dinesh Exports Pvt. Ltd., Tamil Nadu</h2>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Dyeing.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                            <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+<!--                             <h4 class="" style="color:#353535; margin-bottom:20px">VISCOSE</h4> -->
+                            <h4 class="textWhite uk-margin-remove">Dyeing</h4>
+                            <h2 class="textWhite uk-margin-remove">Samurai Textile Processors, Tamil Nadu</h2>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Cut n Sew.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                            <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+<!--                             <h4 class="" style="color:#353535; margin-bottom:20px">VISCOSE</h4> -->
+                            <h4 class="textWhite uk-margin-remove">Cut and sew</h4>
+                            <h2 class="textWhite uk-margin-remove">Hyderabad, Telangana</h2>
+                          </div>
+                        </div>
+                      </li>
+
+                    </ul>
+                    <a
+                      class="uk-position-center-left uk-position-small"
+                      href="#"
+                      uk-slidenav-previous
+                      uk-slider-item="previous" 
+                      onclick="negativeBtn(this)"
+                    ></a>
+                    <a
+                      class="uk-position-center-right uk-position-small"
+                      href="#"
+                      uk-slidenav-next
+                      uk-slider-item="next"
+                      onclick="positiveBtn(this)"
+                    ></a>
+                  </div>
+                </div>
+              </div>
+{% comment %}              <p class="uk-hidden@m" style="float:right;color:#777777;margin-top:13px;margin-left:auto;margin-right:0;"><span style="margin-top:-8px;margin-left:-10px;font-size:20px;color:green;position:absolute;"    >*</span>Viscose</p> {% endcomment %}
+            </div>
+          {% endif %}
+
+
+          <!-- material 4 -->
+
+          {% if metafield_value == 'hemp' %}
+            <div class="uk-container">
+              <div class="uk-grid-match uk-grid-collapse uk-visible@m" uk-grid>
+                <div class="uk-width-1-3@s">
+                  <div class="uk-card uk-card-default uk-card-body">
+<!--                     <h3>Hemp</h3> -->
+                    <ul uk-switcher="connect: .natural-cellulose" class="uk-list nc-list">
+                      <li class="uk-active">
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-cultivating.svg' | asset_url }}"></span
+                          >Cultivation/Sorting</a
+                        >
+                      </li>
+                      <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-yarn.svg' | asset_url }}"></span
+                          >Yarn</a
+                        >
+                      </li>
+                      <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-fabric.svg' | asset_url }}"></span
+                          >Fabric</a
+                        >
+                      </li>
+                      <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-dyeing.svg' | asset_url }}"></span
+                          >Dyeing</a
+                        >
+                      </li>
+                      <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-cutsew.svg' | asset_url }}"></span>Cut
+                          and sew</a
+                        >
+                      </li>
+{% comment %}                       <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-warehouse.svg' | asset_url }}"></span
+                          >Warehouse</a
+                        >
+                      </li> {% endcomment %}
+                    </ul>
+                  </div>
+                </div>
+                <div class="uk-width-2-3@s">
+                  <div class="uk-card uk-card-default uk-card-body uk-padding-remove">
+                    <ul class="uk-switcher natural-cellulose uk-margin uk-height-1-1">
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Cultivation.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">China</h2>
+                        </div>
+                      </li>
+
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Yarn.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Kingdom Holdings, China</h2>
+                        </div>
+                      </li>
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Fabric.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Mumbai, India</h2>
+                        </div>
+                      </li>
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Dyeing.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Mumbai, India</h2>
+                        </div>
+                      </li>
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Cut n Sew.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Hyderabad, Telangana</h2>
+                        </div>
+                      </li>
+{% comment %}                       <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Warehouse.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Hyderabad, Telangana, India</h2>
+                        </div>
+                      </li> {% endcomment %}
+                    </ul>
+                  </div>
+                </div>
+{% comment %}               <p class="" style="float:right;color:#777777;margin-top:13px;margin-left:auto;margin-right:0;"><span style="margin-top:-8px;margin-left:-10px;font-size:20px;color:green;position:absolute;"    >*</span> Hemp</p> {% endcomment %}
+              </div>
+
+              <!-- small screen -->
+
+              <div class="uk-margin-small-top uk-container uk-hidden@m">
+                <div class="uk-slider-container-offset" id="my-slider" uk-slider="finite: true ; draggable: false">
+                  <div>
+                    <a style="color:black; "
+                      ><span class=" nc-icon uk-margin-small-right uk-flex"
+                        ><img id="icon1" class="uk-width-1-5" src="{{ 'icon-cultivating.svg' | asset_url }}"
+                        ><img id="icon2" class="uk-width-1-5" src="{{ 'icon-yarn.svg' | asset_url }}"
+                        ><img id="icon3" class="uk-width-1-5" src="{{ 'icon-fiber.svg' | asset_url }}"
+                        ><img id="icon4" class="uk-width-1-5" src="{{ 'icon-dyeing.svg' | asset_url }}">
+                        <img id="icon5" class="uk-width-1-5" src="{{ 'icon-cutsew.svg' | asset_url }}"></span
+                    ></a>
+                  </div>
+                  <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+                    <ul class="uk-slider-items uk-child-width-1-1 uk-grid">
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Cultivation.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                            <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+<!--                             <h4 class="" style="color:#353535; margin-bottom:20px">Hemp</h4> -->
+                            <h4 class="textWhite uk-margin-remove">Cultivation/Sorting</h4>
+                            <h2 class="textWhite uk-margin-remove">China</h2>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Yarn.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                            <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+<!--                             <h4 class="" style="color:#353535; margin-bottom:20px">Hemp</h4> -->
+                            <h4 class="textWhite uk-margin-remove">Yarn</h4>
+                            <h2 class="textWhite uk-margin-remove">Kingdom Holdings, China</h2>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Fabric.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                            <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+<!--                             <h4 class="" style="color:#353535; margin-bottom:20px">Hemp</h4> -->
+                            <h4 class="textWhite uk-margin-remove">Fabric</h4>
+                            <h2 class="textWhite uk-margin-remove">Mumbai, India</h2>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Dyeing.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                            <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+<!--                             <h4 class="" style="color:#353535; margin-bottom:20px">Hemp</h4> -->
+                            <h4 class="textWhite uk-margin-remove">Dyeing</h4>
+                            <h2 class="textWhite uk-margin-remove">Mumbai, India</h2>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Cut n Sew.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                            <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+<!--                             <h4 class="" style="color:#353535; margin-bottom:20px">Hemp</h4> -->
+                            <h4 class="textWhite uk-margin-remove">Cut and sew</h4>
+                            <h2 class="textWhite uk-margin-remove">Hyderabad, Telangana</h2>
+                          </div>
+                        </div>
+                      </li>
+
+                    </ul>
+                    <a
+                      class="uk-position-center-left uk-position-small"
+                      href="#"
+                      uk-slidenav-previous
+                      uk-slider-item="previous" 
+                      onclick="negativeBtn(this)"
+                    ></a>
+                    <a
+                      class="uk-position-center-right uk-position-small"
+                      href="#"
+                      uk-slidenav-next
+                      uk-slider-item="next"
+                      onclick="positiveBtn(this)"
+                    ></a>
+                  </div>
+                </div>
+              </div>
+{% comment %}                 <p class="uk-hidden@m" style="float:right;color:#777777;margin-top:13px;margin-left:auto;margin-right:0;"><span style="margin-top:-8px;margin-left:-10px;font-size:20px;color:green;position:absolute;"    >*</span> Hemp</p> {% endcomment %}
+            </div>
+          {% endif %}
+
+          <!-- material 1 -->
+
+          {% if metafield_value == 'Material1' %}
+            <div class="uk-container">
+              <div class="uk-grid-match uk-grid-collapse uk-visible@m" uk-grid>
+                <div class="uk-width-1-3@s">
+                  <div class="uk-card uk-card-default uk-card-body">
+<!--                     <h3>Organic Cotton Material 1</h3> -->
+                    <ul uk-switcher="connect: .natural-cellulose" class="uk-list nc-list">
+                      <li class="uk-active">
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-cultivating.svg' | asset_url }}"></span
+                          >Cultivation/Sorting</a
+                        >
+                      </li>
+                      <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-yarn.svg' | asset_url }}"></span
+                          >Yarn</a
+                        >
+                      </li>
+                      <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-fabric.svg' | asset_url }}"></span
+                          >Fabric</a
+                        >
+                      </li>
+                      <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-dyeing.svg' | asset_url }}"></span
+                          >Dyeing</a
+                        >
+                      </li>
+                      <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-cutsew.svg' | asset_url }}"></span>Cut
+                          and sew</a
+                        >
+                      </li>
+{% comment %}                       <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-warehouse.svg' | asset_url }}"></span
+                          >Warehouse</a
+                        >
+                      </li> {% endcomment %}
+                    </ul>
+                  </div>
+                </div>
+                <div class="uk-width-2-3@s">
+                  <div class="uk-card uk-card-default uk-card-body uk-padding-remove">
+                    <ul class="uk-switcher natural-cellulose uk-margin uk-height-1-1">
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Cultivation.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">India</h2>
+                        </div>
+                      </li>
+
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Yarn.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Arun Textiles, Tamil Nadu</h2>
+                        </div>
+                      </li>
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Fabric.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Dinesh Exports Pvt. Ltd., Tamil Nadu</h2>
+                        </div>
+                      </li>
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Dyeing.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Samurai Textile Processors, Tamil Nadu</h2>
+                        </div>
+                      </li>
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Cut n Sew.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Hyderabad, Telangana</h2>
+                        </div>
+                      </li>
+{% comment %}                       <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Warehouse.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Hyderabad, Telangana, India</h2>
+                        </div>
+                      </li> {% endcomment %}
+                    </ul>
+                  </div>
+                </div>
+{% comment %}               <p class="" style="float:right;color:#777777;margin-top:13px;margin-left:auto;margin-right:0;"><span style="margin-top:-8px;margin-left:-10px;font-size:20px;color:green;position:absolute;"    >*</span> Organic Cotton Material 1</p> {% endcomment %}
+              </div>
+
+              <!-- small screen -->
+
+              <div class="uk-margin-small-top uk-container uk-hidden@m">
+                <div class="uk-slider-container-offset" id="my-slider" uk-slider="finite: true ; draggable: false">
+                  <div>
+                    <a style="color:black; "
+                      ><span class=" nc-icon uk-margin-small-right uk-flex"
+                        ><img id="icon1" class="uk-width-1-5" src="{{ 'icon-cultivating.svg' | asset_url }}"
+                        ><img id="icon2" class="uk-width-1-5" src="{{ 'icon-yarn.svg' | asset_url }}"
+                        ><img id="icon3" class="uk-width-1-5" src="{{ 'icon-fiber.svg' | asset_url }}"
+                        ><img id="icon4" class="uk-width-1-5" src="{{ 'icon-dyeing.svg' | asset_url }}">
+                        <img id="icon5" class="uk-width-1-5" src="{{ 'icon-cutsew.svg' | asset_url }}"></span
+                    ></a>
+                  </div>
+                  <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+                    <ul class="uk-slider-items uk-child-width-1-1 uk-grid">
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Cultivation.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                          <div class="uk-position-center uk-position-small uk-text-center uk-light">
+<!--                             <h4 class="" style="color:#353535; margin-bottom:20px">Material 1</h4> -->
+                            <h4 class="textWhite uk-margin-remove">Cultivation/Sorting</h4>
+                            <h2 class="textWhite uk-margin-remove">India</h2>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Yarn.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                            <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+<!--                             <h4 class="" style="color:#353535; margin-bottom:20px">Material 1</h4> -->
+                            <h4 class="textWhite uk-margin-remove">Yarn</h4>
+                            <h2 class="textWhite uk-margin-remove">Arun Textiles, Tamil Nadu</h2>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Fabric.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                            <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+<!--                             <h4 class="" style="color:#353535; margin-bottom:20px">Material 1</h4> -->
+                            <h4 class="textWhite uk-margin-remove">Fabric</h4>
+                            <h2 class="textWhite uk-margin-remove">Dinesh Exports Pvt. Ltd., Tamil Nadu</h2>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Dyeing.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                            <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+<!--                             <h4 class="" style="color:#353535; margin-bottom:20px">Material 1</h4> -->
+                            <h4 class="textWhite uk-margin-remove">Dyeing</h4>
+                            <h2 class="textWhite uk-margin-remove">Samurai Textile Processors, Tamil Nadu</h2>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Cut n Sew.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                            <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+<!--                             <h4 class="" style="color:#353535; margin-bottom:20px">Material 1</h4> -->
+                            <h4 class="textWhite uk-margin-remove">Cut and sew</h4>
+                            <h2 class="textWhite uk-margin-remove">Hyderabad, Telangana</h2>
+                          </div>
+                        </div>
+                      </li>
+
+                    </ul>
+                    <a
+                      class="uk-position-center-left uk-position-small"
+                      href="#"
+                      uk-slidenav-previous
+                      uk-slider-item="previous" 
+                      onclick="negativeBtn(this)"
+                    ></a>
+                    <a
+                      class="uk-position-center-right uk-position-small"
+                      href="#"
+                      uk-slidenav-next
+                      uk-slider-item="next"
+                      onclick="positiveBtn(this)"
+                    ></a>
+                  </div>
+                </div>
+              </div>
+{% comment %}                 <p class="uk-hidden@m" style="float:right;color:#777777;margin-top:13px;margin-left:auto;margin-right:0;"><span style="margin-top:-8px;margin-left:-10px;font-size:20px;color:green;position:absolute;"    >*</span> Organic Cotton Material 1</p> {% endcomment %}
+            </div>
+          {% endif %}
+
+          <!-- material 2 -->
+
+          {% if metafield_value == 'Material2' %}
+            <div class="uk-container">
+              <div class="uk-grid-match uk-grid-collapse uk-visible@m" uk-grid>
+                <div class="uk-width-1-3@s">
+                  <div class="uk-card uk-card-default uk-card-body">
+<!--                     <h3>Organic Cotton Material 2</h3> -->
+                    <ul uk-switcher="connect: .natural-cellulose" class="uk-list nc-list">
+                      <li class="uk-active">
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-cultivating.svg' | asset_url }}"></span
+                          >Cultivation/Sorting</a
+                        >
+                      </li>
+                      <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-yarn.svg' | asset_url }}"></span
+                          >Yarn</a
+                        >
+                      </li>
+                      <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-fabric.svg' | asset_url }}"></span
+                          >Fabric</a
+                        >
+                      </li>
+                      <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-dyeing.svg' | asset_url }}"></span
+                          >Dyeing</a
+                        >
+                      </li>
+                      <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-cutsew.svg' | asset_url }}"></span>Cut
+                          and sew</a
+                        >
+                      </li>
+{% comment %}                       <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-warehouse.svg' | asset_url }}"></span
+                          >Warehouse</a
+                        >
+                      </li> {% endcomment %}
+                    </ul>
+                  </div>
+                </div>
+                <div class="uk-width-2-3@s">
+                  <div class="uk-card uk-card-default uk-card-body uk-padding-remove">
+                    <ul class="uk-switcher natural-cellulose uk-margin uk-height-1-1">
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Cultivation.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">India</h2>
+                        </div>
+                      </li>
+
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Yarn.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Sambandam Spinning Mills, Tamil Nadu</h2>
+                        </div>
+                      </li>
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Fabric.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Dinesh Exports Pvt. Ltd., Tamil Nadu</h2>
+                        </div>
+                      </li>
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Dyeing.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Samurai Textile Processors, Tamil Nadu</h2>
+                        </div>
+                      </li>
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Cut n Sew.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Hyderabad, Telangana</h2>
+                        </div>
+                      </li>
+{% comment %}                       <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Warehouse.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Hyderabad, Telangana, India</h2>
+                        </div>
+                      </li> {% endcomment %}
+                    </ul>
+                  </div>
+                </div>
+{% comment %}            <p class="" style="float:right;color:#777777;margin-top:13px;margin-left:auto;margin-right:0;"><span style="margin-top:-8px;margin-left:-10px;font-size:20px;color:green;position:absolute;"    >*</span> Organic Cotton Material 2</p> {% endcomment %}
+              </div>
+
+              <!-- small screen -->
+
+              <div class="uk-margin-small-top uk-container uk-hidden@m">
+                <div class="uk-slider-container-offset" id="my-slider" uk-slider="finite: true ; draggable: false">
+                  <div>
+                    <a style="color:black; "
+                      ><span class=" nc-icon uk-margin-small-right uk-flex"
+                        ><img id="icon1" class="uk-width-1-5" src="{{ 'icon-cultivating.svg' | asset_url }}"
+                        ><img id="icon2" class="uk-width-1-5" src="{{ 'icon-yarn.svg' | asset_url }}"
+                        ><img id="icon3" class="uk-width-1-5" src="{{ 'icon-fiber.svg' | asset_url }}"
+                        ><img id="icon4" class="uk-width-1-5" src="{{ 'icon-dyeing.svg' | asset_url }}">
+                        <img id="icon5" class="uk-width-1-5" src="{{ 'icon-cutsew.svg' | asset_url }}"></span
+                    ></a>
+                  </div>
+                  <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+                    <ul class="uk-slider-items uk-child-width-1-1 uk-grid">
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Cultivation.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                          <div class="uk-position-center uk-position-small uk-text-center uk-light">
+{% comment %}                             <h4 class="" style="color:#353535; margin-bottom:20px">Material 2</h4> {% endcomment %}
+                            <h4 class="textWhite uk-margin-remove">Cultivation/Sorting</h4>
+                            <h2 class="textWhite uk-margin-remove">India</h2>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Yarn.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                          <div class="uk-position-center uk-position-small uk-text-center uk-light uk-flex uk-flex-center" style="max-width:300px;margin-left:31px;">
+{% comment %}                             <h4 class="" style="color:#353535; margin-bottom:20px">Material 2</h4> {% endcomment %}
+                         <div>   <h4 class="textWhite uk-margin-remove">Yarn</h4>
+                            <h2 class="textWhite uk-margin-remove">Sambandam Spinning Mills, Tamil Nadu</h2>
+                         </div> </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Fabric.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+{% comment %}                             <h4 class="" style="color:#353535; margin-bottom:20px">Material 2</h4> {% endcomment %}
+                            <h4 class="textWhite uk-margin-remove">Fabric</h4>
+                            <h2 class="textWhite uk-margin-remove">Dinesh Exports Pvt. Ltd., Tamil Nadu</h2>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Dyeing.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                             <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+<!--                             <h4 class="" style="color:#353535; margin-bottom:20px">Material 2</h4> -->
+                            <h4 class="textWhite uk-margin-remove">Dyeing</h4>
+                            <h2 class="textWhite uk-margin-remove">Samurai Textile Processors, Tamil Nadu</h2>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Cut n Sew.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                             <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+<!--                             <h4 class="" style="color:#353535; margin-bottom:20px">Material 2</h4> -->
+                            <h4 class="textWhite uk-margin-remove">Cut and sew</h4>
+                            <h2 class="textWhite uk-margin-remove">Hyderabad, Telangana</h2>
+                          </div>
+                        </div>
+                      </li>
+
+                    </ul>
+                    <a
+                      class="uk-position-center-left uk-position-small"
+                      href="#"
+                      uk-slidenav-previous
+                      uk-slider-item="previous" 
+                      onclick="negativeBtn(this)"
+                    ></a>
+                    <a
+                      class="uk-position-center-right uk-position-small"
+                      href="#"
+                      uk-slidenav-next
+                      uk-slider-item="next"
+                      onclick="positiveBtn(this)"
+                    ></a>
+                  </div>
+                </div>
+              </div>
+{% comment %}                 <p class="uk-hidden@m" style="float:right;color:#777777;margin-top:13px;margin-left:auto;margin-right:0;"><span style="margin-top:-8px;margin-left:-10px;font-size:20px;color:green;position:absolute;"    >*</span> Organic Cotton Material 2</p> {% endcomment %}
+            </div>
+          {% endif %}
+
+          <!-- material 3 -->
+
+          {% if metafield_value == 'Material3' %}
+            <div class="uk-container">
+              <div class="uk-grid-match uk-grid-collapse uk-visible@m" uk-grid>
+                <div class="uk-width-1-3@s">
+                  <div class="uk-card uk-card-default uk-card-body">
+<!--                     <h3>Organic Cotton Material 3</h3> -->
+                    <ul uk-switcher="connect: .natural-cellulose" class="uk-list nc-list">
+                      <li class="uk-active">
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-cultivating.svg' | asset_url }}"></span
+                          >Cultivation/Sorting</a
+                        >
+                      </li>
+                      <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-yarn.svg' | asset_url }}"></span
+                          >Yarn</a
+                        >
+                      </li>
+                      <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-fabric.svg' | asset_url }}"></span
+                          >Fabric</a
+                        >
+                      </li>
+                      <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-dyeing.svg' | asset_url }}"></span
+                          >Dyeing</a
+                        >
+                      </li>
+                      <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-cutsew.svg' | asset_url }}"></span>Cut
+                          and sew</a
+                        >
+                      </li>
+{% comment %}                       <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-warehouse.svg' | asset_url }}"></span
+                          >Warehouse</a
+                        >
+                      </li> {% endcomment %}
+                    </ul>
+                  </div>
+                </div>
+                <div class="uk-width-2-3@s">
+                  <div class="uk-card uk-card-default uk-card-body uk-padding-remove">
+                    <ul class="uk-switcher natural-cellulose uk-margin uk-height-1-1">
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Cultivation.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">India</h2>
+                        </div>
+                      </li>
+
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Yarn.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Sambandam Spinning Mills, Tamil Nadu</h2>
+                        </div>
+                      </li>
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Fabric.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Dinesh Exports Pvt. Ltd., Tamil Nadu</h2>
+                        </div>
+                      </li>
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Dyeing.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">BKS Textiles Pvt Ltd., Tamil Nadu</h2>
+                        </div>
+                      </li>
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Cut n Sew.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Hyderabad, Telangana</h2>
+                        </div>
+                      </li>
+{% comment %}                       <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Warehouse.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Hyderabad, Telangana, India</h2>
+                        </div>
+                      </li> {% endcomment %}
+                    </ul>
+                  </div>
+                </div>
+{% comment %}               <p class="" style="float:right;color:#777777;margin-top:13px;margin-left:auto;margin-right:0;"><span style="margin-top:-8px;margin-left:-10px;font-size:20px;color:green;position:absolute;"    >*</span> Organic Cotton Material 3</p> {% endcomment %}
+              </div>
+
+              <!-- small screen -->
+
+              <div class="uk-margin-small-top uk-container uk-hidden@m">
+                <div class="uk-slider-container-offset" id="my-slider" uk-slider="finite: true ; draggable: false">
+                  <div>
+                    <a style="color:black; "
+                      ><span class=" nc-icon uk-margin-small-right uk-flex"
+                        ><img id="icon1" class="uk-width-1-5" src="{{ 'icon-cultivating.svg' | asset_url }}"
+                        ><img id="icon2" class="uk-width-1-5" src="{{ 'icon-yarn.svg' | asset_url }}"
+                        ><img id="icon3" class="uk-width-1-5" src="{{ 'icon-fiber.svg' | asset_url }}"
+                        ><img id="icon4" class="uk-width-1-5" src="{{ 'icon-dyeing.svg' | asset_url }}">
+                        <img id="icon5" class="uk-width-1-5" src="{{ 'icon-cutsew.svg' | asset_url }}"></span
+                    ></a>
+                  </div>
+                  <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+                    <ul class="uk-slider-items uk-child-width-1-1 uk-grid">
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Cultivation.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                          <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                        
+                            <h4 class="textWhite uk-margin-remove">Cultivation/Sorting</h4>
+                            <h2 class="textWhite uk-margin-remove">India</h2>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Yarn.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                          <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+                        
+                            <h4 class="textWhite uk-margin-remove">Yarn</h4>
+                            <h2 class="textWhite uk-margin-remove">Sambandam Spinning Mills, Tamil Nadu</h2>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Fabric.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                          <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+                        
+                            <h4 class="textWhite uk-margin-remove">Fabric</h4>
+                            <h2 class="textWhite uk-margin-remove">Dinesh Exports Pvt. Ltd., Tamil Nadu</h2>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Dyeing.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                         <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+                        
+                            <h4 class="textWhite uk-margin-remove">Dyeing</h4>
+                            <h2 class="textWhite uk-margin-remove">BKS Textiles Pvt Ltd., Tamil Nadu</h2>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Cut n Sew.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                             <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+                        
+                            <h4 class="textWhite uk-margin-remove">Cut and sew</h4>
+                            <h2 class="textWhite uk-margin-remove">Hyderabad, Telangana</h2>
+                          </div>
+                        </div>
+                      </li>
+{% comment %}                       <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Warehouse.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                          <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                        
+                            <h4 class="textWhite uk-margin-remove">Warehouse</h4>
+                            <h2 class="textWhite uk-margin-remove">Hyderabad, Telangana, India</h2>
+                          </div>
+                        </div>
+                      </li> {% endcomment %}
+                    </ul>
+                    <a
+                      class="uk-position-center-left uk-position-small"
+                      href="#"
+                      uk-slidenav-previous
+                      uk-slider-item="previous" 
+                      onclick="negativeBtn(this)"
+                    ></a>
+                    <a
+                      class="uk-position-center-right uk-position-small"
+                      href="#"
+                      uk-slidenav-next
+                      uk-slider-item="next"
+                      onclick="positiveBtn(this)"
+                    ></a>
+                  </div>
+                </div>
+              </div>
+{% comment %}                 <p class="uk-hidden@m" style="float:right;color:#777777;margin-top:13px;margin-left:auto;margin-right:0;"><span style="margin-top:-8px;margin-left:-10px;font-size:20px;color:green;position:absolute;"    >*</span> Organic Cotton Material 3</p> {% endcomment %}
+            </div>
+          {% endif %}
+
+          <!-- material 4 -->
+
+          {% if metafield_value == 'Material4' %}
+            <div class="uk-container">
+              <div class="uk-grid-match uk-grid-collapse uk-visible@m" uk-grid>
+                <div class="uk-width-1-3@s">
+                  <div class="uk-card uk-card-default uk-card-body">
+<!--                     <h3>Organic Cotton Material 4</h3> -->
+                    <ul uk-switcher="connect: .natural-cellulose" class="uk-list nc-list">
+                      <li class="uk-active">
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-cultivating.svg' | asset_url }}"></span
+                          >Cultivation/Sorting</a
+                        >
+                      </li>
+                      <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-yarn.svg' | asset_url }}"></span
+                          >Yarn</a
+                        >
+                      </li>
+                      <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-fabric.svg' | asset_url }}"></span
+                          >Fabric</a
+                        >
+                      </li>
+                      <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-dyeing.svg' | asset_url }}"></span
+                          >Dyeing</a
+                        >
+                      </li>
+                      <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-cutsew.svg' | asset_url }}"></span>Cut
+                          and sew</a
+                        >
+                      </li>
+{% comment %}                       <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-warehouse.svg' | asset_url }}"></span
+                          >Warehouse</a
+                        >
+                      </li> {% endcomment %}
+                    </ul>
+                  </div>
+                </div>
+                <div class="uk-width-2-3@s">
+                  <div class="uk-card uk-card-default uk-card-body uk-padding-remove">
+                    <ul class="uk-switcher natural-cellulose uk-margin uk-height-1-1">
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Cultivation.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">India</h2>
+                        </div>
+                      </li>
+
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Yarn.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Anandhi Textiles, Tamil Nadu</h2>
+                        </div>
+                      </li>
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Fabric.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Dinesh Exports Pvt. Ltd., Tamil Nadu</h2>
+                        </div>
+                      </li>
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Dyeing.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Ero Dyeing, Tamil Nadu</h2>
+                        </div>
+                      </li>
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Cut n Sew.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Hyderabad, Telangana</h2>
+                        </div>
+                      </li>
+{% comment %}                       <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Warehouse.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Hyderabad, Telangana, India</h2>
+                        </div>
+                      </li> {% endcomment %}
+                    </ul>
+                  </div>
+                </div>
+<!--               <p class="" style="float:right;color:#777777;margin-top:13px;margin-left:auto;margin-right:0;"><span style="margin-top:-8px;margin-left:-10px;font-size:20px;color:green;position:absolute;"    >*</span> Organic Cotton Material 4</p> -->
+              </div>
+
+              <!-- small screen -->
+
+              <div class="uk-margin-small-top uk-container uk-hidden@m">
+                <div class="uk-slider-container-offset" id="my-slider" uk-slider="finite: true ; draggable: false">
+                  <div>
+                    <a style="color:black; "
+                      ><span class=" nc-icon uk-margin-small-right uk-flex"
+                        ><img id="icon1" class="uk-width-1-5" src="{{ 'icon-cultivating.svg' | asset_url }}"
+                        ><img id="icon2" class="uk-width-1-5" src="{{ 'icon-yarn.svg' | asset_url }}"
+                        ><img id="icon3" class="uk-width-1-5" src="{{ 'icon-fiber.svg' | asset_url }}"
+                        ><img id="icon4" class="uk-width-1-5" src="{{ 'icon-dyeing.svg' | asset_url }}">
+                        <img id="icon5" class="uk-width-1-5" src="{{ 'icon-cutsew.svg' | asset_url }}"></span
+                    ></a>
+                  </div>
+                  <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+                    <ul class="uk-slider-items uk-child-width-1-1 uk-grid">
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Cultivation.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                           <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+                       
+                            <h4 class="textWhite uk-margin-remove">Cultivation/Sorting</h4>
+                            <h2 class="textWhite uk-margin-remove">India</h2>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Yarn.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                       <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+                       
+                            <h4 class="textWhite uk-margin-remove">Yarn</h4>
+                            <h2 class="textWhite uk-margin-remove">Anandhi Textiles, Tamil Nadu</h2>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Fabric.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                          <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+                       
+                            <h4 class="textWhite uk-margin-remove">Fabric</h4>
+                            <h2 class="textWhite uk-margin-remove">Dinesh Exports Pvt. Ltd., Tamil Nadu</h2>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Dyeing.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                          <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+                       
+                            <h4 class="textWhite uk-margin-remove">Dyeing</h4>
+                            <h2 class="textWhite uk-margin-remove">Ero Dyeing, Tamil Nadu</h2>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Cut n Sew.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                             <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+                       
+                            <h4 class="textWhite uk-margin-remove">Cut and sew</h4>
+                            <h2 class="textWhite uk-margin-remove">Hyderabad, Telangana</h2>
+                          </div>
+                        </div>
+                      </li>
+{% comment %}                       <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Warehouse.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                          <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                       
+                            <h4 class="textWhite uk-margin-remove">Warehouse</h4>
+                            <h2 class="textWhite uk-margin-remove">Hyderabad, Telangana, India</h2>
+                          </div>
+                        </div>
+                      </li> {% endcomment %}
+                    </ul>
+                    <a
+                      class="uk-position-center-left uk-position-small"
+                      href="#"
+                      uk-slidenav-previous
+                      uk-slider-item="previous" 
+                      onclick="negativeBtn(this)"
+                    ></a>
+                    <a
+                      class="uk-position-center-right uk-position-small"
+                      href="#"
+                      uk-slidenav-next
+                      uk-slider-item="next"
+                      onclick="positiveBtn(this)"
+                    ></a>
+                  </div>
+                </div>
+              </div>
+<!--                 <p class="uk-hidden@m" style="float:right;color:#777777;margin-top:13px;margin-left:auto;margin-right:0;"><span style="margin-top:-8px;margin-left:-10px;font-size:20px;color:green;position:absolute;"    >*</span> Organic Cotton Material 4</p> -->
+            </div>
+          {% endif %}
+
+          <!-- material 5 -->
+
+          {% if metafield_value == 'Material5' %}
+            <div class="uk-container">
+              <div class="uk-grid-match uk-grid-collapse uk-visible@m" uk-grid>
+                <div class="uk-width-1-3@s">
+                  <div class="uk-card uk-card-default uk-card-body">
+<!--                     <h3>Organic Cotton Material 5</h3> -->
+                    <ul uk-switcher="connect: .natural-cellulose" class="uk-list nc-list">
+                      <li class="uk-active">
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-cultivating.svg' | asset_url }}"></span
+                          >Cultivation/Sorting</a
+                        >
+                      </li>
+                      <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-yarn.svg' | asset_url }}"></span
+                          >Yarn</a
+                        >
+                      </li>
+                      <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-fabric.svg' | asset_url }}"></span
+                          >Fabric</a
+                        >
+                      </li>
+                      <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-dyeing.svg' | asset_url }}"></span
+                          >Dyeing</a
+                        >
+                      </li>
+                      <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-cutsew.svg' | asset_url }}"></span>Cut
+                          and sew</a
+                        >
+                      </li>
+<!--                       <li>
+                        <a class="uk-link-reset" href="#"
+                          ><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-warehouse.svg' | asset_url }}"></span
+                          >Warehouse</a
+                        >
+                      </li> -->
+                    </ul>
+                  </div>
+                </div>
+                <div class="uk-width-2-3@s">
+                  <div class="uk-card uk-card-default uk-card-body uk-padding-remove">
+                    <ul class="uk-switcher natural-cellulose uk-margin uk-height-1-1">
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Cultivation.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">India</h2>
+                        </div>
+                      </li>
+
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Yarn.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">KKP Spinning Mills, Tamil Nadu</h2>
+                        </div>
+                      </li>
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Fabric.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Dinesh Exports Pvt. Ltd., Tamil Nadu</h2>
+                        </div>
+                      </li>
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Dyeing.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Samurai Textile Processors, Tamil Nadu</h2>
+                        </div>
+                      </li>
+                      <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Cut n Sew.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Hyderabad, Telangana</h2>
+                        </div>
+                      </li>
+<!--                       <li class="uk-height-1-1 index-toggle-section">
+                        <img style="max-height:400px" src="{{ 'Warehouse.jpg' | asset_url }}" alt="" uk-cover>
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                          <h2 class="uk-margin-remove">Hyderabad, Telangana, India</h2>
+                        </div>
+                      </li> -->
+                    </ul>
+                  </div>
+                </div>
+<!--                   <p class="" style="float:right;color:#777777;margin-top:13px;margin-left:auto;margin-right:0;"><span style="margin-top:-8px;margin-left:-10px;font-size:20px;color:green;position:absolute;"    >*</span> Organic Cotton Material 5</p> -->
+              </div>
+
+              <!-- small screen -->
+
+              <div class="uk-margin-small-top uk-container uk-hidden@m">
+                <div class="uk-slider-container-offset" id="my-slider" uk-slider="finite: true ; draggable: false">
+                  <div>
+                    <a style="color:black; "
+                      ><span class=" nc-icon uk-margin-small-right uk-flex"
+                        ><img id="icon1" class="uk-width-1-5" src="{{ 'icon-cultivating.svg' | asset_url }}"
+                        ><img id="icon2" class="uk-width-1-5" src="{{ 'icon-yarn.svg' | asset_url }}"
+                        ><img id="icon3" class="uk-width-1-5" src="{{ 'icon-fiber.svg' | asset_url }}"
+                        ><img id="icon4" class="uk-width-1-5" src="{{ 'icon-dyeing.svg' | asset_url }}">
+                        <img id="icon5" class="uk-width-1-5" src="{{ 'icon-cutsew.svg' | asset_url }}"></span
+                    ></a>
+                  </div>
+                  <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+                    <ul class="uk-slider-items uk-child-width-1-1 uk-grid">
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Cultivation.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                        <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+                        
+                            <h4 class="textWhite uk-margin-remove">Cultivation/Sorting</h4>
+                            <h2 class="textWhite uk-margin-remove">India</h2>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Yarn.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                          <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+                        
+                            <h4 class="textWhite uk-margin-remove">Yarn</h4>
+                            <h2 class="textWhite uk-margin-remove">KKP Spinning Mills, Tamil Nadu</h2>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Fabric.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                      <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+                        
+                            <h4 class="textWhite uk-margin-remove">Fabric</h4>
+                            <h2 class="textWhite uk-margin-remove">Dinesh Exports Pvt. Ltd., Tamil Nadu</h2>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Dyeing.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                            <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+                        
+                            <h4 class="textWhite uk-margin-remove">Dyeing</h4>
+                            <h2 class="textWhite uk-margin-remove">Samurai Textile Processors, Tamil Nadu</h2>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Cut n Sew.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                            <div class="uk-position-center uk-position-small uk-text-center uk-light " style="max-width:300px;margin-left:31px;">
+                        
+                            <h4 class="textWhite uk-margin-remove">Cut and sew</h4>
+                            <h2 class="textWhite uk-margin-remove">Hyderabad, Telangana</h2>
+                          </div>
+                        </div>
+                      </li>
+<!--                       <li>
+                        <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+                          <img
+                            class="tab-slider-img"
+                            style="max-height:220px"
+                            src="{{ 'Warehouse.jpg' | asset_url }}"
+                            alt=""
+                            uk-cover
+                          >
+                          <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                        
+                            <h4 class="textWhite uk-margin-remove">Warehouse</h4>
+                            <h2 class="textWhite uk-margin-remove">Hyderabad, Telangana, India</h2>
+                          </div>
+                        </div>
+                      </li> -->
+                    </ul>
+                    <a
+                      class="uk-position-center-left uk-position-small"
+                      href="#"
+                      uk-slidenav-previous
+                      uk-slider-item="previous" 
+                      onclick="negativeBtn(this)"
+                    ></a>
+                    <a
+                      class="uk-position-center-right uk-position-small"
+                      href="#"
+                      uk-slidenav-next
+                      uk-slider-item="next"
+                      onclick="positiveBtn(this)"
+                    ></a>
+                  </div>
+                </div>
+              </div>
+<!--                 <p class="uk-hidden@m" style="float:right;color:#777777;margin-top:13px;margin-left:auto;margin-right:0;"><span style="margin-top:-8px;margin-left:-10px;font-size:20px;color:green;position:absolute;"    >*</span> Organic Cotton Material 5</p> -->
+            </div>
+          {% endif %}
+
+          {% if metafield_value == blank %}
+            <div class="uk-container uk-text-center">This product is devoid of any traceability data.</div>
+          {% endif %}
+        </li>
+
+<!--         <li>
+          <div class="uk-container uk-text-center">
+            <h3 class="uk-heading-small uk-text-bold">Price transparency</h3>
+            <div>
+              We take pride in being transparent about our pricing traceability. We believe that it's important for our
+              customers to understand the true cost of producing each garment and the steps we take to ensure that our
+              products are made sustainably and ethically.
+            </div>
+            <a class="uk-button uk-button-default uk-border-rounded uk-margin-top" href="#">Learn more</a>
+            <div class="uk-child-width-1-2 uk-child-width-1-6@l uk-text-center uk-margin-medium-top" uk-grid>
+              <div>
+                <img src="{{ 'icon-material.svg' | asset_url }}" class="icon-transparency">
+                <div class="uk-text-large uk-text-bold">24%</div>
+                <div>Material</div>
+              </div>
+              <div>
+                <img src="{{ 'icon-material.svg' | asset_url }}" class="icon-transparency">
+                <div class="uk-text-large uk-text-bold">12%</div>
+                <div>
+                  Trims & Accessories<br>
+                  & Packaging
+                </div>
+              </div>
+              <div>
+                <img src="{{ 'icon-material.svg' | asset_url }}" class="icon-transparency">
+                <div class="uk-text-large uk-text-bold">13%</div>
+                <div>Manpower</div>
+              </div>
+              <div>
+                <img src="{{ 'icon-material.svg' | asset_url }}" class="icon-transparency">
+                <div class="uk-text-large uk-text-bold">53%</div>
+                <div>Taxes</div>
+              </div>
+              <div>
+                <img src="{{ 'icon-material.svg' | asset_url }}" class="icon-transparency">
+                <div class="uk-text-large uk-text-bold">27%</div>
+                <div>Shipping</div>
+              </div>
+              <div>
+                <img src="{{ 'icon-material.svg' | asset_url }}" class="icon-transparency">
+                <div class="uk-text-large uk-text-bold">45%</div>
+                <div>Sustainability initiatives</div>
+              </div>
+            </div>
+          </div>
+        </li> -->
+
+        <li>
+          <h3 class="uk-text-center uk-text-bold uk-text-left">A purchase with a purpose</h3>
+          <div class="uk-visible@m" uk-grid>
+            <div class="uk-width-5-6@m uk-child-width-1-2" style="margin-left:0px;" uk-grid>
+              <div class="uk-flex uk-flex-center uk-flex-middle uk-background-contain uk-light uk-text-center uk-height-medium uk-child-width-1-4" data-src="{{ 'carbon-footprint-bg.svg' | asset_url }}" style="width:25%;margin-left:50px;" uk-img="loading: eager" uk-height-match>
+                <div>
+                  <div class="uk-text-large">{{ product.metafields.custom.c02.value }}Kg</div>
+                  <div>Co<sub>2</sub></div>
+                </div>
+              </div>
+              <div class="uk-flex uk-flex-center uk-flex-middle uk-child-width-2-4" style="margin-left:48px;" uk-height-match><p class="uk-text-center ">Redefining responsible consumption! Our products have <strong>~45% less</strong> carbon footprint compared to conventional alternatives but regardless have one. With every product you buy, we take responsibility for <strong>offsetting the CO2 emissions</strong> generated during the crafting of this product. In addition, we also <strong>plant trees</strong> and <strong>rescue ocean plastic</strong>, ensuring each product represents a conscious step forward</p></div>
+            </div>
+            <div class="uk-flex uk-flex-center uk-flex-middle uk-width-1-6@m" uk-height-match><img src="{{ 'plant-tree-illustration.svg' | asset_url }}" style="margin-right:142px;"></div>
+          </div>
+<!--           Mob view -->
+          <div class="uk-hidden@m uk-container" uk-grid>
+            <div class="uk-child-width-1-1" style="margin-left: 0px !important;" uk-grid>
+              <div class="uk-flex uk-flex-center uk-flex-middle uk-background-contain uk-light uk-text-center uk-height-medium" data-src="{{ 'carbon-footprint-bg.svg' | asset_url }}" uk-img="loading: eager" uk-height-match>
+                <div>
+                  <div class="uk-text-large">{{ product.metafields.custom.c02.value }}Kg</div>
+                  <div>Co<sub>2</sub></div>
+                </div>
+              </div>
+              <div class="uk-flex uk-flex-center uk-flex-middle" uk-height-match ><p class="uk-text-center " style="padding-right: 30px;">Redefining responsible consumption! Our products have <strong>~45% less</strong> carbon footprint compared to conventional alternatives but regardless have one. With every product you buy, we take responsibility for <strong>offsetting the CO2 emissions</strong> generated during the crafting of this product. In addition, we also <strong>plant trees</strong> and <strong>rescue ocean plastic</strong>, ensuring each product represents a conscious step forward</p></div>
+            </div>
+            <div class="uk-flex uk-flex-center uk-flex-middle uk-width-1-6@m" uk-height-match><img src="{{ 'plant-tree-illustration.svg' | asset_url }}"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+    @media only screen and (max-width: 640px) {
+    .why-this-matter-toggle-section{
+      height: 250px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    #product_desc_mob_align_1 { order: 2; }
+    #product_desc_mob_align_2 { order: 1; }
+    #product_desc_mob_align_3 { order: 3; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Why This Matters",
+  "settings": []
+}
+{% endschema %}
+
+{% stylesheet %}
+  .nc-icon {
+    height: 35px;
+    display: inline-block;
+  }
+  .nc-icon img {
+    height: 100%;
+  }
+  .nc-list li.uk-active a {
+    font-weight: bold;
+  }
+  img.icon-transparency {
+    height: 100px;
+    margin-bottom: 20px;
+  }
+  .overflowing-x{
+    height:360px;
+    overflow: scroll;
+  }
+
+  .overflowing-x::-webkit-scrollbar {
+    display: none;
+  }
+
+ .nc-list li.uk-active a{
+   color:#61d161 !important;
+   font-size:24px !important;
+ } 
+
+
+.custom-list {
+list-style-type: none; /* Remove default bullets */
+  text-indent:-16px;
+}
+
+.custom-list li::before {
+content:"-" !important; /* Replace with your preferred bullet character */
+color: green !important; /* Set the color to green or any other desired color */
+margin-right: 8px !important; /* Add some spacing between the bullet and the list item text */
+}
+  
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

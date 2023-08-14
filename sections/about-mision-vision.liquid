@@ -1,0 +1,61 @@
+    <div class="uk-child-width-expand@s" uk-grid>
+            <div class="uk-visible@m" style="margin-top: 98px; ">
+                <img src="{{ section.settings['mision-vision'] | img_url : 'master' }}" alt=""   class="uk-contain" />
+            </div>
+            <div class="uk-grid-item-match uk-padding-remove-left  uk-float-right">
+                <div class="lead-icon" style=" padding-top:30px">
+                    <img src="{{ 'leadership.svg' | asset_url }}" alt="" width="110px"  class="uk-float-right"/>
+
+                </div>
+         <div class="mision-vision uk-padding-larg uk-padding-remove-top">
+            <div>
+                    <h1 class="uk-padding-small uk-padding-remove-bottom ">{{ section.settings['head1'] }}</h1>
+                    <p class="uk-width-3-4 uk-padding-small uk-padding-remove-top uk-margin-remove " style="font-size:18px;">{{ section.settings['content1'] }}</p>
+                </div>
+         <div>
+                     <h1 class="uk-padding-small uk-padding-remove-bottom ">{{ section.settings['head2'] }}</h1>
+                    <p class="uk-width-3-4 uk-padding-small uk-padding-remove-top uk-margin-remove uk-flex " style="font-size:18px;"> {{ section.settings['content2'] }}</p>
+                </div>
+               
+         
+        </div>
+            </div>
+        </div>
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": [
+      {
+        "type":"text",
+        "id":"head1",
+        "label":"head1"
+      },
+      {
+        "type":"text",
+        "id":"content1",
+        "label":"content1"
+      },
+      {
+        "type":"text",
+        "id":"head2",
+        "label":"head2"
+      },
+      {
+        "type":"text",
+        "id":"content2",
+        "label":"content2"
+      },
+      {
+        "type":"image_picker",
+        "id":"mision-vision",
+        "label":"image"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

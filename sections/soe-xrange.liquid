@@ -1,0 +1,120 @@
+<section class="uk-section main-section uk-position-relative uk-visible@m" style="padding-bottom: 0;">
+  <div class="uk-container" style="padding-bottom: 20px;">
+    <div class="uk-grid-column-large uk-flex-middle uk-child-width-1-2@m" uk-grid>
+      <div>
+        <div class="">
+          <h2 class="uk-margin-remove">{{ section.settings.main_heading }}</h2>
+          <h4 class="" style="margin-top: 0px;">{{ section.settings.sub_heading }}</h4>
+          <p class="uk-margin-remove" style="font-size: 18px;">
+            {{ section.settings.first_para }}
+          </p>
+          <p style="font-size: 18px;">
+            {{ section.settings.secondary_para }}
+          </p>
+
+          <div class="uk-margin-medium-top">
+            <a href="/pages/sustainability#people" class="uk-button uk-button-primary" style="font-weight: bolder;">
+              {{ section.settings.cta_text }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="uk-border-rounded uk-overflow-hidden">
+          <img src="{{ section.settings['img'] | img_url:'master' }}" loading="lazy" alt="{{ section.settings.img-alt }}">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mobile View -->
+
+<section class="uk-section uk-position-relative uk-hidden@m">
+  <div class="uk-container">
+    <h2 class="uk-margin-remove" style="">{{ section.settings.main_heading }}</h2>
+    <h5 style="margin-top: 0px">{{ section.settings.sub_heading }}</h5>
+    <div class="uk-grid-column-large uk-flex-middle uk-child-width-1-1" uk-grid>
+      <div>
+        <div class="">
+          <p class="uk-margin-remove">
+            {{ section.settings.first_para }}
+          </p>
+          <p>
+            {{ section.settings.secondary_para }}
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="uk-border-rounded uk-overflow-hidden">
+          <img src="{{ section.settings['img'] | img_url:'master' }}" loading="lazy" alt="{{ section.settings.img-alt }}">
+        </div>
+      </div>
+      <div class="uk-margin-small-top uk-flex uk-flex-center">
+        <a href="/pages/sustainability#people" class="uk-button uk-button-primary" style="font-weight: bolder;">
+          {{ section.settings.cta_text }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "SoE X RangeDe",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main_heading",
+      "label": "Main Header"
+    },
+    {
+      "type": "text",
+      "id": "sub_heading",
+      "label": "Sub Header"
+    },
+    {
+      "type": "text",
+      "id": "first_para",
+      "label": "first Paragraph"
+    },
+    {
+      "type": "text",
+      "id": "secondary_para",
+      "label": "secondary Paragraph"
+    },
+    {
+      "type":"image_picker",
+      "id":"img",
+      "label":"image"
+    },
+     { "type": "text", 
+       "id": "img-alt",
+       "label": "img alt" 
+     },
+
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "CTA Text"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "CTA Link"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+  @media screen and (max-width: 650px){
+    .main-section{
+      padding:0px !important;
+    }
+  }
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

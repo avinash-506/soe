@@ -1,0 +1,9 @@
+<section class="headerMargin uk-section uk-section-default cartPage uk-background-cover" style="background-image: url('{{ 'mainSmokeBG.png' | asset_url }}'); background-position: inherit;">
+<!--   {% include 'greenspark-widget' %}
+  {% section 'blub2-imgs' %} -->
+  
+  {% include 'greenspark-cart' %}
+  
+  <cart-component img-size='{{ product.metafields.product.cart_image_size.value }}'></cart-component>
+  
+</section>

@@ -1,0 +1,87 @@
+{% if section.settings.enable_checkbox %}
+<section class="uk-section uk-position-relative">
+    <div class="uk-container" style="z-index:2;">
+        <div class="uk-position-top-right" style="z-index:-1; top: 37px !important;">
+            <img class="uk-visible@m" src="{{ 'price-tag.svg' | asset_url }}" loading="lazy" alt="" style="width:120px;">
+            <img class="uk-hidden@m" src="{{ 'price-tag.svg' | asset_url }}" loading="lazy" alt="" style="width:50px;">
+        </div>
+        <div class="">
+            <h2 class="uk-margin-remove uk-visible@m">{{ section.settings['main_heading'] }}</h2>
+            <h2 class="uk-margin-remove uk-hidden@m">{{ section.settings['mobile_heading'] }}</h2>
+            <p Style="font-size:18px">
+                {{ section.settings['first_paragraph'] }}  
+            </p>
+            <img class="img-toggle-tab1-big" src="{{ section.settings['img-1'] | img_url : 'master' }}" loading="lazy" alt="{{ section.settings.img-alt1 }}">
+            <img class="img-toggle-tab1-small" src="{{ section.settings['img-2'] | img_url : 'master' }}" loading="lazy" alt="{{ section.settings.img-alt1 }}">
+            <p style="font-size:18px;">{{ section.settings['second_paragraph'] }}</p>
+        </div>
+    </div>
+</section>
+
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Pricing Transparency",
+    "settings": [
+      {
+      "type":"checkbox",
+      "id":"enable_checkbox",
+      "label":"Enable section"
+      },
+      {
+        "type":"text",
+        "id": "main_heading",
+        "label": "Main Heading"
+      },
+      {
+        "type":"text",
+        "id": "mobile_heading",
+        "label": "Mobile Main Heading"
+      },
+      {
+        "type": "text",
+        "id": "first_paragraph",
+        "label": "first Paragraph"
+      },
+      {
+        "type":"image_picker",
+        "id": "img-1",
+        "label": "Image Web"
+      },
+       { "type": "text",
+         "id": "img-alt1",
+         "label": "img alt"
+       },
+      {
+        "type":"image_picker",
+        "id": "img-2",
+        "label": "Image Mobile"
+      },
+      {
+        "type": "text",
+        "id": "second_paragraph",
+        "label": "second Paragraph"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+  
+@media only screen and (min-width: 600px){
+   .img-toggle-tab1-small{
+     display: none;
+   }
+} 
+
+@media only screen and (max-width: 600px){
+   .img-toggle-tab1-big{
+     display: none;
+   }
+} 
+  
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

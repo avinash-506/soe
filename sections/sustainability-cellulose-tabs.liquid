@@ -1,0 +1,500 @@
+<section class="uk-section uk-position-relative uk-padding-remove">
+  <div class="uk-container for-desk uk-visible@m">
+    <div>
+      <ul class="uk-flex-center uk-child-width-1-5@s uk-child-width-1-5 uk-flex-wrap" uk-tab>
+
+        <li><a href="#">
+            <h3 class="cellulose-text" style="">Natural <br> Cellulose</h3>
+          </a></li>
+        <li style=""><a href="#" style="padding-rigth: 5px 66px">
+            <h3 class="cellulose-text" style="">Manmade <br> Cellulose</h3>
+          </a></li>
+        <li style=""><a href="#">
+            <h3 class="cellulose-text" style="">Handcrafted <br> Material</h3>
+          </a></li>
+        <li style=""><a href="#" style="padding-rigth: 5px 86px">
+            <h3 class="cellulose-text" style=""> Pre-Consumer <br> Textile Waste </h3>
+          </a></li>
+        <li style=""><a href="#">
+            <h3 class="cellulose-text" style="">Recycled <br> Synthetic </h3>
+          </a></li>
+
+
+      </ul>
+
+      <ul class="uk-switcher uk-margin">
+        <li>
+          <div class="uk-grid  uk-child-width-1-2@m" style="">
+            <div class="uk-flex uk-flex-center">
+              <div style="width:100%; ">
+                <img src="{{ section.settings['natural-desk'] | img_url : 'master' }}" alt="" style="" class="uk-flex uk-flex-center" />
+              </div>
+            </div>
+            <div class="uk-width-1-2@m uk-padding-small " style="padding:30px;">
+              <div>
+               <h4 class=" uk-bold uk-margin-remove" style="">Sweet Spots</h4>
+                <div>{{ section.settings['nc-ss'] }}</div>
+                <h4 class=" uk-bold uk-margin-remove" style="">Sour Notes</h4>
+                 <div>{{ section.settings['nc-sn'] }}</div>
+                <p style="font-size:18px;">  {{ section.settings['nc-op'] }} </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="uk-grid  uk-child-width-1-2@m" style="">
+            <div class="uk-flex uk-flex-center">
+              <div style="width:100%; ">
+                <img src="{{ section.settings['man-desk'] | img_url : 'master' }}" loading="lazy" alt="" style=" border-radius:8px;"
+                  class="uk-flex uk-flex-center" />
+              </div>
+            </div>
+            <div class="uk-width-1-2@m uk-padding-small " style="padding:30px;">
+                <div>
+               <h4 class=" uk-bold uk-margin-remove" style="">Sweet Spots</h4>
+                <div>{{ section.settings['mc-ss'] }}</div>
+                <h4 class=" uk-bold uk-margin-remove" style="">Sour Notes</h4>
+                 <div>{{ section.settings['mc-sn'] }}</div>
+                <p style="font-size:18px;">  {{ section.settings['mc-op'] }} </p>
+              </div>
+
+
+            </div>
+
+          </div>
+        </li>
+        <li>
+          <div class="uk-grid  uk-child-width-1-2@m" style="">
+            <div class="uk-flex uk-flex-center">
+              <div style="width:100%; ">
+                <img src="{{ section.settings['hand-desk'] | img_url : 'master' }}" loading="lazy" alt="" style=" border-radius:8px;"
+                  class="uk-flex uk-flex-center uk-margin-remove" />
+              </div>
+            </div>
+            <div class="uk-width-1-2@m uk-padding-small " style="padding:30px;">
+                <div>
+               <h4 class=" uk-bold uk-margin-remove" style="">Sweet Spots</h4>
+                <div>{{ section.settings['hm-ss'] }}</div>
+                <h4 class=" uk-bold uk-margin-remove" style="">Sour Notes</h4>
+                 <div>{{ section.settings['hm-sn'] }}</div>
+                <p style="font-size:18px;">  {{ section.settings['hm-op'] }} </p>
+              </div>
+
+
+            </div>
+
+          </div>
+        </li>
+        <li>
+          <div class="uk-grid  uk-child-width-1-2@m" style="">
+            <div class="uk-flex uk-flex-center">
+              <div style="width:100%; ">
+                <img src="{{ section.settings['textile-desk'] | img_url : 'master' }}" loading="lazy" alt=""
+                  style=" border-radius:8px;" class="uk-flex uk-flex-center" />
+              </div>
+            </div>
+            <div class="uk-width-1-2@m uk-padding-small " style="padding:30px;">
+               <div>
+               <h4 class=" uk-bold uk-margin-remove" style="">Sweet Spots</h4>
+                <div>{{ section.settings['tw-ss'] }}</div>
+                <h4 class=" uk-bold uk-margin-remove" style="">Sour Notes</h4>
+                 <div>{{ section.settings['tw-sn'] }}</div>
+                <p style="font-size:18px;">  {{ section.settings['tw-op'] }} </p>
+              </div>
+
+
+            </div>
+
+          </div>
+        </li>
+        <li>
+          <div class="uk-grid  uk-child-width-1-2@m" style="">
+            <div class="uk-flex uk-flex-center">
+              <div style="width:100%; ">
+                <img class="" src="{{ section.settings['recycled-desk'] | img_url : 'master' }}" loading="lazy"  alt=""
+                  style=" border-radius:8px;" class="uk-flex uk-flex-center" />
+
+              </div>
+            </div>
+            <div class="uk-width-1-2@m uk-padding-small " style="padding:30px;">
+               <div>
+               <h4 class=" uk-bold uk-margin-remove" style="">Sweet Spots</h4>
+                <div>{{ section.settings['rs-ss'] }}</div>
+                <h4 class=" uk-bold uk-margin-remove" style="">Sour Notes</h4>
+                 <div>{{ section.settings['rs-sn'] }}</div>
+                <p style="font-size:18px;">  {{ section.settings['rs-op'] }} </p>
+              </div>
+
+
+            </div>
+
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="for-mob uk-hidden@m">
+  <div class="uk-padding-large uk-padding-remove-top uk-padding-remove-bottom">
+    <ul uk-accordion>
+      <!--     <li class="uk-padding" style="border:1px groove black; border-radius:8px;"> -->
+      <li>
+        <a class="uk-accordion-title" href="#" style="font-size:18px;">Natural Cellulose </a>
+        <div class="uk-accordion-content">
+          <div class="uk-grid  uk-child-width-1-2@m" style="">
+            <div class="uk-flex uk-flex-center">
+              <div class="cellulose-mob" style="width:100%; ">
+                <img src="{{ section.settings['natural-mob'] | img_url : 'master' }}"loading="lazy"  alt="" style=" border-radius:8px;" class="uk-flex uk-flex-center" />
+              </div>
+              <div class="cellulose-tab" style="width:100%; display:none;">
+                <img src="{{ section.settings['natural-desk'] | img_url : 'master' }}"alt="" loading="lazy" style=" border-radius:8px;" class="uk-flex uk-flex-center" />
+              </div>
+            </div>
+            <div class="uk-width-1-2@m uk-padding-small uk-padding-remove-bottom" style="padding:30px;">
+              <div>
+
+                <h4 class=" uk-bold uk-margin-remove" style="">Sweet Spots</h4>
+               {{ section.settings['nc-ss'] }}
+
+                <h4 class=" uk-bold uk-margin-remove" style="">Sour Notes</h4>
+               {{ section.settings['nc-sn'] }}
+                <p style="font-size:18px;">{{ section.settings['nc-op'] }}</p>
+       </div>
+          </div>
+        </div>
+        </div>
+        <hr>
+      </li>
+      <li>
+        <a class="uk-accordion-title" href="#" style="font-size:18px;">Manmade Cellulose</a>
+        <div class="uk-accordion-content">
+          <div class="uk-grid  uk-child-width-1-2@m" style="">
+            <div class="uk-flex uk-flex-center">
+              <div class="cellulose-mob" style="width:100%; ">
+                <img src="{{ section.settings['man-mob'] | img_url : 'master' }}" loading="lazy" alt="" style="border-radius:8px;"
+                  class="uk-flex uk-flex-center" />
+              </div>
+              <div class="cellulose-tab" style="width:100%; display:none;">
+                <img src="{{ section.settings['man-desk'] | img_url : 'master' }}" loading="lazy" alt="" style="" class="uk-flex uk-flex-center" />
+              </div>
+            </div>
+            <div class="uk-width-1-2@m uk-padding-small uk-padding-remove-bottom" style="padding:30px;">
+              <div>
+
+                <h4 class=" uk-bold uk-margin-remove" style="">Sweet Spots</h4>
+               {{ section.settings['mc-ss'] }}
+                <h4 class=" uk-bold uk-margin-remove" style="text-indent: 0;">Sour Notes</h4>
+               {{ section.settings['mc-sn'] }}
+                <p style="font-size:18px;">{{ section.settings['mc-op'] }}</p>
+
+              </div>
+
+
+            </div>
+
+          </div>
+        </div>
+        <hr>
+      </li>
+      <li>
+        <a class="uk-accordion-title" href="#" style="font-size:18px;">Handcrafted Material</a>
+        <div class="uk-accordion-content">
+          <div class="uk-grid  uk-child-width-1-2@m" style="">
+            <div class="uk-flex uk-flex-center">
+              <div class="cellulose-mob" style="width:100%; ">
+                <img src="{{ section.settings['hand-mob'] | img_url : 'master' }}" alt="" loading="lazy" style=" border-radius:8px;"
+                  class="uk-flex uk-flex-center uk-margin-remove" />
+              </div>
+              <div class="cellulose-tab" style="width:100%; display:none;">
+                <img src="{{ section.settings['hand-desk'] | img_url : 'master' }}" alt="" style="" loading="lazy"  class="uk-flex uk-flex-center" />
+              </div>
+            </div>
+            <div class="uk-width-1-2@m uk-padding-small uk-padding-remove-bottom " style="padding:30px;">
+              <div>
+
+                <h4 class=" uk-bold uk-margin-remove" style="">Sweet Spots</h4>
+               {{ section.settings['hm-ss'] }}
+                <h4 class=" uk-bold uk-margin-remove" style="text-indent: 0;">Sour Notes</h4>
+               {{ section.settings['hm-sn'] }}
+                <p style="font-size:18px;">{{ section.settings['hm-op'] }}</p>
+
+              </div>
+
+
+            </div>
+
+          </div>
+        </div>
+        <hr>
+      </li>
+      <li>
+        <a class="uk-accordion-title" href="#" style="font-size:18px;"> Industrial Textile Waste </a>
+        <div class="uk-accordion-content">
+          <div class="uk-grid  uk-child-width-1-2@m" style="">
+            <div class="uk-flex uk-flex-center">
+              <div class="cellulose-mob" style="width:100%; ">
+                <img src="{{ section.settings['textile-mob'] | img_url : 'master' }}" alt="" loading="lazy" style=" border-radius:8px;"
+                  class="uk-flex uk-flex-center" />
+              </div>
+              <div class="cellulose-tab" style="width:100%; display:none;">
+                <img src="{{ section.settings['textile-desk'] | img_url : 'master' }}" alt="" loading="lazy"  style="" class="uk-flex uk-flex-center" />
+              </div>
+            </div>
+            <div class="uk-width-1-2@m uk-padding-small uk-padding-remove-bottom" style="padding:30px;">
+             <div>
+
+                <h4 class=" uk-bold uk-margin-remove" style="">Sweet Spots</h4>
+               {{ section.settings['tw-ss'] }}
+                <h4 class=" uk-bold uk-margin-remove" style="text-indent: 0;">Sour Notes</h4>
+               {{ section.settings['tw-sn'] }}
+                <p style="font-size:18px;">{{ section.settings['tw-op'] }}</p>
+
+              </div>
+
+
+            </div>
+
+          </div>
+        </div>
+        <hr>
+      </li>
+      <li>
+        <a class="uk-accordion-title" href="#" style="font-size:18px;">Recycled Synthetic </a>
+        <div class="uk-accordion-content">
+          <div class="uk-grid  uk-child-width-1-2@m" style="">
+            <div class="uk-flex uk-flex-center">
+              <div class="cellulose-mob" style="width:100%; ">
+                <img src="{{ section.settings['recycled-mob'] | img_url : 'master' }}" alt="" loading="lazy"  style=" border-radius:8px;"
+                  class="uk-flex uk-flex-center" />
+              </div>
+              <div class="cellulose-tab" style="width:100%; display:none;">
+                <img src="{{ section.settings['recycled-desk'] | img_url : 'master' }}" alt="" style="" loading="lazy"  class="uk-flex uk-flex-center" />
+              </div>
+            </div>
+            <div class="uk-width-1-2@m uk-padding-small uk-padding-remove-bottom " style="padding:30px;">
+               <div>
+
+                <h4 class=" uk-bold uk-margin-remove" style="">Sweet Spots</h4>
+               {{ section.settings['rs-ss'] }}
+                <h4 class=" uk-bold uk-margin-remove" style="text-indent: 0;">Sour Notes</h4>
+               {{ section.settings['rs-sn'] }}
+                <p style="font-size:18px;">{{ section.settings['rs-op'] }}</p>
+
+              </div>
+
+
+            </div>
+
+          </div>
+        </div>
+        <hr>
+      </li>
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+"name": "Section name",
+"settings": [
+   {
+     "type":"text",
+     "id":"nc-ss",
+     "label":"Natural cellulose-Sweet spots"
+    
+   },
+   {
+     "type":"text",
+     "id":"nc-sn",
+     "label":"Natural cellulose-Sour notes"
+    
+   },
+   {
+     "type":"text",
+     "id":"nc-op",
+     "label":"Natural cellulose-Our picks"
+    
+   },
+   {
+   "type":"image_picker",
+   "id":"natural-desk",
+   "label":"natural cellulose image web"
+   },
+   {
+   "type":"image_picker",
+   "id":"natural-mob",
+   "label":"natural cellulose image mobile"
+   },
+  
+   {
+     "type":"text",
+     "id":"mc-ss",
+     "label":"Natural cellulose-Sweet spots"
+    
+   },
+   {
+     "type":"text",
+     "id":"mc-sn",
+     "label":"Natural cellulose-Sour notes"
+    
+   },
+   {
+     "type":"text",
+     "id":"mc-op",
+     "label":"Natural cellulose-Our picks"
+    
+   },
+   {
+   "type":"image_picker",
+   "id":"man-desk",
+   "label":"manmade cellulose image"
+   },
+   {
+   "type":"image_picker",
+   "id":"man-mob",
+   "label":"manmade cellulose image mobile"
+   },
+
+   {
+     "type":"text",
+     "id":"hm-ss",
+     "label":"Natural cellulose-Sweet spots"
+    
+   },
+   {
+     "type":"text",
+     "id":"hm-sn",
+     "label":"Natural cellulose-Sour notes"
+    
+   },
+   {
+     "type":"text",
+     "id":"hm-op",
+     "label":"Natural cellulose-Our picks"
+    
+   },
+   {
+   "type":"image_picker",
+   "id":"hand-desk",
+   "label":"handcrafted cellulose image web"
+   },
+   {
+   "type":"image_picker",
+   "id":"hand-mob",
+   "label":"handcrafted cellulose image mobile"
+   },
+  
+   {
+     "type":"text",
+     "id":"tw-ss",
+     "label":"Natural cellulose-Sweet spots"
+    
+   },
+   {
+     "type":"text",
+     "id":"tw-sn",
+     "label":"Natural cellulose-Sour notes"
+    
+   },
+   {
+     "type":"text",
+     "id":"tw-op",
+     "label":"Natural cellulose-Our picks"
+    
+   },
+   {
+   "type":"image_picker",
+   "id":"textile-desk",
+   "label":"industrial textile image web"
+   },
+   {
+   "type":"image_picker",
+   "id":"textile-mob",
+   "label":"industrial textile image mobile"
+   },
+
+   {
+     "type":"text",
+     "id":"rs-ss",
+     "label":"Natural cellulose-Sweet spots"
+    
+   },
+   {
+     "type":"text",
+     "id":"rs-sn",
+     "label":"Natural cellulose-Sour notes"
+    
+   },
+   {
+     "type":"text",
+     "id":"rs-op",
+     "label":"Natural cellulose-Our picks"
+    
+   },
+   {
+   "type":"image_picker",
+   "id":"recycled-desk",
+   "label":"recycled synthetic image web"
+   },
+   {
+   "type":"image_picker",
+   "id":"recycled-mob",
+   "label":"recycled synthetic image mobile"
+   }
+  
+   ]
+   }
+{% endschema %}
+
+{% stylesheet %}
+
+.dot {
+height: 2vw;
+width: 2vw;
+background-color: #8bb73f;
+border-radius: 50%;
+display: inline-block;
+
+}
+.cont{
+
+padding-left:30px;
+}
+
+
+
+
+.uk-tab > * {
+padding-left:80px;
+
+}
+.custom-list {
+list-style-type: none; /* Remove default bullets */
+}
+
+.custom-list li::before {
+content:"-" !important; /* Replace with your preferred bullet character */
+color: green !important; /* Set the color to green or any other desired color */
+margin-right: 8px !important; /* Add some spacing between the bullet and the list item text */
+}
+
+@media (min-width: 600px) {
+.cellulose-tab{
+display:block !important;;
+
+}
+.cellulose-mob{
+display:none !important;
+}
+}
+
+
+
+
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,433 @@
+<li>
+          <div class="uk-visible@m">
+          {% assign beatles = product.metafields.custom.why_we_exist_description.value | split: ", " %}
+          
+          {% for the_member in beatles %}
+            
+          {% assign metafield_description = the_member %}
+            
+          <div class="uk-width-1-1@m">
+            <div class="uk-container">
+              <div class="uk-position-relative uk-visible-toggle" tabindex="-1" uk-slideshow="autoplay: true; autoplay-interval: 5000; max-height: 380;">
+                <ul class="uk-slideshow-items">
+            
+          <!-- hemp -->
+         {% if metafield_description contains 'hemp' %}
+          <li>
+          
+            <div class="uk-container ">
+              <div class="uk-grid-column-large uk-child-width-1-2@m" uk-grid>
+                <div>
+                  <div class="uk-border-rounded uk-overflow-hidden">
+                    <img src="{{ 'Hemp.png' | asset_url }}" alt="">
+                  </div>
+                </div>
+                <div>
+                  <h2 class=" uk-margin-remove">Hemp</h2>
+                  <p class="uk-margin-remove">
+                    <ul>
+                      <li>Made of 100% hemp, 100% biodegradable</li>
+                      <li>All-season suitability, softens with washing, breathable, lightweight and durable</li>
+                      <li>
+                        Gentle on the environment
+                        <ul>
+                          <li>Requires 1/4 the water needed to grow cotton</li>
+                          <li>Natural and renewable, grows quicker, easier and has a high yield</li>
+                          <li>Naturally resistant to pests, requiring no toxic pesticides or fertilizers</li>
+                          <li>Acts as a natural carbon sink, storing carbon in the soil</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+          </li>
+          <!-- organic cotton -->
+          
+          {% if metafield_description contains 'organic-cotton' %}
+            <li>
+            <div class="uk-container ">
+              <div class="uk-grid uk-child-width-1-2@m" uk-grid>
+                <div id="">
+                  <div class="uk-border-rounded uk-overflow-hidden">
+                    <img src="{{ 'Organic-cotton.png' | asset_url }}" alt="">
+                  </div>
+                </div>
+                <div>
+                  <h2 class="uk-margin-remove" id="">Organic Cotton</h2>
+                  <p class="uk-margin-remove" id="">
+                    <ul>
+                      <li>Produced using non-genetically modified seeds (GMOs).</li>
+                      <li>
+                        Avoids supporting the unethical GMO cotton industry, which drives up seed prices and pressures
+                        farmers into unmanageable debt.
+                      </li>
+                      <li>
+                        Grown without the use of synthetic chemicals (pesticides, fertilizers)
+                        <ul>
+                          <li>Safer for the farmers and workers.</li>
+                          <li>Does not pollute groundwater systems.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        Still requires a lot of water to grow and process, but is easier on the planet than conventional
+                        cotton.
+                      </li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </div>
+          
+          </li>
+                  {% endif %}
+            
+          <!-- description viscose -->
+          
+          {% if metafield_description contains 'viscose' %}
+            <li>
+            <div class="uk-container ">
+              <div class="uk-grid uk-child-width-1-2@m" uk-grid>
+                <div id="">
+                  <div class="uk-border-rounded uk-overflow-hidden">
+                    <img src="{{ 'Viscose.png' | asset_url }}" alt="">
+                  </div>
+                </div>
+                <div>
+                  <h2 class="uk-margin-remove" id="">Viscose</h2>
+                  <p class="uk-margin-remove" id="">
+                    <ul>
+                      <li>Resembles silk and feels like cotton</li>
+                      <li>
+                        Made from Livaeco by Birla Cellulose, derived from the wood pulp of beech or pine trees (not
+                        resource intensive to grow)
+                      </li>
+                      <li>Biodegradable, with a longer degradation period</li>
+                      <li>
+                        Sourced from Forest Stewardship Council (FSC) certified forests, involves no deforestation
+                      </li>
+                      <li>
+                        Chemical-intensive production process, but with a closed loop system to reuse chemicals and
+                        minimise waste and release in effluents
+                      </li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </div>
+              </li>
+          {% endif %}
+          
+          <!-- Gots -->
+          
+          {% if metafield_description contains 'gots' %}
+            <li>
+            <div class="uk-container uk-visible@s">
+              <div class="uk-grid uk-child-width-1-2@m" uk-grid>
+                <div id="">
+                  <div class="uk-border-rounded uk-overflow-hidden">
+                    <img src="{{ 'Gots.png' | asset_url }}" alt="" loading="lazy" >
+                  </div>
+                </div>
+                <div>
+                  <h2 class="uk-margin-remove" id="">GOTS Certified Facilities</h2>
+                  <p class="uk-margin-remove" id="">
+                    <ul>
+                      GOTS (Global Organic Textile Standard) certified facilities right from spinning to weaving to
+                      dyeing, ensuring.
+
+                      <li>
+                        No harmful chemicals used throughout the production process, from harvesting to finished product
+                      </li>
+                      <li>Workers treated fairly and work under safe conditions</li>
+                      <li>Proper treatment and disposal of wastewater and other waste products</li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            </li>
+          {% endif %}
+          
+          <!-- Trims and Accessories -->
+
+          
+          {% if metafield_description contains 'Trims-and-accessories' %}
+            <li>
+            <div class="uk-container">
+              <div class="uk-grid uk-child-width-1-2@m" uk-grid>
+                <div id="">
+                  <div class="uk-border-rounded uk-overflow-hidden">
+                    <img src="{{ 'Corozo-button.png' | asset_url }}" alt="">
+                  </div>
+                </div>
+                <div>
+                  <h2 class="uk-margin-remove" id="">Trims and Accessories</h2>
+                  <p class="uk-margin-remove" id="">
+                    <ul>
+                      <li>
+                        OEKO-TEX Certified Corozo Buttons
+                        <ul>
+                          <li>
+                            Renewable: Made from the seeds of the tagua palm tree, grown in South American rainforests
+                          </li>
+                          <li>Biodegradable: naturally breaks down over time without harming the environment</li>
+                          <li>
+                            Chemical-free: made without any harmful chemicals, making them safer for the environment and
+                            the workers
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        GRS (Global Recycling Standard) Recycled Polyester elastics
+                        <ul>
+                          <li>
+                            Made from recycled materials like plastic bottles or industrial waste, reducing the use of
+                            virgin synthetics
+                          </li>
+                          <li>Production requires 59% less energy compared to virgin polyester</li>
+                          <li>
+                            Has relatively lower strength compared to conventional virgin polyester elastics, but
+                            mitigated in design through fabric waistband
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        OCS (Organic Cotton Standard) certified labels
+                        <ul>
+                          <li>Contributes to the circular economy - making it easier to recycle</li>
+                          <li>Compostable like the main fabric</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </div>
+              </li>
+          {% endif %}
+<!--           {% if metafield_description == blank %}
+            <div class="uk-container"> This product lacks any descriptive information. </div>
+            {% endif %}
+          {% endfor %} -->
+          
+                </ul>
+                <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+              </div>
+            </div>
+          </div>
+          </div>
+          
+     <div class="uk-hidden@m">
+         {% assign beatles = product.metafields.custom.why_we_exist_description.value | split: ", " %}
+              
+         {% for member in beatles %}
+           
+         {% assign metafield_descriptions = member %}
+           
+          <div class="uk-slider-container-offset" uk-slider>
+
+                <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+            
+                    <ul class="uk-slider-items uk-child-width-1-2@s uk-grid" style="color:black">
+                      
+                      {% if metafield_descriptions contains 'hemp' %}
+                        <li>
+                            <div class="uk-container">
+                              <div class="uk-grid-column-large" uk-grid>
+                                <div>
+                                  <h2 class=" uk-margin-remove" style="color:black">Hemp</h2>
+                                  <div class="uk-border-rounded uk-overflow-hidden">
+                                    <img src="{{ 'Hemp.png' | asset_url }}" alt="">
+                                  </div>
+                                </div>
+                                <div>
+                                  <p class="uk-margin-remove">
+                                    <ul>
+                                      <li>Made of 100% hemp, 100% biodegradable</li>
+                                      <li>All-season suitability, softens with washing, breathable, lightweight and durable</li>
+                                      <li>
+                                        Gentle on the environment
+                                        <ul>
+                                          <li>Requires 1/4 the water needed to grow cotton</li>
+                                          <li>Natural and renewable, grows quicker, easier and has a high yield</li>
+                                          <li>Naturally resistant to pests, requiring no toxic pesticides or fertilizers</li>
+                                          <li>Acts as a natural carbon sink, storing carbon in the soil</li>
+                                        </ul>
+                                      </li>
+                                    </ul>
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                        </li>
+                      {% endif %}
+                       {% if metafield_descriptions contains 'organic-cotton' %}
+                        <li>
+                             <div class="uk-container">
+                                <div class="uk-grid" uk-grid>
+                                  <div id="">
+                                    <h2 class="uk-margin-remove" id="" style="color:black">Organic Cotton</h2>
+                                    <div class="uk-border-rounded uk-overflow-hidden">
+                                      <img src="{{ 'Organic-cotton.png' | asset_url }}" alt="">
+                                    </div>
+                                  </div>
+                                  <div>
+                                    <p class="uk-margin-remove" id="">
+                                      <ul>
+                                        <li>Produced using non-genetically modified seeds (GMOs).</li>
+                                        <li>
+                                          Avoids supporting the unethical GMO cotton industry, which drives up seed prices and pressures
+                                          farmers into unmanageable debt.
+                                        </li>
+                                        <li>
+                                          Grown without the use of synthetic chemicals (pesticides, fertilizers)
+                                          <ul>
+                                            <li>Safer for the farmers and workers.</li>
+                                            <li>Does not pollute groundwater systems.</li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          Still requires a lot of water to grow and process, but is easier on the planet than conventional
+                                          cotton.
+                                        </li>
+                                      </ul>
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                        </li>
+                        {% endif %}
+                       {% if metafield_descriptions contains 'viscose' %}
+
+                      <li>
+                            <div class="uk-container">
+                              <div class="uk-grid" uk-grid>
+                                <div id="">
+                                  <h2 class="uk-margin-remove" id="" style="color:black">Viscose</h2>
+                                  <div class="uk-border-rounded uk-overflow-hidden">
+                                    <img src="{{ 'Viscose.png' | asset_url }}" alt="" loading="lazy" >
+                                  </div>
+                                </div>
+                                <div>
+                                  <p class="uk-margin-remove" id="">
+                                    <ul>
+                                      <li>Resembles silk and feels like cotton</li>
+                                      <li>
+                                        Made from Livaeco by Birla Cellulose, derived from the wood pulp of beech or pine trees (not
+                                        resource intensive to grow)
+                                      </li>
+                                      <li>Biodegradable, with a longer degradation period</li>
+                                      <li>
+                                        Sourced from Forest Stewardship Council (FSC) certified forests, involves no deforestation
+                                      </li>
+                                      <li>
+                                        Chemical-intensive production process, but with a closed loop system to reuse chemicals and
+                                        minimise waste and release in effluents
+                                      </li>
+                                    </ul>
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                        </li>
+                         {% endif %}
+                        {% if metafield_descriptions contains 'gots' %}
+                        <li>
+                            <div class="uk-container">
+                              <div class="uk-grid" uk-grid>
+                                <div id="">
+                                  <h2 class="uk-margin-remove" id="" style="color:black">GOTS Certified Facilities</h2>
+                                  <div class="uk-border-rounded uk-overflow-hidden">
+                                    <img src="{{ 'Gots.png' | asset_url }}" alt=""loading="lazy" >
+                                  </div>
+                                </div>
+                                <div>
+                                  <p class="uk-margin-remove" id="">
+                                    <ul>
+                                      GOTS (Global Organic Textile Standard) certified facilities right from spinning to weaving to
+                                      dyeing, ensuring.
+                
+                                      <li>
+                                        No harmful chemicals used throughout the production process, from harvesting to finished product
+                                      </li>
+                                      <li>Workers treated fairly and work under safe conditions</li>
+                                      <li>Proper treatment and disposal of wastewater and other waste products</li>
+                                    </ul>
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            </li>
+                        </li>
+                        {% endif %}
+                       {% if metafield_descriptions contains 'Trims-and-accessories' %}
+                        <li>
+                            <div class="uk-container">
+                                  <div class="uk-grid" uk-grid>
+                                    <div id="">
+                                      <h2 class="uk-margin-remove" id="">Trims and Accessories</h2>
+                                      <div class="uk-border-rounded uk-overflow-hidden">
+                                        <img src="{{ 'Corozo-button.png' | asset_url }}" alt=""loading="lazy" >
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <p class="uk-margin-remove" id="" style="color:black">
+                                        <ul>
+                                          <li>
+                                            OEKO-TEX Certified Corozo Buttons
+                                            <ul>
+                                              <li>
+                                                Renewable: Made from the seeds of the tagua palm tree, grown in South American rainforests
+                                              </li>
+                                              <li>Biodegradable: naturally breaks down over time without harming the environment</li>
+                                              <li>
+                                                Chemical-free: made without any harmful chemicals, making them safer for the environment and
+                                                the workers
+                                              </li>
+                                            </ul>
+                                          </li>
+                                          <li>
+                                            GRS (Global Recycling Standard) Recycled Polyester elastics
+                                            <ul>
+                                              <li>
+                                                Made from recycled materials like plastic bottles or industrial waste, reducing the use of
+                                                virgin synthetics
+                                              </li>
+                                              <li>Production requires 59% less energy compared to virgin polyester</li>
+                                              <li>
+                                                Has relatively lower strength compared to conventional virgin polyester elastics, but
+                                                mitigated in design through fabric waistband
+                                              </li>
+                                            </ul>
+                                          </li>
+                                          <li>
+                                            OCS (Organic Cotton Standard) certified labels
+                                            <ul>
+                                              <li>Contributes to the circular economy - making it easier to recycle</li>
+                                              <li>Compostable like the main fabric</li>
+                                            </ul>
+                                          </li>
+                                        </ul>
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                        </li>
+                      {% endif %}
+                    </ul>
+            
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+            
+                </div>
+            
+                <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+            
+            </div>
+       {% endfor %}
+          </div>
+        </li>

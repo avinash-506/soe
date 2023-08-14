@@ -1,0 +1,188 @@
+
+  <section class="uk-section uk-position-relative uk-visible@m" style="padding-bottom: 0">
+    <div class="uk-container">
+      <div class="uk-child-width-1-2" uk-grid>
+        <div>
+          <div
+            class="uk-inline uk-flex uk-flex-middle uk-background-primary uk-border-rounded block-banner-height"
+            style="height: 604px"
+          >
+            <div style="padding: 0 34px">
+              <div class="uk-position-top-left" style="z-index:1; top:20px;">
+                <img src="{{ 'Vector.png' | asset_url }}"  loading="lazy"  alt="" style="width:120px;">
+              </div>
+
+              <div class="uk-position-bottom-right" style="z-index:5;">
+                <img src="{{ 'Group 58.png' | asset_url }}"  loading="lazy"  alt="" style="width:350px;">
+              </div>
+
+              <h2 class="uk-margin-remove textWhite">{{ section.settings['header-text'] }}</h2>
+              <p class="textWhite" style="font-size:18px;">
+                {{ section.settings['para-text'] }}
+              </p>
+              <div class="">
+                <a href="/pages/sustainability#people" class="uk-button uk-button-primary" style="font-weight:bolder;"
+                  >Explore Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          {% if section.settings.enable_image %}
+          <div
+            class="uk-position-relative uk-visible-toggle uk-light"
+            tabindex="-1"
+            uk-slider="autoplay: true; autoplay-interval: 2000; "
+          >
+            <ul class="uk-slider-items uk-child-width-1-1 ">
+              {% for block in section.blocks %}
+                <li>
+                  <img
+                    class="uk-border-rounded uk-background-cover uk-padding-remove-right block-banner-height"
+                    height="604px"
+                    width="100%"
+                    loading="lazy"
+                    src="{{ block.settings.img | img_url : 'master'}}"
+                    alt=""
+                  >
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endif %}
+          {% if section.settings.enable_video %}
+          <div>
+            <video
+              class="uk-border-rounded uk-background-cover uk-padding-remove-right block-banner-height"
+              src="{{ section.settings.url }}"
+              height="604px"  loading="lazy" 
+              loop
+              muted
+              playsinline
+              uk-video="autoplay: inview"
+            ></video>
+          </div> 
+          {% endif %}
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile View -->
+  <section class="uk-hidden@m" style="padding-bottom: 0">
+    <div class="uk-container">
+      <div>
+        <div>
+          <div
+            class="uk-inline uk-flex uk-flex-middle uk-background-primary block-banner-height"
+            
+          >
+            <div style="padding: 40px 34px;">
+              <div class="uk-position-top-left uk-hidden@m" style="z-index:1; top:20px;">
+                <img src="{{ 'Vector.png' | asset_url }}"  loading="lazy"  alt="" style="width:90px;">
+              </div>
+
+              <div class="uk-position-bottom-right uk-hidden@m" style="z-index:5;">
+                <img src="{{ 'Group 58.png' | asset_url }}"  loading="lazy"  alt="" style="width:170px;">
+              </div>
+
+              <h2 class="uk-margin-remove textWhite">{{ section.settings['header-text'] }}</h2>
+              <p class="textWhite">
+                {{ section.settings['para-text'] }}
+              </p>
+              <div class="">
+                <a
+                  href="/pages/sustainability#people"
+                  class="uk-text-bold uk-button uk-button-primary"
+                  style="font-weight:bolder;"
+                  >Explore Now</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="uk-slider-container-offset" uk-slider="autoplay: true; autoplay-interval: 2000">
+             {% if section.settings.enable_image %}
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+              <ul class="uk-slider-items" uk-grid>
+                {% for block in section.blocks %}
+                  <li class="uk-width-1-1">
+                    <img
+                      class=""
+                      height="400px" width = "100%" loading="lazy"
+                      src="{{ block.settings.img-m | img_url : 'master' }}"
+                      alt=""
+                    >
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+            {% endif %}
+              {% if section.settings.enable_video %}
+          <div>
+            <video
+              class="uk-background-cover uk-padding-remove-right block-banner-height"
+              src="{{ section.settings.url }}"
+              height="400px"
+              loading="lazy"
+              loop
+              muted
+              playsinline
+              uk-video="autoplay: inview"
+            ></video>
+          </div> 
+          {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+{% schema %}
+{
+  "name": "fashion bold banner",
+  "settings": [
+    {
+    "type":"checkbox",
+    "id":"enable_image",
+    "label":"Enable Image(do not enable img and vdo both)"
+    },
+    {
+    "type":"checkbox",
+    "id":"enable_video",
+    "label":"Enable video(do not enable img and vdo both)"
+    },
+    { "type": "text", "id": "header-text", "label": "Header Text" },
+    { "type": "text", "id": "para-text", "label": "Paragraph Text" },
+
+    { "type":"url", "id":"url", "label":"vdo web - upload at backend(content>files>upload>copy url>paste here)" },
+    { "type":"url", "id":"url-m", "label":"video mob (content>files>upload>copy url>paste url here)" }
+
+  ],
+     "blocks":[
+      {
+        "type": "image",
+        "name": "new slider",
+        "settings": [
+          { "type":"image_picker", "id":"img", "label":"image web" },
+          { "type":"image_picker", "id":"img-m", "label":"image mobile" }
+
+      ]
+      }
+    ]
+}
+{% endschema %}
+
+{% stylesheet %}
+  /*   @media only screen and (max-width: 600px) {
+    .block-banner-height {
+      height:350px !important;
+    }
+  } */
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

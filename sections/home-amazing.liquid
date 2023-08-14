@@ -1,0 +1,49 @@
+<section class="mainBG uk-section-default uk-section-large uk-padding-remove-bottom">
+  <div class="uk-container uk-position-relative">
+    <div>
+      <img  src="{{ section.settings.image_top | img_url :'' }}" loading="lazy" alt="" />
+      <!-- style="height: -webkit-fill-available" -->
+    </div>
+    <div class="uk-text-center">
+      <div class="uk-h1 uk-margin-auto headingForSection quoteMarginTop" style="max-width: 756px">{{ section.settings.content }}</div>
+      <p>{{ section.settings.sub_head }}</p>
+    </div>
+    <div class="quoteMarginTop">
+      <img  src="{{ section.settings.image_bottom | img_url :'' }}"loading="lazy"  alt="" />
+      <!-- style="height: -webkit-fill-available" -->
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Home amazing",
+    "settings": [
+      {
+        "type":"image_picker",
+        "id":"image_top",
+        "label":"Image Top"
+      },
+      {
+        "type":"image_picker",
+        "id":"image_bottom",
+        "label":"Image Bottom"
+      },
+      {
+        "type":"textarea",
+        "id":"content",
+        "label":"Content"
+      },
+      {
+        "type":"text",
+        "id":"sub_head",
+        "label":"Text"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

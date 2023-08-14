@@ -1,0 +1,31 @@
+<section class="uk-inline uk-margin-top" >
+  <div class="uk-position-relative" style="width: 100vw; height: 60vw; max-height: 245px; background: #8BB73F; margin-bottom: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 100px;">
+    <div class="" style="text-align: center;z-index:1;">
+      <div class="uk-h2 collection-banner-section1" style="color: #fff;">
+        {{ section.settings['head'] }}
+      </div>
+
+      <div class="uk-h5 uk-margin-remove-top collection-banner-section1 uk-padding-small uk-padding-remove-top uk-padding-remove-bottom" style="color: #fff;">
+       {{ section.settings['subhead'] }}
+      </div>
+    </div>
+
+    <img src="{{ 'needle.svg' | asset_url }}" class="uk-position-top-right uk-padding-small" style="height: 24vh; max-height: 80px;z-index:0;opacity:42%;">
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Below green section",
+    "settings": [
+      { "type": "text", "id": "head", "label": "Heading" },
+      { "type": "text", "id": "subhead", "label": "Sub Heading" }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

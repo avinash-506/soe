@@ -1,0 +1,209 @@
+
+
+  <div class="container">
+               <div class="slide-container active">
+            <div class="slide">
+
+
+
+              
+                <div class="image uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" style="background-image: url({{ 'trends-accessories.png' | asset_url }}) ; height:470px;">
+                 <h3 class="uk-h4 uk-text-center " style="font-size:36px; color:white;">Trims <br> & <br> Accessories</h3>
+                </div>
+                <div class="content uk-padding-small">
+                    <h4 class=" uk-bold uk-margin-remove uk-flex uk-flex-center  " style="font-size:28px;"><b>Getting creative with trims and accessories. Let's trim the waste and accessorise the planet!</b></h4>
+                        <p class=" uk-flex uk-flex-center   uk-margin-remove " style=" color:#8B8B8B; font-size:19px; padding-top:12px;">Our pursuit of a sustainable masterpiece goes beyond just the fabric – it's all in the details! We use GRS certified recycled elastics, OEKO-TEX certified Corozo buttons, cotton labels. But don't you worry, we're not resting on our sustainable laurels - we're working hard to eliminate plastic from seams, zippers, and everything in between too!
+</p>
+                </div>
+              
+            </div>
+
+        </div>
+        <div class="slide-container">
+            <div class="slide">
+                <div class="image">
+                <img src="{{ 'we-support.png' | asset_url }}" loading="lazy"  alt="" />
+                </div>
+                <div class="content uk-padding-small">
+                    <h4 class=" uk-bold uk-margin-remove uk-flex uk-flex-center  " style="font-size:28px;"><b>We support small scale farmers</b></h4>
+                        <p class=" uk-flex uk-flex-center   uk-margin-remove " style=" color:#8B8B8B; font-size:19px; padding-top:12px;">By supporting these farmers, we can help promote sustainable practices, improve their livelihoods, and ensure the continued availability of high-quality, responsibly-sourced materials for our clothing. We do this by forming partnerships with these farmers, offering fair prices for their products, and investing in their communities to provide resources and training to improve their farming practices.</p>
+                </div>
+              
+               
+            </div>
+
+        </div>
+        <div class="slide-container">
+            <div class="slide">
+                <div class="image">
+                <img src="{{ 'trends-accessories.png' | asset_url }}" loading="lazy" alt="" />
+                </div>
+                <div class="content uk-padding-small">
+                    <h4 class=" uk-bold uk-margin-remove uk-flex uk-flex-center  " style="font-size:28px;"><b>We support small scale farmers</b></h4>
+                        <p class=" uk-flex uk-flex-center   uk-margin-remove " style=" color:#8B8B8B; font-size:19px; padding-top:12px;">By supporting these farmers, we can help promote sustainable practices, improve their livelihoods, and ensure the continued availability of high-quality, responsibly-sourced materials for our clothing. We do this by forming partnerships with these farmers, offering fair prices for their products, and investing in their communities to provide resources and training to improve their farming practices.</p>
+                </div>
+              
+            </div>
+
+        </div>
+
+        <div id="prev" onclick="prev()"><</div>
+        <div id="next" onclick="next()">></div>
+    </div>
+
+      <script>
+        let slides = document.querySelectorAll('.slide-container');
+        let index = 0;
+
+        function next() {
+            slides[index].classList.remove('active');
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('active');
+
+        }
+        function prev() {
+            slides[index].classList.remove('active');
+            index = (index - 1 + slides.length) % slides.length;
+            slides[index].classList.add('active');
+
+        }
+
+
+        
+setInterval(next,8000);
+
+
+    </script>
+
+
+
+ 
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": []
+  }
+{% endschema %}
+
+{% stylesheet %}
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;border: none;
+    text-transform: capitalize;
+}
+
+.container{
+    position: relative;
+}
+
+.container .slide-container .slide{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px 9%;
+    padding-bottom: 70px;
+
+
+
+}
+
+.container .slide-container .slide .content{
+    flex:1 1 350px;
+    animation: slideContent .4s linear .6s backwards;
+}
+@keyframes slideImage{
+    0%{
+        opacity:0;
+        transform: translateX(-50px);
+    }
+}
+
+
+.container .slide-container .slide .image{
+    flex:1 1 500px;
+}
+
+.container .slide-container .slide .image img{
+width: 100%;
+animation: slideImage .4s linear;
+
+
+}
+
+@keyframes slideContent{
+    0%{
+        opacity:0;
+        transform: translateY(-50px);
+    }
+}
+
+}
+.container .slide-container .slide .content h4{
+font-size: 35px;
+color: #333;
+  overflow: hidden;
+    flex-wrap: wrap;
+}
+.container .slide-container .slide .content p{
+font-size: 16px;
+color: #666;
+padding: 10px 0px;
+
+}
+
+.container .slide-container{
+    display: none;
+}
+
+.container .slide-container.active{
+    display: block;
+}
+
+
+.container #prev,.container #next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color:  rgb(120, 120, 120);
+   
+    height: 50px;
+    width: 40px;
+    line-height: 50px;
+    font-size: 25px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bolder;
+}
+.container #prev:hover,.container #next:hover{
+   
+    border-radius: 50px;
+}
+.container #prev{
+    left: 20px;
+}
+.container #next{
+    right: 20px;
+}
+
+@media(max-width:500px){
+    .container #prev{
+        left: 0px;
+        top:60%;
+    }
+    .container #next{
+        right: 0px;
+        top:60%;
+    }
+}
+
+
+{% endstylesheet %}
+
+{% javascript %}
+  
+  
+{% endjavascript %}

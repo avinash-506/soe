@@ -1,0 +1,87 @@
+ <div class="out-put-the-best uk-padding-small" style="margin-top:20px;">
+      <h1 style="" class="uk-padding-small uk-text-center">{{ section.settings['header'] }}</h1>
+
+    <p style="font-size:18px;" class="uk-text-center  ">{{ section.settings['paragraph'] }}</p>
+  </div>
+
+
+<section id="materials">
+  <div class="material" style="margin-top:10px;">
+    
+      <div class="uk-child-width-expand@m" uk-grid style="margin:0;">
+
+         <h1 class=" uk-padding-small  uk-padding-remove-top  uk-text-center uk-hidden@m uk-margin-large-top  " style="">{{ section.settings['header-material'] }}</h1>
+
+         <div  class=" uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle uk-padding-remove" style="background-image: url({{ section.settings['material_image'] | img_url : 'master' }}) ; height:523px;border-radius:4px; ">
+   <h2 class="uk-text-center trims-para  " style="width:348px;color:white;">{{ section.settings['para-on-image'] }}</h2>
+        </div>
+
+
+<div class="uk-grid-item-match uk-padding-remove" style="margin:auto;">
+            <div  class="uk-text-center uk-padding-small uk-padding-remove uk-margin-remove">
+          
+               
+                <h1 class="     uk-padding-small  uk-text-center uk-visible@m  " >{{ section.settings['header-material'] }}</h1>
+<!--                <h4 class="num uk-padding-small  uk-text-bold  uk-text-center  " data-val="100" style="margin-top:25px; color:#8BB73F; font-size:60px;">100%</h4> -->
+             
+ 
+
+                 <img class="per-illu"  src="{{ '100-per.gif' | asset_url }}" alt="" loading="lazy"   width="420vw" style="margin-top:-68px;">
+              
+                    <p class="  uk-padding-small uk-padding-remove-top uk-text-center  " style=" font-size:18px;margin-top:-36px; ">{{ section.settings['material_para'] }}</p>
+            </div>
+         
+        </div>
+        
+        
+       
+        
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": [
+      {
+        "type":"text",
+        "id":"header",
+        "label":"head1"
+ 
+      },
+      {
+        "type":"text",
+        "id":"paragraph",
+        "label":"text1"
+      },
+      {
+        "type":"text",
+        "id":"header-material",
+        "label":"head2"
+      },
+      {
+        "type":"text",
+        "id":"material_para",
+        "label":"text2"
+      },
+      {
+        "type":"text",
+        "id":"para-on-image",
+        "label":"content on the image"
+      },
+      {
+        "type":"image_picker",
+        "id":"material_image",
+        "label":"img"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,48 @@
+<div class="our-fav-fabric uk-margin-large-top uk-margin-large-bottom" >
+
+  <div>
+    <div class="head uk-text-center uk-padding-small" >
+      <h1 class="uk-margin-remove" style="">{{ section.settings['head'] }}</h1>
+    
+    </div>
+
+<div class="con uk-padding-small  uk-padding-remove-top " style="  line-height: 1.7;">
+  {{ section.settings['content'] }}
+</div>
+    
+  </div>
+  
+</div>
+<div class="margin"></div>
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": [
+            {
+        "type":"text",
+        "id":"head",
+        "label":"head"
+      },
+            {
+        "type":"text",
+        "id":"content",
+        "label":"content"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+@media screen and (max-width: 620px) {
+  .margin{
+    margin:46px !important;
+    
+  }
+}
+  
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

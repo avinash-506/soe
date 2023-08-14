@@ -1,0 +1,41 @@
+ <div class="we-are-connected " style="margin-top:20px">
+    <div class="main-head uk-text-center"><h1 class="  uk-padding-small uk-margin-remove-bottom" style="">{{ section.settings['header'] }}</h1></div>
+    <div class="uk-text-center uk-padding-small uk-padding-remove-top " style="line-height:1.9;"><p class="" style="font-size:18px;">{{ section.settings['content'] }}</p></div>
+
+    
+    <div class=" uk-flex uk-flex-center uk-flex-wrap uk-padding-small uk-visible@s "  >
+ <img class="earth-equa" style="width:64%;  "  loading="lazy" src="{{ 'earthpos01' | asset_url }}" alt="" />
+
+</div>
+    <div class=" uk-flex uk-flex-center uk-flex-wrap uk-padding-small uk-hidden@s "  >
+ <img class="earth-equa" style="width:64%;  " loading="lazy"  src="{{ 'sus-equa-mob-01.png' | asset_url }}" alt="" />
+
+</div>
+ </div>
+
+
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": [
+      {
+        "type":"text",
+        "id":"header",
+        "label":"head"
+        
+      },
+      {
+      "type":"text",
+      "id":"content",
+      "label":"content"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,92 @@
+<div id="sizeChartModal" uk-modal>
+  <div class="uk-modal-dialog uk-modal-body uk-padding-remove">
+    {% assign sizechart = product.metafields.custom.size_chart %}
+      {% if sizechart contains 'women' %}
+        <img class="uk-visible@m" style="height:500px; " src="{{ section.settings['womens'] | img_url : 'master' }}" alt="" srcset="">
+        <img class="uk-hidden@m" style="width:360px; " src="{{ section.settings['womens-m'] | img_url : 'master' }}" alt="" srcset="">
+      {% endif %}
+      {% if sizechart contains 'men-slim' %}
+        <img class="uk-visible@m" style="height:500px; " src="{{ section.settings['menslim'] | img_url : 'master' }}" alt="" srcset="">
+        <img class="uk-hidden@m" style="width:360px; " src="{{ section.settings['menslim-m'] | img_url : 'master' }}" alt="" srcset="">
+      {% endif %}
+      {% if sizechart contains 'men-regular' %}
+        <img class="uk-visible@m" style="height:500px; " src="{{ section.settings['menregular'] | img_url : 'master' }}" alt="" srcset="">
+        <img class="uk-hidden@m" style="width:360px; " src="{{ section.settings['menregular-m'] | img_url : 'master' }}" alt="" srcset="">
+      {% endif %}
+      {% if sizechart contains 'men-jacket' %}
+        <img class="uk-visible@m" style="height:500px; " src="{{ section.settings['menjacket'] | img_url : 'master' }}" alt="" srcset="">
+        <img class="uk-hidden@m" style="width:360px; " src="{{ section.settings['menjacket-m'] | img_url : 'master' }}" alt="" srcset="">
+      {% endif %}
+      {% if sizechart contains 'men-bottom' %}
+        <img class="uk-visible@m" style="height:500px; " src="{{ section.settings['menbottom'] | img_url : 'master' }}" alt="" srcset="">
+        <img class="uk-hidden@m" style="width:360px; " src="{{ section.settings['menbottom-m'] | img_url : 'master' }}" alt="" srcset="">
+      {% endif %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Size chart",
+    "settings": [
+      {
+         "type": "image_picker",
+      "id": "womens",
+      "label": "womens"
+      },
+      {
+         "type": "image_picker",
+      "id": "menslim",
+      "label": "men-slim"
+      },
+      {
+         "type": "image_picker",
+      "id": "menregular",
+      "label": "men-regular"
+      },
+      {
+         "type": "image_picker",
+      "id": "menjacket",
+      "label": "men-jacket"
+      },
+      {
+         "type": "image_picker",
+      "id": "menbottom",
+      "label": "men-bottom"
+      },
+
+      //mobile 
+      
+      {
+         "type": "image_picker",
+      "id": "womens-m",
+      "label": "womens  small screen"
+      },
+      {
+         "type": "image_picker",
+      "id": "menslim-m",
+      "label": "men-slim small screen"
+      },
+      {
+         "type": "image_picker",
+      "id": "menregular-m",
+      "label": "men-regular small screen"
+      },
+      {
+         "type": "image_picker",
+      "id": "menjacket-m",
+      "label": "men-jacket small screen"
+      },
+      {
+         "type": "image_picker",
+      "id": "menbottom-m",
+      "label": "men-bottom small screen"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

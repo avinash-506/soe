@@ -1,0 +1,158 @@
+<div class="contactPage">
+  <section class="headerMargin uk-section-default uk-section faq uk-background-cover contactPage">
+    <div class="uk-container">
+      <div class="uk-child-width-1-2@m formDiv" uk-height-match="target: > div > .uk-card" uk-grid>
+        <div>
+          <div class="uk-card">
+            {%- form 'contact', id: 'ContactForm', class: 'isolate' -%} {%- if form.posted_successfully? -%}
+            <h1>thanks</h1>
+            {%- elsif form.errors -%}
+            <div class="form__message">
+              <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>{% render 'icon-error' %} {{ 'templates.contact.form.error_heading' | t }}</h2>
+            </div>
+            <ul class="form-status-list caption-large" role="list">
+              <li>
+                <a href="#ContactForm-email" class="link"> {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }} </a>
+              </li>
+            </ul>
+            {%- endif -%}
+            <h1 class="uk-margin-remove-top uk-margin-medium-bottom uk-text-bolder">Get in touch</h1>
+            <div uk-grid>
+              <div class="uk-width-1-1">
+                <div class="uk-margin">
+                  <div class="uk-form-controls">
+                    <input class="uk-input" type="text" placeholder="Enter your name here" name="contact[first_name]" value="{{ form.first_name }}" />
+                  </div>
+                </div>
+              </div>
+              <div class="uk-width-1-1">
+                <div class="uk-margin">
+                  <div class="uk-form-controls">
+                    <input class="uk-input" type="text" placeholder="Enter your last name" name="contact[last_name]" value="{{ form.last_name }}" />
+                  </div>
+                </div>
+              </div>
+              <div class="uk-width-1-1@m">
+                <div class="uk-margin">
+                  <div class="uk-form-controls">
+                    <input class="uk-input" required type="email" placeholder="name@domain.com" name="contact[email]" value="{{ form.email }}" />
+                  </div>
+                </div>
+              </div>
+              <div class="uk-width-1-1@m">
+                <div class="uk-margin">
+                  <div class="uk-form-controls">
+                    <input class="uk-input" type="text" placeholder="Enter your organization name" name="contact[company]" value="{{ form.company }}" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="uk-width-1-1@m">
+                <div class="uk-margin">
+                  <div class="uk-form-controls">
+                    <textarea class="uk-textarea" rows="5" placeholder="Write your message here..." name="contact[message]" value="{{ form.message }}"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="uk-width-1-1@m">
+                <div class="uk-margin">
+                  <div class="uk-form-controls">
+                    <input class="uk-button uk-button-primary uk-width-1-1" value="Send message" type="submit" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endform %}
+          </div>
+        </div>
+        <div>
+          <div class="uk-background-cover uk-card mapDiv" style="background-image: url('{{ 'mapSS.png' | asset_url }}');"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="uk-section-default uk-section">
+    <div class="uk-container">
+      <h1 class="uk-text-bolder uk-text-center uk-margin-medium-bottom">Contact information</h1>
+
+      <div class="uk-child-width-1-2@m" uk-grid>
+        <div>
+          <div class="uk-card uk-card-body uk-card-small uk-card-default uk-border-rounded-small">
+            <h3 class="uk-text-bolder uk-margin-remove-top">Support & warranty</h3>
+            <p class="uk-margin-remove-top uk-margin-small-bottom uk-flex uk-flex-middle"><img style="width: 14px; margin-right: 6px" src="{{ 'map.svg' | asset_url }}" alt="" /> Bangalore, India</p>
+            <p class="uk-margin-remove-top uk-margin-small-bottom uk-flex uk-flex-middle"><img style="width: 14px; margin-right: 6px" src="{{ 'time.svg' | asset_url }}" alt="" /> 9AM - 5PM, Monday to Friday</p>
+            <p class="uk-margin-remove-top uk-margin-small-bottom uk-flex uk-flex-middle"><img style="width: 16px; margin-right: 6px" src="{{ 'telephone-call.svg' | asset_url }}" alt="" /> 9810127282</p>
+            <p class="uk-margin-remove-top uk-margin-small-bottom uk-flex uk-flex-middle"><img style="width: 16px; margin-right: 6px" src="{{ 'email.svg' | asset_url }}" alt="" /> ravinder.gupta69@gmail.com</p>
+          </div>
+        </div>
+        <div>
+          <div class="uk-card uk-card-body uk-card-small uk-card-default uk-border-rounded-small">
+            <h3 class="uk-text-bolder uk-margin-remove-top">Sales & bulk orders</h3>
+            <p class="uk-margin-remove-top uk-margin-small-bottom uk-flex uk-flex-middle"><img style="width: 14px; margin-right: 6px" src="{{ 'map.svg' | asset_url }}" alt="" /> Bangalore, India</p>
+            <p class="uk-margin-remove-top uk-margin-small-bottom uk-flex uk-flex-middle"><img style="width: 14px; margin-right: 6px" src="{{ 'time.svg' | asset_url }}" alt="" /> 9AM - 5PM, Monday to Friday</p>
+            <p class="uk-margin-remove-top uk-margin-small-bottom uk-flex uk-flex-middle"><img style="width: 16px; margin-right: 6px" src="{{ 'telephone-call.svg' | asset_url }}" alt="" /> 9810127282</p>
+            <p class="uk-margin-remove-top uk-margin-small-bottom uk-flex uk-flex-middle"><img style="width: 16px; margin-right: 6px" src="{{ 'email.svg' | asset_url }}" alt="" /> ravinder.gupta69@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="uk-section uk-section-default">
+    <div class="uk-container">
+      <h1 class="uk-text-bolder uk-text-center uk-margin-medium-bottom">Service centers</h1>
+
+      <div class="uk-child-width-1-3@m" uk-grid>
+        <div>
+          <div class="uk-card uk-card-body uk-card-small uk-card-default uk-border-rounded-small">
+            <div>
+              <span class="bgPrimaryGreen textWhite uk-text-small badge">Authorised service center</span>
+            </div>
+            <h3 class="uk-text-bolder uk-margin-small-top">Rameshwar Das Jawahar Lal (Collection Point)</h3>
+            <p class="uk-margin-remove-top uk-margin-small-bottom uk-flex uk-flex-middle"><img style="width: 14px; margin-right: 6px" src="{{ 'map.svg' | asset_url }}" alt="" /> Bangalore, India</p>
+            <p class="uk-margin-remove-top uk-margin-small-bottom uk-flex uk-flex-middle"><img style="width: 16px; margin-right: 6px" src="{{ '23-direction.svg' | asset_url }}" alt="" /> Address : M-24, Connaught Circus, Counaght Place, 110001</p>
+            <p class="uk-margin-remove-top uk-margin-small-bottom uk-flex uk-flex-middle"><img style="width: 16px; margin-right: 6px" src="{{ 'telephone-call.svg' | asset_url }}" alt="" /> 9810127282</p>
+            <p class="uk-margin-remove-top uk-margin-small-bottom uk-flex uk-flex-middle"><img style="width: 16px; margin-right: 6px" src="{{ 'email.svg' | asset_url }}" alt="" /> ravinder.gupta69@gmail.com</p>
+
+            <div style="margin-top: 28px !important">
+              <a href="#" class="uk-button uk-button-default uk-width-1-1" style="border-color: #353332 !important; color: #353332 !important">Locate on map</a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="uk-card uk-card-body uk-card-small uk-card-default uk-border-rounded-small">
+            <div>
+              <span class="bgPrimaryGreen textWhite uk-text-small badge">Authorised service center</span>
+            </div>
+            <h3 class="uk-text-bolder uk-margin-small-top">Rameshwar Das Jawahar Lal (Collection Point)</h3>
+            <p class="uk-margin-remove-top uk-margin-small-bottom uk-flex uk-flex-middle"><img style="width: 14px; margin-right: 6px" src="{{ 'map.svg' | asset_url }}" alt="" /> Bangalore, India</p>
+            <p class="uk-margin-remove-top uk-margin-small-bottom uk-flex uk-flex-middle"><img style="width: 16px; margin-right: 6px" src="{{ '23-direction.svg' | asset_url }}" alt="" /> Address : M-24, Connaught Circus, Counaght Place, 110001</p>
+            <p class="uk-margin-remove-top uk-margin-small-bottom uk-flex uk-flex-middle"><img style="width: 16px; margin-right: 6px" src="{{ 'telephone-call.svg' | asset_url }}" alt="" /> 9810127282</p>
+            <p class="uk-margin-remove-top uk-margin-small-bottom uk-flex uk-flex-middle"><img style="width: 16px; margin-right: 6px" src="{{ 'email.svg' | asset_url }}" alt="" /> ravinder.gupta69@gmail.com</p>
+
+            <div style="margin-top: 28px !important">
+              <a href="#" class="uk-button uk-button-default uk-width-1-1" style="border-color: #353332 !important; color: #353332 !important">Locate on map</a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="uk-card uk-card-body uk-card-small uk-card-default uk-border-rounded-small">
+            <div>
+              <span class="bgPrimaryGreen textWhite uk-text-small badge">Authorised service center</span>
+            </div>
+            <h3 class="uk-text-bolder uk-margin-small-top">Rameshwar Das Jawahar Lal (Collection Point)</h3>
+            <p class="uk-margin-remove-top uk-margin-small-bottom uk-flex uk-flex-middle"><img style="width: 14px; margin-right: 6px" src="{{ 'map.svg' | asset_url }}" alt="" /> Bangalore, India</p>
+            <p class="uk-margin-remove-top uk-margin-small-bottom uk-flex uk-flex-middle"><img style="width: 16px; margin-right: 6px" src="{{ '23-direction.svg' | asset_url }}" alt="" /> Address : M-24, Connaught Circus, Counaght Place, 110001</p>
+            <p class="uk-margin-remove-top uk-margin-small-bottom uk-flex uk-flex-middle"><img style="width: 16px; margin-right: 6px" src="{{ 'telephone-call.svg' | asset_url }}" alt="" /> 9810127282</p>
+            <p class="uk-margin-remove-top uk-margin-small-bottom uk-flex uk-flex-middle"><img style="width: 16px; margin-right: 6px" src="{{ 'email.svg' | asset_url }}" alt="" /> ravinder.gupta69@gmail.com</p>
+
+            <div style="margin-top: 28px !important">
+              <a href="#" class="uk-button uk-button-default uk-width-1-1" style="border-color: #353332 !important; color: #353332 !important">Locate on map</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

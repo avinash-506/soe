@@ -1,0 +1,64 @@
+{% comment %} <div class="uk-container uk-section" style="padding-bottom:0;"> <img class="img-toggle-tab1-big" src="{{ "Group24638.png" |asset_url }}"> </div>
+<div class="img-toggle-tab1-small" style="padding-left:20px"> <img src="{{ "blurb1.png" |asset_url }}"> </div> {% endcomment %}
+
+<!-- style="padding-left:20px" -->
+<div class="uk-section uk-visible@s" style="padding-bottom:0;"></div>
+<section class=" uk-section" style="padding-bottom: 0; ">
+    
+  <div class="uk-container" style="z-index:2;position:relative;">
+    <div class="uk-child-width-1-3" uk-grid>
+      
+        <div class="blurb-container">
+          <img class="img-size" src="{{ '001.png' | asset_url }}" loading="lazy" alt="" />
+       
+          <p class=" uk-text-bold">Earth Positive</p>
+        </div>
+
+        <div class="blurb-container">
+              <img class="img-size" src="{{ '002.png' | asset_url }}" loading="lazy" alt="" />
+     
+          <p class=" uk-text-bold">Ethical People Practices</p>
+        </div>
+
+        <div class="blurb-container">
+              <img class="img-size" src="{{ '003.png' | asset_url }}" loading="lazy" alt="" />
+          
+          <p class=" uk-text-bold">Thoughtfully Made</p>
+        </div>
+    </div>
+  
+  </div>
+   <div class="bg-line uk-visible@s uk-container"><img class="background-line" style="z-index:0;margin-top:-371px;position:relative;" src="{{ '004.png' | asset_url }}" alt="" /></div>
+   <div class="bg-line uk-hidden@s"><img class="background-line" style="z-index:0;margin-top:-271px;position:relative;" src="{{ '004.png' | asset_url }}" alt="" /></div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "blub imgs 1",
+    "settings": []
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+
+  
+
+  
+@media only screen and (min-width: 600px){
+   .img-toggle-tab1-small{
+     display: none;
+   }
+} 
+
+@media only screen and (max-width: 600px){
+   .img-toggle-tab1-big{
+     display: none;
+   }
+} 
+  
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

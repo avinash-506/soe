@@ -1,0 +1,217 @@
+<script>
+  async function fetchWidgetForHeader() {
+    const response = await fetch('https://api.getgreenspark.com/widgets/stats-widget', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-API-KEY': 'zinBYZP2Zx2HzxnLAVJGtVNwWWMYwwLBrfnbTFX%2FeVkzdwxCiUXEMlDxh%2BCZlvhfc7pG%2BVXvXd',
+      },
+      body: JSON.stringify({
+        color: 'white'
+      }),
+    });
+
+    if (response.ok) {
+      const data = await response.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(data, 'text/html');
+
+      const labels = Array.from(doc.querySelectorAll('.gs-stats-label')).map(node => node.innerText);
+
+      // Get the parent container element
+      const parentContainer = document.getElementById('responseContainer');
+
+      // Clear the container
+      parentContainer.innerHTML = '';
+
+      // Create a separate div for each label and append it to the container
+      labels.forEach(label => {
+        const div = document.createElement('div');
+        const words = label.split(" ");
+        const firstWord = words[0];
+        console.log("this is FirstWord", firstWord);
+        div.textContent = firstWord;
+        parentContainer.appendChild(div);
+      });
+    } else {
+      const error = await response.text();
+      throw new Error(error);
+    }
+  };
+
+    fetchWidgetForHeader();
+</script>
+
+
+{% comment %} 
+<script>
+async function fetchWidgetForHeader() {
+const response = await fetch('https://api.getgreenspark.com/widgets/stats-widget', {
+method: 'POST',
+headers: {
+'Content-Type': 'application/json',
+'X-API-KEY': 'zinBYZP2Zx2HzxnLAVJGtVNwWWMYwwLBrfnbTFX%2FeVkzdwxCiUXEMlDxh%2BCZlvhfc7pG%2BVXvXd',
+},
+body: JSON.stringify({
+color: 'white'
+}),
+});
+
+if (response.ok) {
+const data = await response.text();
+const parser = new DOMParser();
+const doc = parser.parseFromString(data, 'text/html');
+
+const labels = Array.from(doc.querySelectorAll('.gs-stats-label')).map(node => node.innerText);
+
+const parentContainer = document.getElementById('responseContainer');
+parentContainer.innerHTML = '';
+
+// Create a separate div for each label and append it to the container
+labels.forEach((label, index) => {
+const div = document.createElement('div');
+div.setAttribute('id', 'count-' + (index+1));
+const words = label.split(" ");
+const firstWord = words[0];
+  console.log("this is console");
+div.textContent = 0;
+parentContainer.appendChild(div).setAttribute("data-target", firstWord);
+
+});
+} else {
+const error = await response.text();
+throw new Error(error);
+}
+};
+
+function startCounter() {
+var treeInput = document.getElementById("count-1").getAttribute("data-target");
+var treeValue = parseInt(treeInput.trim(), 10);
+
+var bottleInput = document.getElementById("count-2").getAttribute("data-target");
+var bottleValue = parseInt(bottleInput.trim(), 10);
+
+var carbonInput = document.getElementById("count-3").getAttribute("data-target");
+var carbonValue = parseInt(carbonInput.trim(), 10);
+
+var hasCounterStarted = false;
+
+document.addEventListener("scroll", () => {
+if (!hasCounterStarted && window.pageYOffset > 5600) {
+hasCounterStarted = true;
+function counter(id, start, end, duration) {
+let obj = document.getElementById(id),
+current = start,
+range = end - start,
+increment = end > start ? 1 : -1,
+step = Math.abs(Math.floor(duration / range)),
+timer = setInterval(() => {
+current += increment;
+obj.textContent = current;
+if (current === end) {
+clearInterval(timer);
+}
+}, step);
+}
+counter("count-1", 0, treeValue, 3000);
+counter("count-2", 0, bottleValue, 3000);
+counter("count-3", 0, carbonValue, 3000);
+}
+});
+}
+async function fetchWidgetAndStartCounter() {
+  await fetchWidgetForHeader();
+  startCounter();
+}
+
+fetchWidgetAndStartCounter();
+  
+</script> {% endcomment %}
+
+<!-- <script>
+  async function fetchWidgetForHeader() {
+    const response = await fetch('https://api.getgreenspark.com/widgets/stats-widget', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-API-KEY': 'zinBYZP2Zx2HzxnLAVJGtVNwWWMYwwLBrfnbTFX%2FeVkzdwxCiUXEMlDxh%2BCZlvhfc7pG%2BVXvXd',
+      },
+      body: JSON.stringify({
+        color: 'white'
+      }),
+    });
+
+    if (response.ok) {
+      const data = await response.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(data, 'text/html');
+
+      const labels = Array.from(doc.querySelectorAll('.gs-stats-label')).map(node => node.innerText);
+
+      // Get the parent container element
+      const parentContainer = document.getElementById('responseContainer');
+   
+      // Clear the container
+      parentContainer.innerHTML = '';
+
+      // Create a separate div for each label and append it to the container
+      labels.forEach(label => {
+        const div = document.createElement('div');
+        div.setAttribute('class', 'count');
+        const words = label.split(" ");
+        const firstWord = words[0];
+        console.log("this is FirstWord", firstWord);
+        div.textContent = 0;
+        parentContainer.appendChild(div).setAttribute("data-target", firstWord);
+
+        const counters = document.querySelectorAll(".count");
+
+        window.onscroll = () => {
+            if (window.pageYOffset > 5150) {
+              counters.forEach((counter) => {
+                      const updateCount = () => {
+                        const target = parseInt(+counter.getAttribute("data-target"));
+                        const count = parseInt(+counter.innerText);
+                        const increment = 1;
+                        console.log(increment);
+                    
+                        if (count < target) {
+                          counter.innerText = count + increment;
+                          setTimeout(updateCount, 1);
+                        } else {
+                          count.innerText = target;
+                        }
+                      };
+                      updateCount();
+              });
+            }
+          };
+      });
+    } else {
+      const error = await response.text();
+      throw new Error(error);
+    }
+  };
+    fetchWidgetForHeader();
+
+      const counters = document.querySelectorAll(".count");
+      const speed = 3000; // Speed set to 3 seconds
+      
+      counters.forEach((counter) => {
+        const updateCount = () => {
+          const target = parseInt(counter.getAttribute("data-target"));
+          const count = parseInt(counter.innerText);
+          const increment = Math.ceil(target / (speed / 1000)); // Calculate the increment based on the speed
+      
+          if (count < target) {
+            counter.innerText = count + increment;
+            setTimeout(updateCount, 1000); // Update every second
+          } else {
+            counter.innerText = target;
+          }
+        };
+        updateCount();
+      });
+
+
+</script> -->

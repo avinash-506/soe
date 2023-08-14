@@ -1,0 +1,165 @@
+<section class="ticker-section uk-section" style="padding-bottom: 0;">
+  <div class="uk-container" style="z-index:2; position:relative;">
+    <div class="uk-child-width-1-3" uk-grid>
+      <div class="blurb-container">
+        <a href="https://app.getgreenspark.com/dashboard/1684991288373/shades-of-earth">
+          <img class="img-size" src="{{ 'individuals.png' | asset_url }}" loading="lazy" alt="" />
+        </a>
+        <h2 class="uk-margin-remove uk-padding-small"><span id="count1"></span></h2>
+        <p class="uk-margin-remove">Individuals</p>
+      </div>
+
+      <div class="blurb-container">
+        <a href="https://app.getgreenspark.com/dashboard/1684991288373/shades-of-earth">
+          <img class="img-size" src="{{ 'potential day of livelihood.png' | asset_url }}" loading="lazy" alt="" />
+        </a>
+        <h2 class="uk-margin-remove uk-padding-small"><span id="count2"></span></h2>
+        <p class="uk-margin-remove">Potential days of livelihood</p>
+      </div>
+
+      <div class="blurb-container">
+        <a href="https://app.getgreenspark.com/dashboard/1684991288373/shades-of-earth">
+          <img class="img-size" src="{{ 'inr invested.png' | asset_url }}" loading="lazy" alt="" />
+        </a>
+        <h2 class="uk-margin-remove uk-padding-small"><span id="count3"></span></h2>
+        <p class="uk-margin-remove">INR invested</p>
+      </div>
+    </div>
+  </div>
+  <div class="bg-line uk-visible@s uk-container"><img class="background-line" style="z-index:0;margin-top:-466px;position:relative;" src="{{ 'heart element.png' | asset_url }}" loading="lazy" alt="" /></div>
+  <div class="bg-line uk-hidden@s"><img class="background-line" style="z-index:0;margin-top:-389px;position:relative;" src="{{ 'heart element.png' | asset_url }}" loading="lazy" alt="" /></div>
+</section>
+
+
+<input type="hidden" id="individual" name="individual" value="{{ section.settings['individual'] }}" />
+<input type="hidden" id="days" name="days" value="{{ section.settings['days'] }}" />
+<input type="hidden" id="invested" name="invested" value="{{ section.settings['invested']}}" />
+
+<script>
+    var individualInput = document.getElementById("individual");
+    var individualValue = parseInt(individualInput.value, 10);
+
+    var daysInput = document.getElementById("days");
+    var daysValue = parseInt(daysInput.value, 10);
+
+    var investedInput = document.getElementById("invested");
+    var investedValue = parseInt(investedInput.value, 10);
+    
+    const individual = individualValue;
+    const days = daysValue;
+    const invested = investedValue;
+
+    var hasCounterStarted = false;
+  
+    document.addEventListener("scroll", () => {
+      if (!hasCounterStarted && window.pageYOffset > 5800) {
+        hasCounterStarted = true;
+        startCounterAnimation();
+      } else if (hasCounterStarted && (window.pageYOffset <= 5800 || window.pageYOffset >= 6400)) {
+        hasCounterStarted = false;
+      } else if (!hasCounterStarted && window.pageYOffset < 6400) {
+        hasCounterStarted = true;
+        startCounterAnimation();
+      } 
+    });
+
+    function startCounterAnimation() {
+      function counter(id, start, end, duration) {
+        let obj = document.getElementById(id),
+          current = start,
+          range = end - start,
+          increment = end > start ? 1 : -1,
+          step = Math.abs(Math.floor(duration / range)),
+          timer = setInterval(() => {
+            current += increment;
+            obj.textContent = current;
+            if (current === end) {
+              clearInterval(timer);
+            }
+          }, step);
+      }
+      
+      counter("count1", 0, individual, 800);
+      counter("count2", 25, days, 400);
+      counter("count3", 10950, invested, 400);
+    }
+</script>
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Blub 2 imgs",
+    "settings": [
+      {
+        "type":"text",
+        "id":"individual",
+        "label":"individuals"
+      },
+      {
+        "type":"text",
+        "id":"days",
+        "label":" days of livelihood"
+      },
+      {
+        "type":"text",
+        "id":"invested",
+        "label":"INR invested"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+@media(max-width:620px){
+  .img-size{
+  width:60px !important;
+  }
+  .blurb-section{
+    margin-top:75px;
+      
+    
+  }
+ 
+}
+  
+  .blurb-section {
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position-x: center;
+  }
+
+  .blurb-container {
+    text-align: center;
+    margin-top: 0px !important;
+  }
+
+  .blurb-container img {
+    width: 170px;
+  }
+
+  .blurb-api {
+    width: 170px;
+  }
+}
+
+ 
+    .bg-line{
+      margin-left:30px !important;
+    }
+
+
+
+/* @media only screen and (max-width: 600px){
+   .img-toggle-tab1-big{
+     display: none;
+   }
+}  */
+{% endstylesheet %}
+
+{% javascript %}
+  
+{% endjavascript %}

@@ -1,0 +1,161 @@
+  <h1 class="uk-text-center"><img style="width: 40px; margin-left: 14px" src="{{ section.settings['main_logo'] | img_url : 'master' }}" /> {{ section.settings['main-head'] }}</h1>
+  
+    
+ <!--    leaves-->
+
+      <section class="uk-section uk-position-relative uk-padding-remove-bottom uk-padding-remove-top">
+  <div class="uk-container uk-padding-remove-bottom uk-padding-remove-top">
+    
+    <div class="uk-grid-column-large uk-flex-middle uk-child-width-1-2@m uk-padding-large  uk-padding-remove-bottom uk-padding-remove-top" uk-grid>
+       <div class="">
+        <div class="uk-border-rounded uk-overflow-hidden uk-flex uk-flex-center " style="padding-top:26px;">
+<!--               <h3 class="uk-hidden@m" style=" "><b>Leaves</b></h3> -->
+      <img src="{{ 'leaves.png' | asset_url }}" alt="" width="184px" class="leaves" />
+        </div>
+      </div>
+      <div>
+        <div class="">
+<!--            <h3 class="uk-visible@m" style=" "><b>Leaves</b></h3> -->
+           <h3 class="" style=" "><b>Leaves</b></h3>
+          <p class="uk-margin-remove"  style="color:#8B8B8B; font-size:18px;">{{ section.settings['leaves_content']  }}</p>
+         
+        </div>
+      </div >
+     
+    </div>
+  </div>
+</section>
+
+
+<!--   leavesendddd -->
+ <!--     hand -->
+
+
+
+      <section class="uk-section uk-position-relative uk-padding-remove-bottom uk-padding-remove-top ">
+  <div class="uk-container ">
+    
+    <div class="uk-grid-column-large uk-flex-middle uk-child-width-1-2@m uk-padding-large" uk-grid>
+      <div class="yarn-about">
+        <div>
+           <h3 class="" style=" "><b>Hand</b></h3>
+          <p class="uk-margin-remove"  style="color:#8B8B8B; font-size:18px;">{{ section.settings['hand_content']  }}</p>
+         
+        </div>
+      </div>
+      <div class="yarn-img">
+        <div class="uk-border-rounded uk-overflow-hidden uk-flex uk-flex-center">
+      <img src="{{ 'hand.png' | asset_url }}" alt="" width="370px" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--     hand endddd -->
+      <!--    tag&recycle-->
+
+      <section class="uk-section uk-position-relative uk-padding-remove-bottom uk-padding-remove-top">
+  <div class="uk-container uk-padding-remove-bottom uk-padding-remove-top">
+    
+    <div class="uk-grid-column-large uk-flex-middle uk-child-width-1-2@m uk-padding-large  uk-padding-remove-bottom uk-padding-remove-top" uk-grid>
+       <div class="">
+        <div class="uk-border-rounded uk-overflow-hidden uk-flex uk-flex-center">
+      <img src="{{ 'tag.png' | asset_url }}" alt="" width="260px" />
+        </div>
+      </div>
+      <div>
+        <div class="">
+           <h3 class="" style=" "><b>Tag</b></h3>
+          <p class="uk-margin-remove"  style="color:#8B8B8B; font-size:18px;">{{ section.settings['tag_content']  }}</p>
+         
+        </div>
+      </div >
+     
+    </div>
+  </div>
+</section>
+
+<!--    tag  endddd -->
+
+                   <!--    earth-->
+
+      <section class="uk-section uk-position-relative   uk-padding-remove-top uk-padding-remove-bottom">
+  <div class="uk-container">
+    
+    <div class="uk-grid-column-large uk-flex-middle uk-child-width-1-2@m uk-padding-large" uk-grid>
+       
+      <div class="yarn-about">
+        <div class="">
+           <h3 class="" style=" "><b>Shades of Earth</b></h3>
+          <p class="uk-margin-remove"  style="color:#8B8B8B; font-size:18px;">{{ section.settings['soe_content']  }}</p>
+         
+        </div>
+      </div >
+      <div class="yarn-img">
+        <div class="uk-border-rounded uk-overflow-hidden uk-flex uk-flex-center">
+      <img src="{{ 'soelogo.png' | asset_url }}" alt="" width="260px" />
+        </div>
+      </div>
+     
+    </div>
+  </div>
+
+    
+  
+</section>
+
+
+<!--   earth  endddd -->
+
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": [
+      {
+        "type":"image_picker",
+        "id":"main_logo",
+        "label":"logo"
+        
+      },
+      {
+        "type":"text",
+        "id":"main-head",
+        "label":"main head"
+        
+      },
+      {
+        "type":"text",
+        "id":"leaves_content",
+        "label":"leaves-content"
+      },
+      {
+        "type":"text",
+        "id":"hand_content",
+        "label":"hand-content"
+      },
+     
+      {
+        "type":"text",
+        "id":"tag_content",
+        "label":"tag-content"
+      },
+     
+      {
+        "type":"text",
+        "id":"soe_content",
+        "label":"soe-content"
+      }
+     
+     
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

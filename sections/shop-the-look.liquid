@@ -1,0 +1,220 @@
+{% if section.settings.enable_checkbox %}
+
+<section class="uk-section uk-position-relative uk-visible@m" style="padding-bottom:0">
+  <div class="uk-position-top-right">
+    <img src="{{ 'needle-thread.svg' | asset_url }}" loading="lazy" alt="">
+  </div>
+  <div class="uk-container">
+    <h2 class="uk-margin-remove-top uk-margin-medium-bottom ">Shop the Look</h2>
+    <div class="uk-grid-small uk-child-width-1-2@m" uk-grid>
+      <div>
+        <div class="shopLook001">
+          <div
+            class="shop-the-look  uk-border-rounded uk-background-cover mainColLGHeigth uk-position-relative"
+            style="background-image: url('{{ section.settings['img-1'] | img_url : 'master' }}');" loading="lazy"
+          >
+            <div class=" uk-position-bottom-left" style="left: 22px; bottom: 22px">
+              <a href="{{ section.settings['url-1'] }}"><img style="width: 38px" src="{{ 'shopingBag.svg' | asset_url }}" loading="lazy" alt=""></a>
+            </div>
+          </div>
+          <p class="uk-margin-remove" style="margin-top: 10px !important; text-decoration: underline">#shadesonyou</p>
+        </div>
+      </div>
+      <div>
+        <div class="uk-grid-small uk-child-width-1-2@m" uk-grid>
+          <div>
+            <div class="topMinus58 uk-grid-small uk-child-width-1-1" uk-grid>
+              <div>
+                <div class="">
+                  <div
+                    class="shop-the-look uk-border-rounded uk-background-cover mainColSMHeigth uk-position-relative"
+                    style="background-image: url('{{ section.settings['img-2'] | img_url : 'master' }}');" loading="lazy"
+                  >
+                    <div class="uk-position-bottom-left" style="left: 22px; bottom: 22px">
+                      <a href="{{ section.settings['url-2'] }}"><img style="width: 38px" src="{{ 'shopingBag.svg' | asset_url }}" loading="lazy" alt=""></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="shopLook03">
+                  <div
+                    class="shop-the-look uk-border-rounded uk-background-cover mainColSMHeigth uk-position-relative"
+                    style="background-image: url('{{ section.settings['img-3'] | img_url : 'master' }}');" loading="lazy"
+                  >
+                    <div class=" uk-position-bottom-left" style="left: 22px; bottom: 22px">
+                      <a href="{{ section.settings['url-3'] }}"><img style="width: 38px" src="{{ 'shopingBag.svg' | asset_url }}" loading="lazy" alt=""></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="topPlus58 uk-grid-small uk-child-width-1-1" uk-grid>
+              <div>
+                <div >
+                  <p class="get-the-look uk-text-right uk-margin-remove-top uk-margin-small-bottom uk-text-primary uk-text-small">
+                    Get the look
+                  </p>
+                  <div
+                    class="shop-the-look uk-border-rounded uk-background-cover mainColSMHeigth uk-position-relative"
+                    style="background-image: url('{{ section.settings['img-4'] | img_url : 'master' }}');" loading="lazy"
+                  >
+                    <div class=" uk-position-bottom-left" style="left: 22px; bottom: 22px">
+                      <a href="{{ section.settings['url-4'] }}"><img style="width: 38px" src="{{ 'shopingBag.svg' | asset_url }}" loading="lazy" alt=""></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <div
+                    class="shop-the-look uk-border-rounded uk-background-cover mainColSMHeigth uk-position-relative"
+                    style="background-image: url('{{ section.settings['img-5'] | img_url : 'master' }}');" loading="lazy"
+                  >
+                    <div class=" uk-position-bottom-left" style="left: 22px; bottom: 22px">
+                      <a href="{{ section.settings['url-5'] }}"><img style="width: 38px" src="{{ 'shopingBag.svg' | asset_url }}" loading="lazy" alt=""></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Mobile View -->
+
+<section class=" uk-position-relative uk-hidden@m" style="margin-left: 20px;">
+  <div class="uk-container">
+    <div class="uk-position-top-right " style="width:45px; top:27px">
+      <img src="{{ 'needle-thread.svg' | asset_url }}" loading="lazy" alt="">
+    </div>
+    </div>
+    <h2 class="uk-margin-remove-top" style="font-size: 2.0rem;margin-bottom:20px">Shop the Look</h2>
+  
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+
+    <ul class="uk-slider-items uk-grid">
+        <li class="uk-width-4-5">
+            <div class="">
+                    <div
+                      class="shop-the-look shop-the-look-mob  uk-border-rounded uk-background-cover mainColLGHeigth uk-position-relative"
+                      style="background-image: url('{{ section.settings['img-1'] | img_url : 'master' }}'); " loading="lazy"
+                    >
+                      <div class=" uk-position-bottom-left" style="left: 22px; bottom: 22px">
+                        <a href="{{ section.settings['url-1'] }}"><img style="width: 38px" src="{{ 'shopingBag.svg' | asset_url }}" loading="lazy" alt=""></a>
+                      </div>
+                    </div>
+                </div>
+        </li>
+        <li class="uk-width-4-5">
+            <div class="">
+                    <div
+                      class=" shop-the-look shop-the-look-mob  uk-border-rounded uk-background-cover mainColLGHeigth uk-position-relative"
+                      style=" background-image: url('{{ section.settings['img-2'] | img_url : 'master' }}');" loading="lazy"
+                    >
+                      <div class=" uk-position-bottom-left" style="left: 22px; bottom: 22px">
+                        <a href="{{ section.settings['url-2'] }}"><img style="width: 38px" src="{{ 'shopingBag.svg' | asset_url }}" loading="lazy" alt=""></a>
+                      </div>
+                    </div>
+                </div> 
+        </li>
+        <li class="uk-width-4-5">
+           <div class="">
+                    <div
+                      class=" shop-the-look shop-the-look-mob  uk-border-rounded uk-background-cover mainColLGHeigth uk-position-relative"
+                      style=" background-image: url('{{ section.settings['img-3'] | img_url : 'master' }}');" loading="lazy"
+                    >
+                      <div class=" uk-position-bottom-left" style="left: 22px; bottom: 22px">
+                        <a href="{{ section.settings['url-3'] }}"><img style="width: 38px" loading="lazy" src="{{ 'shopingBag.svg' | asset_url }}" alt=""></a>
+                      </div>
+                    </div>
+                </div> 
+        </li>
+        <li class="uk-width-4-5">
+           <div class="">
+                    <div
+                      class=" shop-the-look shop-the-look-mob  uk-border-rounded uk-background-cover mainColLGHeigth uk-position-relative"
+                      style=" background-image: url('{{ section.settings['img-4'] | img_url : 'master' }}');" loading="lazy"
+                    >
+                      <div class=" uk-position-bottom-left" style="left: 22px; bottom: 22px">
+                        <a href="{{ section.settings['url-4'] }}"><img style="width: 38px" loading="lazy" src="{{ 'shopingBag.svg' | asset_url }}" alt=""></a>
+                      </div>
+                    </div>
+                </div>
+        </li>
+        <li class="uk-width-4-5">
+            <div class="">
+                    <div
+                      class=" shop-the-look shop-the-look-mob  uk-border-rounded uk-background-cover mainColLGHeigth uk-position-relative"
+                      style=" background-image: url('{{ section.settings['img-5'] | img_url : 'master' }}');" loading="lazy"
+                    >
+                      <div class=" uk-position-bottom-left" style="left: 22px; bottom: 22px">
+                        <a href="{{ section.settings['url-5'] }}"><img style="width: 38px" loading="lazy" src="{{ 'shopingBag.svg' | asset_url }}" alt=""></a>
+                      </div>
+                    </div>
+                </div>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+</div>
+
+      <div style="margin-top:10px;">
+        <a href="#" style="color:black; font-weight:400;  text-decoration: underline;">#shadesonyou</a>
+      </div>
+      
+</section>
+
+
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Shop the look",
+    "settings": [
+      {
+      "type":"checkbox",
+      "id":"enable_checkbox",
+      "label":"Enable section"
+      },
+
+      
+      { "type": "image_picker", "id": "img-1", "label": "Product Image 1" },
+      { "type": "url", "id": "url-1", "label": "Product Target 1" },
+
+      { "type": "image_picker", "id": "img-2", "label": "Product Image 2" },
+      { "type": "url", "id": "url-2", "label": "Product Target 2" },
+
+      { "type": "image_picker", "id": "img-3", "label": "Product Image 3" },
+      { "type": "url", "id": "url-3", "label": "Product Target 3" },
+
+      { "type": "image_picker", "id": "img-4", "label": "Product Image 4" },
+      { "type": "url", "id": "url-4", "label": "Product Target 4" },
+
+      { "type": "image_picker", "id": "img-5", "label": "Product Image 5" },
+      { "type": "url", "id": "url-5", "label": "Product Target 5" }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+@media only screen and (max-width: 500px){
+   .shop-the-look-mob{
+    max-width:350px;
+    max-height:350px;
+  }
+} 
+  
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

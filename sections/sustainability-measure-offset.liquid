@@ -1,0 +1,176 @@
+<section id="measure">
+     <div class="measure" style="margin-top:50px;">
+           <h1 class="uk-padding-small uk-margin-large-top uk-text-center uk-hidden@m">{{ section.settings['head1'] }}</h1>
+      <div class="uk-child-width-expand@m" uk-grid style="margin:0;">
+        <div  class="  uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle uk-padding-remove" style="background-image: url({{ section.settings['measure'] | img_url : 'master' }}) ; height:523px; border-radius:4px; ">
+   <h2 class="trims-para uk-text-center " style=" color:white;">{{ section.settings['head1'] }}</h2>
+        </div>
+        <div class=" uk-grid-item-match uk-padding-remove" style="margin:auto;">
+            <div  class="">
+                 <h1 class="uk-padding-small uk-text-center uk-visible@m">{{ section.settings['head1'] }}</h1>
+                <p class=" uk-padding-small uk-padding-remove-top uk-padding-remove-bottom  uk-text-center  " style="margin-top:25px; font-size:18px;">{{ section.settings['content01'] }}</p>
+            </div>
+          <div style=" display: flex;justify-content: center;align-items: center;">
+               <div  class="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle " style="background-image: url({{ '45-55.png' | asset_url }}) ; background-size: 65%; width:311px; border-radius:50px; margin-top:-65px;" >
+      
+                 </div>
+               </div>
+{% comment %}    <p class=" uk-flex uk-flex-center uk-padding-small uk-text-center " style="margin-top:-25px; font-size:18px; ">{{ section.settings['content02'] }}</p> {% endcomment %}
+          
+        </div>
+    </div>
+
+  </div>
+</section>
+
+     
+
+
+<!-- reduce.. -->
+<section id="reduce">
+  <h1 class=" uk-margin-large-top uk-padding-small uk-text-center uk-hidden@m">{{ section.settings['head2'] }}</h1>
+    <div class="uk-child-width-expand@m" uk-grid style="margin:0;">
+        
+        <div class="" style="padding:0; margin:auto;">
+             <h1 class="uk-padding-small uk-text-center uk-visible@m">{{ section.settings['head2'] }}</h1>
+          <p class="uk-text-center uk-padding-small" style =" font-size:18px;">{{ section.settings['content2'] }}</p>
+            <div class="uk-margin-medium-top uk-text-center" style="padding:0 50px; margin:auto;" >
+     <ul uk-accordion>
+                <li class="" style="border:1px solid black; padding:16px;">
+                  <a class="uk-accordion-title" href="#">
+                    <h4 class="uk-margin-remove uk-text-center">{{ section.settings['accor-head1'] }}</h4>
+                  </a>
+                  <div class="uk-accordion-content" style="margin-top:6px;">
+                    <p  style="font-size:18px;">{{ section.settings['accor-content1'] }}</p>
+                  </div>
+                </li>
+                <li class="" style="border:1px solid black; padding:16px;">
+                  <a class="uk-accordion-title" href="#">
+                    <h4 class="uk-margin-remove uk-text-center">{{ section.settings['accor-head2'] }}</h4>
+                  </a>
+                  <div class="uk-accordion-content" style="margin-top: 6px">
+                    <p  style="font-size:18px;"> {{ section.settings['accor-content2'] }}</p>
+                  </div>
+                </li>
+                <li class="" style="border:1px solid black; padding:16px; margin-bottom:30px">
+                  <a class="uk-accordion-title" href="#">
+                    <h4 class="uk-margin-remove uk-text-center">{{ section.settings['accor-head3'] }}</h4>
+                  </a>
+                  <div class="uk-accordion-content" style="margin-top: 6px">
+                    <p  style="font-size:18px;">{{ section.settings['accor-content3'] }}</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+        </div>
+
+        <div  class=" yarn-img  uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" style="background-image: url({{ section.settings['reduce'] | img_url : 'master' }}) ; height:523px;  padding:0; border-radius:4px;">
+             <h2 class=" uk-text-center trims-para" style="color:white;">{{ section.settings['head2'] }}</h2>
+        </div>
+      
+    </div>
+</section>
+
+<section id="offsett">
+    <h1 class="uk-padding-small uk-margin-large-top uk-text-center uk-hidden@m">{{ section.settings['head3'] }}</h1>
+  <div class="uk-child-width-expand@m" uk-grid style="margin:0;">
+        <div  class=" uk-padding-remove uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" style="background-image: linear-gradient(rgba(0, 0, 0, 0.01),rgba(0, 0, 0, 0.4)),url({{ section.settings['offset'] | img_url : 'master' }}) ; height:523px; border-radius:4px;">
+   <h2 class=" uk-text-center trims-para" style=" color:white;">{{ section.settings['head3'] }}</h2>
+        </div>
+        <div class=" uk-grid-item-match uk-padding-remove " style="padding-right:14px; margin:auto;">
+            <div  class="">
+                 <h1 class="uk-padding-small uk-text-center uk-visible@m">{{ section.settings['head3'] }}</h1>
+                <p class=" uk-padding-small uk-padding-remove-top uk-padding-remove-bottom uk-padding-remove-lef uk-text-center  " style="margin-top:25px; font-size:18px; ">{{ section.settings['content3'] }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": [
+      {
+        "type":"text",
+        "id":"head1",
+        "label":"head 1"
+      },
+      {
+        "type":"text",
+        "id":"content01",
+        "label":"content 1"
+      },
+     
+      {
+        "type":"image_picker",
+        "id":"measure",
+        "label":"measure image"
+      },
+      {
+        "type":"text",
+        "id":"head2",
+        "label":"head 2"
+      },
+      {
+        "type":"text",
+        "id":"content2",
+        "label":"content "
+      },
+      {
+        "type":"text",
+        "id":"accor-head1",
+        "label":"accordion head 1"
+      },
+      {
+        "type":"text",
+        "id":"accor-content1",
+        "label":"accordion content 1"
+      },
+      {
+        "type":"text",
+        "id":"accor-head2",
+        "label":"accordion head 2"
+      },
+      {
+        "type":"text",
+        "id":"accor-content2",
+        "label":"accordion content 2"
+      },
+      {
+        "type":"text",
+        "id":"accor-head3",
+        "label":"accordion head 3"
+      },
+      {
+        "type":"text",
+        "id":"accor-content3",
+        "label":"accordion content3"
+      },
+      {
+        "type":"image_picker",
+        "id":"reduce",
+        "label":"reduce image"
+      },
+       {
+        "type":"text",
+        "id":"head3",
+        "label":"head 3"
+      },
+      {
+        "type":"text",
+        "id":"content3",
+        "label":"content "
+      },
+      {
+        "type":"image_picker",
+        "id":"offset",
+        "label":"offset image"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,187 @@
+<section class="uk-section uk-position-relative uk-visible@m" style="padding-bottom:0;">
+  <div class="uk-position-top-right uk-visible@m" style="z-index:-1; opacity:45%;">
+    <img src="{{ 'mouldTopImg.svg' | asset_url }}" loading="lazy" alt="">
+  </div>
+  <div class="uk-position-top-right uk-hidden@m" style="z-index:-1; opacity:35%; width:75px;">
+    <img src="{{ 'mouldTopImg.svg' | asset_url }}" loading="lazy" alt="">
+  </div>
+  <div class="uk-container" style="z-index:1; ">
+    <h2 class="uk-margin-remove">{{ section.settings['main_heading'] }}</h2>
+    <h4 class="uk-margin-remove-top">{{ section.settings['sub_heading'] }}</h4>     
+    <p class="uk-margin-bottom" style="font-size:18px;">{{ section.settings['main_paragraph'] }}</p>
+  </div>
+
+  <div class="uk-container">
+    <div class="uk-grid-match uk-grid-collapse" uk-grid>
+      <div class="uk-width-1-3@s">
+        <div class="uk-card uk-card-default uk-card-body">
+          <ul uk-switcher="connect: .natural-cellulose" class="uk-list nc-list">
+            <li class="uk-active"><a class="uk-link-reset" href="#"><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-cultivating.svg' | asset_url }}" loading="lazy"></span>Cultivation/Sorting</a></li>
+            <!-- <li><a class="uk-link-reset" href="#"><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-fiber.svg' | asset_url }}" loading="lazy"></span>Fiber/Granulate/Recycling</a></li> -->
+            <li><a class="uk-link-reset" href="#"><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-yarn.svg' | asset_url }}" loading="lazy"></span>Yarn</a></li>
+            <li><a class="uk-link-reset" href="#"><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-fabric.svg' | asset_url }}" loading="lazy"></span>Fabric</a></li>
+            <li><a class="uk-link-reset" href="#"><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-dyeing.svg' | asset_url }}" loading="lazy"></span>Dyeing</a></li>
+            <li><a class="uk-link-reset" href="#"><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-cutsew.svg' | asset_url }}" loading="lazy"></span>Cut and sew</a></li>
+            <!-- <li><a class="uk-link-reset" href="#"><span class="uk-width-1-6 nc-icon"><img src="{{ 'icon-warehouse.svg' | asset_url }}" loading="lazy"></span>Warehouse</a></li> -->
+          </ul>
+        </div>
+      </div>
+      <div class="uk-width-2-3@s">
+        <div class="uk-card uk-card-default uk-card-body uk-padding-remove">
+          <ul class="uk-switcher natural-cellulose uk-margin uk-height-1-1">
+            <li class="uk-height-1-1 index-toggle-section">
+              <img style="max-height:400px" src="{{ 'Cultivation.jpg' | asset_url }}" loading="lazy" alt="" uk-cover>
+              <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                <h2 class="uk-margin-remove">Canada</h2>
+              </div>
+            </li>
+
+            <li class="uk-height-1-1 index-toggle-section">
+              <img style="max-height:400px" src="{{ 'Yarn.jpg' | asset_url }}" loading="lazy" alt="" uk-cover>
+              <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                <h2 class="uk-margin-remove">Pallava Mills, Tamil Nadu</h2>
+              </div>
+            </li>
+            <li class="uk-height-1-1 index-toggle-section">
+              <img style="max-height:400px" src="{{ 'Fabric.jpg' | asset_url }}" loading="lazy" alt="" uk-cover>
+              <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                <h2 class="uk-margin-remove">Dinesh Exports Pvt. Ltd., Tamil Nadu</h2>
+              </div>
+            </li>
+            <li class="uk-height-1-1 index-toggle-section">
+              <img style="max-height:400px" src="{{ 'Dyeing.jpg' | asset_url }}" loading="lazy" alt="" uk-cover>
+              <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                <h2 class="uk-margin-remove">Samurai Textile Processors, Tamil Nadu</h2>
+              </div>
+            </li>
+            <li class="uk-height-1-1 index-toggle-section">
+              <img style="max-height:400px" src="{{ 'Cut n Sew.jpg' | asset_url }}" loading="lazy" alt="" uk-cover>
+              <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                <h2 class="uk-margin-remove">Hyderabad, Telangana</h2>
+              </div>
+            </li>
+            <!-- <li class="uk-height-1-1 index-toggle-section">
+                <img style="max-height:400px" src="{{ 'Warehouse.jpg' | asset_url }}" loading="lazy" alt="" uk-cover>
+                <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                    <h2 class="uk-margin-remove">Hyderabad, Telangana, India</h2>
+                </div>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="" style="float:right;color:#777777;margin:6px !important;"><span style="margin-top:-8px;margin-left:-10px;font-size:20px;color:green;position:absolute;">*</span> Traceability for viscose</p>
+  </div>
+</section>
+
+<!-- small screen -->
+
+<section class="uk-section uk-position-relative uk-hidden@m" style="padding-bottom:0;">
+  <div class="uk-position-top-right uk-visible@m" style="z-index:-1; opacity:45%;">
+    <img src="{{ 'mouldTopImg.svg' | asset_url }}" loading="lazy" alt="">
+  </div>
+  <div class="uk-position-top-right uk-hidden@m" style="z-index:-1; opacity:45%; width:55px; top:38px;">
+    <img src="{{ 'mouldTopImg.svg' | asset_url }}" loading="lazy" alt="">
+  </div>
+  <div class="uk-container" style="z-index:1; ">
+    <h2 class="uk-margin-remove" style="">{{ section.settings['main_heading'] }}</h2>
+    <p>{{ section.settings['main_paragraph'] }}</p>
+    <h5 class="uk-margin-remove-top">{{ section.settings['sub_heading'] }}</h5>
+  </div>
+
+
+  <div class="uk-margin-small-top uk-container">
+    <div class="uk-slider-container-offset" id="my-slider" uk-slider="finite: true ; draggable: false">
+      <div>
+        <a style="color:black; "><span class=" nc-icon uk-margin-small-right uk-flex"><img id="icon1" class="uk-width-1-5" src="{{ 'icon-cultivating.svg' | asset_url }}" loading="lazy"><img id="icon2" class="uk-width-1-5" src="{{ 'icon-yarn.svg' | asset_url }}" loading="lazy"><img id="icon3" class="uk-width-1-5" src="{{ 'icon-fiber.svg' | asset_url }}" loading="lazy"><img id="icon4" class="uk-width-1-5" src="{{ 'icon-dyeing.svg' | asset_url }}" loading="lazy">  <img id="icon5" class="uk-width-1-5" src="{{ 'icon-cutsew.svg' | asset_url }}" loading="lazy"></span></a>
+      </div>
+      <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+        <ul class="uk-slider-items uk-child-width-1-1 uk-grid ">
+          <li>
+            <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+              <img class="tab-slider-img" style="max-height:220px" src="{{ 'Cultivation.jpg' | asset_url }}" loading="lazy" alt="" uk-cover>
+              <div style="padding-left:26px;" class="uk-position-center uk-position-small uk-text-center uk-light">
+                <!-- <h4 class="" style="color:#353535; margin-bottom:20px">VISCOSE</h4> -->
+                <h4  class="textWhite uk-margin-remove" >Cultivation/Sorting</h4>
+                <h2 class="textWhite uk-margin-remove ">Canada</h2>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+              <img class="tab-slider-img" style="max-height:220px" src="{{ 'Yarn.jpg' | asset_url }}" loading="lazy" alt="" uk-cover>
+              <div style="padding-left:26px;" class="uk-position-center uk-position-small uk-text-center uk-light"> 
+                <!-- <h4 class="" style="color:#353535; margin-bottom:20px">VISCOSE</h4> -->
+                <h4  class="textWhite uk-margin-remove" >Yarn</h4>
+                <h2 class="textWhite uk-margin-remove ">Pallava Mills, Tamil Nadu</h2>
+              </div>
+            </div>                  
+          </li>
+          <li>
+            <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+              <img class="tab-slider-img" style="max-height:220px" src="{{ 'Fabric.jpg' | asset_url }}" loading="lazy" alt="" uk-cover>
+              <div style="padding-left:26px;" class="uk-position-center uk-position-small uk-text-center uk-light">
+                <!-- <h4 class="" style="color:#353535; margin-bottom:20px">VISCOSE</h4> -->
+                <h4  class="textWhite uk-margin-remove" >Fiber</h4>
+                <h2 class="textWhite uk-margin-remove ">Dinesh Exports Pvt. Ltd., Tamil Nadu</h2>
+              </div>
+            </div>                
+          </li>
+          <li>
+            <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+              <img class="tab-slider-img" style="max-height:220px" src="{{ 'Dyeing.jpg' | asset_url }}" loading="lazy" alt="" uk-cover>
+              <div style="padding-left:26px;" class="uk-position-center uk-position-small uk-text-center uk-light">
+                <!-- <h4 class="" style="color:#353535; margin-bottom:20px">VISCOSE</h4> -->
+                <h4  class="textWhite uk-margin-remove" >Dyeing</h4>
+                <h2 class="textWhite uk-margin-remove ">Samurai Textile Processors, Tamil Nadu</h2>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="uk-height-1-1 index-toggle-section uk-margin-small-top">
+              <img class="tab-slider-img" style="max-height:220px" src="{{ 'Cut n Sew.jpg' | asset_url }}" loading="lazy" alt="" uk-cover>
+              <div style="padding-left:26px;" class="uk-position-center uk-position-small uk-text-center uk-light">
+                <!-- <h4 class="" style="color:#353535; margin-bottom:20px">VISCOSE</h4> -->
+                <h4  class="textWhite uk-margin-remove" >Cut and sew</h4>
+                <h2 class="textWhite uk-margin-remove ">Hyderabad, Telangana</h2>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous" style="" onclick="negativeBtn(this)"></a>
+        <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next" style="" onclick="positiveBtn(this)"></a>
+      </div>
+    </div>
+  </div>
+  <p class="" style="float:right;color:#777777;margin:-13px 24px!important;"><span style="margin-top:-8px;margin-left:-10px;font-size:20px;color:green;position:absolute;">*</span> Traceability for viscose</p>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Breaking the mould",
+    "settings": [
+      {
+        "type":"text",
+        "id": "main_heading",
+        "label": "Main Heading"
+      },
+      {
+        "type": "text",
+        "id": "main_paragraph",
+        "label": "Main Paragraph"
+      },
+      {
+        "type": "text",
+        "id": "sub_heading",
+        "label": "Sub Heading"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,137 @@
+ <section id="happy-work">
+     <div class="" style="margin-top:50px;">
+            <h1 class=" uk-padding-small  uk-text-center uk-hidden@m  uk-margin-large-top" style=" ">{{ section.settings['head1']}}</h1> 
+      <div class="uk-child-width-expand@m" uk-grid style="margin:0;">
+      <div  class="  uk-padding-remove uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" style="background-image:linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0,0.5)), url({{ section.settings['price-wage'] | img_url : 'master' }}) ; height:523px; border-radius:4px; ">
+   <h2 class="trims-para uk-text-center " style="color:white; width:348px;">{{ section.settings['content-image']}}</h2>
+        </div>
+        <div class=" uk-grid-item-match uk-padding-remove" style="margin:auto;">
+            <div  class="uk-text-center">
+                <h1 class=" uk-padding-small uk-padding-remove-top uk-padding-remove-bottom   uk-text-center uk-visible@m  " style=" ">{{ section.settings['head1']}}</h1>  
+           <p class="uk-padding-small" style="font-size:18px">{{ section.settings['content1']}}</p>   
+          </div>
+         
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+   <section id="soexrangde">
+     <div class="measure" style="">
+            <h1 class="uk-text-center uk-margin-small-top uk-hidden@m">{{ section.settings['head2']}}</h1>
+      <div class="uk-child-width-expand@m" uk-grid style="margin:0;">
+     
+        <div class=" uk-grid-item-match uk-padding-remove" style="margin:auto;">
+            <div  class="uk-text-center">
+              <h1 class="uk-text-center uk-margin-small-top uk-visible@m">{{ section.settings['head2']}}</h1>
+                <p class=" uk-padding-small uk-padding-remove-top uk-padding-remove-bottom   uk-text-center  " style="font-size:18px;">{{ section.settings['content2']}}</p>    </div>
+          <div style=" display: flex;justify-content: center;align-items: center;">
+             <div class="uk-padding-small uk-flex uk-flex-center" style="">
+<div>
+          <div class="" >
+            <div class="uk-flex  uk-padding-small "> 
+            <img class="" style="width: 48px; height:47px; "  loading="lazy" src="{{ 'organic-farming.png' | asset_url }}" alt="" />
+              <h4 style="color:#8BB73F; padding: 10px 10px; " class="uk-margin-remove ">{{ section.settings['content2-sub1']}}</h4>
+            </div>
+          </div>
+          <div class="" >
+            <div class="uk-flex  uk-padding-small "> 
+             <img class="" style="width: 48px; height:47px; " loading="lazy"   src="{{ 'artisans.png' | asset_url }}" alt="" />
+              <h4 style="color:#8BB73F; padding: 10px 10px; " class="uk-margin-remove ">{{ section.settings['content2-sub2']}}</h4>
+            </div>
+          </div>
+          <div class="" >
+            <div class="uk-flex  uk-padding-small "> 
+             <img class="" style="width: 48px; height:47px; " loading="lazy" src="{{ 'rural.png' | asset_url }}" alt="" />
+              <h4 style="color:#8BB73F; padding: 10px 10px; " class="uk-margin-remove ">{{ section.settings['content2-sub3']}}</h4>
+            </div>
+          </div>
+</div>
+         
+            </div>
+               </div>
+  
+        </div>
+        
+
+   <div  class="yarn-img   uk-padding-remove uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" style="background-image: url({{ section.settings['soex'] | img_url : 'master' }}) ; height:523px; border-radius:4px;">&nbsp;&nbsp;
+   <h2 class="uk-text-center trims-para " style="width:348px; color:white;">{{ section.settings['head2']}}</h2>
+        </div>
+    </div>
+
+  </div>
+</section>   
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": [
+      {
+        "type":"text",
+        "id":"head1",
+        "label":"head 1"
+        
+      },
+      {
+        "type":"text",
+        "id":"content1",
+        "label":"content "
+        
+      },
+      {
+        "type":"text",
+        "id":"content-image",
+        "label":"content on the image"
+        
+      },
+      {
+        "type":"image_picker",
+        "id":"price-wage",
+        "label":"price wage image"
+      },
+       {
+        "type":"text",
+        "id":"head2",
+        "label":"head 2"
+        
+      },
+      {
+        "type":"text",
+        "id":"content2",
+        "label":"content "
+        
+      },
+      {
+        "type":"text",
+        "id":"content2-sub1",
+        "label":"sub 1"
+        
+      },
+      {
+        "type":"text",
+        "id":"content2-sub2",
+        "label":"sub 2"
+        
+      },
+      {
+        "type":"text",
+        "id":"content2-sub3",
+        "label":"sub 3"
+        
+      },
+      {
+        "type":"image_picker",
+        "id":"soex",
+        "label":"soex image"
+      }
+      
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,102 @@
+
+
+{% comment %} <div class="uk-flex  uk-grid-collapse uk-flex-center  uk-child-width-1-2@s  " style="margin-top:40px;margin:auto;position:relative"> {% endcomment %}
+  <div class="uk-text-center  uk-child-width-1-4@m uk-child-width-1-2@s uk-child-width-1-1  uk-padding-small   " uk-grid>
+  <div class="uk-flex">
+     <img style="width:50px" class="img-size" loading="lazy" src="{{ 'Group 24593.png' | asset_url }}" alt="">
+    <div style="margin-left:20px; margin-top:12px" id="responseDiv"></div>
+
+  </div>
+
+
+  <div class="uk-flex">
+     <img style="width:50px" class="img-size" loading="lazy" src="{{ 'Group 24597.png' | asset_url }}" alt="">
+    <div style="margin-left:20px; margin-top:12px" id="plasticDiv"></div>
+
+  </div>
+
+
+  <div class="uk-flex logo_s" >
+     <img style="width:50px" class="img-size"loading="lazy" src="{{ 'Group 24551.png' | asset_url }}" alt="">
+    <div style="margin-left:20px; margin-top:12px" id="treeDiv"></div>
+
+  </div>
+
+  <div class="uk-flex" >
+     <img style="width:50px" class="img-size"loading="lazy" src="{{ 'inr invested.png' | asset_url }}" alt="">
+    <div style="margin-left:20px; margin-top:12px">10k INR invested</div>
+
+  </div>
+</div>
+
+
+<script>
+    const options = {
+      method: 'POST',
+      headers: {
+        accept: 'application/json',
+        'content-type': 'application/json',
+        'x-api-key': 'zinBYZP2Zx2HzxnLAVJGtVNwWWMYwwLBrfnbTFX%2FeVkzdwxCiUXEMlDxh%2BCZlvhfc7pG%2BVXvXd'
+      },
+      body: JSON.stringify({
+        shopUniqueName: 'shadesofearth.myshopify.com',
+        color: 'green',
+        order: {
+          currency: {{ cart.currency.iso_code | json }},
+          totalPrice: {{ cart.total_price | json }},
+          lineItems: [
+            {% for item in cart.items %}
+              {
+                productId: {{ item.product_id | json }},
+                quantity: {{ item.quantity | json }}
+              },
+            {% endfor %}
+          ]
+        },
+        withPopup: false
+      })
+    };
+
+
+  fetch('https://api.getgreenspark.com/widgets/cart-widget?lng=en', options)
+    .then(response => response.text())
+    .then(responseString => {
+      const parser = new DOMParser();
+      const html = parser.parseFromString(responseString, 'text/html');
+      const responseDiv = document.getElementById('responseDiv');
+
+      const labels = Array.from(html.querySelectorAll('.gs-carbon-label')).map(node => node.innerText);
+
+      const plastics = Array.from(html.querySelectorAll('.gs-plastic-label')).map(node => node.innerText);
+
+      const trees = Array.from(html.querySelectorAll('.gs-trees-label')).map(node => node.innerText);
+
+      console.log(labels);
+      console.log(plastics);
+      console.log(trees);
+
+      responseDiv.innerHTML = ''; // Clear the existing content
+      labels.forEach(label => {
+        const div = document.createElement('div');
+        div.textContent = label;
+        responseDiv.appendChild(div);
+      });
+
+      plasticDiv.innerHTML = ''; // Clear the existing content
+      plastics.forEach(plastic => {
+        const div = document.createElement('div');
+        div.textContent = plastic;
+        plasticDiv.appendChild(div);
+      });
+
+      treeDiv.innerHTML = ''; // Clear the existing content
+      trees.forEach(tree => {
+        const div = document.createElement('div');
+        div.textContent = tree;
+        treeDiv.appendChild(div);
+      });
+
+    })
+    .catch(err => console.error(err));
+</script>
+  

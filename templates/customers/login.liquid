@@ -1,0 +1,121 @@
+<!-- /templates/customers/login.liquid -->
+
+<script type="application/javascript" defer>
+  var colorChLinkWhite = document.getElementsByClassName('color_white');
+
+  for (let i = 0; i < colorChLinkWhite.length; i++) {
+    colorChLinkWhite[i].style.setProperty('color', 'white', 'important');
+  }
+</script>
+
+{% form 'customer_login' %}
+<div class="loginPage uk-position-relative">
+  <div class="uk-position-bottom-left uk-visible@m" style="bottom: 62px">
+    <img src="{{ 'loginPageLeftHeroImg.svg' | asset_url }}" alt="" />
+  </div>
+  <div class="uk-position-bottom-right uk-visible@m" style="bottom: 102px">
+    <img src="{{ 'loginPageRigthHeroImg.svg' | asset_url }}" alt="" />
+  </div>
+  <div class="uk-container">
+    <div>
+      <div class="formTBB uk-card" id="recoverPass">
+        <div class="formWidth">
+          {% form 'recover_customer_password' %}
+
+          {{ form.errors | default_errors }}
+
+          <div class="uk-margin">
+            <div class="uk-form-controls">
+              <input class="uk-input uk-border-rounded" type="email" placeholder="Email Address" name="email" />
+            </div>
+          </div>
+
+          <div class="uk-margin">
+            <div class="uk-form-controls">
+              <input class="uk-button uk-width-1-1 uk-button-primary" type="submit" value="Reset" />
+            </div>
+          </div>
+
+          <div>Already have an account? <a href="/account/login" class="uk-text-primary">Login here.</a></div>
+
+          {% endform %}
+        </div>
+      </div>
+      <div class="formTBB uk-card shadowNone" id="loginForm">
+        <div class="formWidth">
+          <h2 class="uk-text-bold uk-text-center">Login to your account</h2>
+          {{ form.errors | default_errors }}
+          <div class="uk-margin">
+            <div class="uk-form-controls">
+              <input class="uk-input uk-border-rounded" type="email" placeholder="Email Address" name="customer[email]" />
+            </div>
+          </div>
+
+          <div class="uk-margin" style="margin-bottom: 6px">
+            <div class="uk-form-controls">
+              <input class="uk-input uk-border-rounded" type="password" placeholder="Password" name="customer[password]" />
+            </div>
+          </div>
+
+          <div class="uk-flex uk-flex-right">
+            <div><a class="uk-link-reset uk-button-link" style="text-decoration: underline !important; font-size: 12px" href="/account/login#recover" onclick="recoverCheck(true)">Forgot password?</a></div>
+          </div>
+
+          <div class="uk-margin">
+            <div class="uk-form-controls">
+              <input class="uk-button uk-button-primary uk-width-1-1" type="submit" value="Login to your account" />
+            </div>
+          </div>
+
+          <div class="orDiv"></div>
+
+          <div class="uk-text-center">Don't have an account ?<a href="/account/register" style="background-color: white; border-color: #353332" class="uk-link-reset uk-text-emphasis uk-margin-small-left">Signup</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endform %}
+
+<script type="application/javascript">
+  function recoverCheck(value) {
+    var recoverPass = document.getElementById('recoverPass');
+    var loginForm = document.getElementById('loginForm');
+    var currentUrl = window.location.href;
+    if (currentUrl.includes('#recover') || value) {
+      recoverPass.style.display = 'block';
+      loginForm.style.display = 'none';
+    } else {
+      recoverPass.style.display = 'none';
+      loginForm.style.display = 'block';
+    }
+  }
+  recoverCheck(false);
+</script>
+
+<!-- <h2>Login</h2>
+  {% form 'customer_login' %}
+  
+  {{ form.errors | default_errors }}
+  
+  <label for="customer_email">Email Address</label>
+  <input type="email" name="customer[email]" />
+  
+  <label for="customer_password">Password</label>
+  <input type="password" name="customer[password]" />
+  
+  <input type="submit" value="Sign In" />
+  
+  {% endform %} -->
+
+<!-- <h2>Forgot Password</h2>
+  {% form 'recover_customer_password' %}
+  
+  {{ form.errors | default_errors }}
+  
+  <label for="customer_email">Email Address</label>
+  <input type="email" name="email" />
+  
+  <input type="submit" value="Submit" />
+  
+  {% endform %} -->

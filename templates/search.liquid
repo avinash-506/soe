@@ -1,0 +1,33 @@
+{% paginate search.results by 10 %}
+{% comment %}  <form action="/search" method="get" role="search">
+    <input type="search" name="q" value="{{ search.terms | escape }}">
+    <button type="submit">search</button>
+  </form> {% endcomment %}
+  
+<div class="spf-search-result" style="padding: 30px">
+  <div class="template-search__header page-width">
+    <h1 class="h2 center">Search results</h1>
+  </div>
+  {% if search.performed %}
+     <div data-globo-filter-items >
+    {% for item in search.results %}    
+        {% if item.featured_image %}
+          <a href="{{ item.url | within: collection }}" title="{{ item.title | escape }}">
+            {{ item.featured_image.src | img_url: 'medium' | img_tag: item.featured_image.alt }}
+          </a>
+        {% endif %}
+        <h5>{{ item.title | link_to: item.url }}</h5>
+        <p>{{ item.content | strip_html | truncatewords: 50 }}</p>
+        
+      {% endfor %}
+    {% if paginate.pages > 1 %}{{ paginate | default_pagination }}{% endif %}
+     </div>
+    {% else %}
+      no results
+    
+   
+  {% endif %}
+</div>
+ 
+{% endpaginate %}
+{% render 'shooraai-widgets' %}

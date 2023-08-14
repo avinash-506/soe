@@ -1,0 +1,184 @@
+{% assign collectionHandle = '' %} {% for c in product.collections %} {% assign collectionHandle = c.handle %} {% endfor %}
+<div style="background-color: #f9f9f9;"style="text-transform:none !important;" id="productPage">
+  <section class="headerMargin  productPage faq uk-background-cover" style="overflow: hidden">
+    <div class="uk-container">
+
+
+      <div class="row uk-margin-medium-top">
+        <div class="col-md-5 col-sm-12 col-xs-12 uk-flex">
+          <div style="width: 100%">
+            <div class="uk-margin-auto">
+              <div uk-slideshow="animation: push;  min-height: 735;" class="product-main-div slider-dot-forward productSlider productSliderCom">
+                <div class="uk-position-relative uk-visible-toggle slider-dot-forward-main" tabindex="-1">
+                  <ul class="product-main uk-slideshow-items">
+                    {% for image in product.images %}
+                    <li>
+                      <!-- <span class="zoom ex{{forloop.index}}" data-attr="{{forloop.index}}"> -->
+                      <img class="product-main-pic" src="{{ image.src | img_url : '1000x1000' }}" alt="{{ image.alt | escape }}" uk-cover style="background-size:contain; width:fit-content; min-height:478.8px;"/>
+                      <!-- </span> -->
+                    </li>
+                    {% endfor %}
+                  </ul>
+
+                  <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                  <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                </div>
+              </div>
+              <div uk-slideshow="animation: push; min-height: 300;" class="slider-dot-forward productSliderMobo uk-hidden@m"></div>
+            </div>
+
+            <div class="uk-flex" id="tabsOverflow" style="margin-top: 38px;overflow:auto;">
+              {% for image in product.images %}
+              <div class="productSliderClick uk-border-rounded-small uk-margin-small-right uk-margin-small-left uk-flex uk-flex-center uk-flex-middle" id="{{ forloop.index }}productSliderClick" style="width:">
+                <img class="product-main-sub" src="{{ image.src | img_url : '1000x1000' }}" style="height: 150px;max-width:fit-content !important;" alt="{{ image.alt | escape }}" />
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7 col-sm-12 col-xs-12">
+          <!-- uk-sticky="end: #stopScroll; media: @m; offset: 40" -->
+          <div style="text-transform:none !important;">
+
+            {%- form 'product', product -%}
+              <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+              <input type="hidden" name="quantity" value="1">
+            {%- endform -%}
+            
+            <p class="uk-margin-remove uk-text-uppercase product_badge">{{ product.metafields.product.tag.value }}</p>
+            <h2 class="uk-text-bold uk-text-capitalize uk-margin-remove-top" style="">{{ product.title }}</h2>
+            
+<!-- Start of Judge.me code -->
+      <div style='{{ jm_style }}' class='jdgm-widget jdgm-preview-badge' data-id='{{ product.id }}' data-auto-install='false'>
+        {{ product.metafields.judgeme.badge }}
+      </div>
+      <!-- End of Judge.me code -->
+            <div id="small_description" style="display: block;" style="text-transform:none !important;">
+              <p style="text-transform:none !important;">{{ product.description }}</p>
+            </div>
+            
+            <a class="uk-text-matter uk-text-bold" style="color:black !important;" href="#why-this-matter">Responsibly Made</a>
+
+
+             <variants collection='{{ product.collections | json }}' product-title='{{ product.title }}' product-image='{{ product.featured_image | product_img_url : 'large' }}' variants='{{ product.variants | json }}' options='{{ product.options_by_name | json }}'></variants>
+
+
+            <div class="uk-margin-medium-top">
+              <ul style="" uk-accordion>
+                <li class="uk-open">
+                  <a class="uk-accordion-title" href="#">
+                    <h3 class="uk-margin-remove">Product Details, Styling and Fit</h3>
+                  </a>
+                  <div class="uk-accordion-content" style="margin-top: 6px">
+                    <p>{{ product.metafields.custom.size_fit | metafield_tag }}</p>
+                  </div>
+                </li>
+                <li class="">
+                  <a class="uk-accordion-title" href="#">
+                    <h3 class="uk-margin-remove">Composition and Care
+</h3>
+                  </a>
+                  <div class="uk-accordion-content" style="margin-top: 6px">
+                    <p>{{ product.metafields.custom.fabric_care | metafield_tag }}</p>
+                  </div>
+                </li>
+                <li class="">
+                  <a class="uk-accordion-title" href="#">
+                    <h3 class="uk-margin-remove">Shipping and Returns</h3>
+                  </a>
+                  <div class="uk-accordion-content" style="margin-top: 6px">
+                    <p>
+                   All products are shipped within 7 days of placing an order.
+We put a lot of love and care into making your products. As a company policy, we do not provide refunds on any product sold. If the order meets the requisite conditions, the products can be exchanged for a different size or a credit note. In case of any production defect, we will replace the piece at no extra cost to you. 
+
+                    <br><br>Find more information about our policies in the <a style="text-decoration:none; color: #8BB73F;" href="/pages/faq#section03">Shipping</a> & <a style="text-decoration:none; color: #8BB73F;" href="/pages/faq#section02">Returns</a> section on Info page
+.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="productPage" style="padding-top:60px">
+    <section class="uk-section" style="padding-top: 0px">
+      <div class="you-might-like uk-container">
+        <h2 class="you-might-like-head uk-margin-medium-bottom headingForSection uk-heading-small uk-align-left" style="font-size: 2.25rem; margin-top: 24px;">You might also like</h2>
+       </div>
+      <div class="uk-container">
+        <div class="uk-margin-auto uk-class-row">{% section 'product-recommend' %}</div>
+      </div>
+    </section>
+  </div>
+  
+  <div id="why-this-matter">{% section 'why-this-matters' %}</div>
+
+{% section 'product-size-chart' %}
+
+<!--  -->
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org/",
+    "@type": "Product",
+    "name": {{ product.title | json }},
+    "url": {{ request.origin | append: product.url | json }},
+    {% if seo_media -%}
+      "image": [
+        {{ seo_media | image_url: width: seo_media.preview_image.width | prepend: "https:" | json }}
+      ],
+    {%- endif %}
+    "description": {{ product.description | strip_html | json }},
+    {% if product.selected_or_first_available_variant.sku != blank -%}
+      "sku": {{ product.selected_or_first_available_variant.sku | json }},
+    {%- endif %}
+    "brand": {
+      "@type": "Brand",
+      "name": {{ product.vendor | json }}
+    },
+    "offers": [
+      {%- for variant in product.variants -%}
+        {
+          "@type" : "Offer",
+          {%- if variant.sku != blank -%}
+            "sku": {{ variant.sku | json }},
+          {%- endif -%}
+          {%- if variant.barcode.size == 12 -%}
+            "gtin12": {{ variant.barcode }},
+          {%- endif -%}
+          {%- if variant.barcode.size == 13 -%}
+            "gtin13": {{ variant.barcode }},
+          {%- endif -%}
+          {%- if variant.barcode.size == 14 -%}
+            "gtin14": {{ variant.barcode }},
+          {%- endif -%}
+          "availability" : "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
+          "price" : {{ variant.price | json }},
+          "priceCurrency" : {{ cart.currency.iso_code | json }},
+          "url" : {{ request.origin | append: variant.url | json }}
+        }{% unless forloop.last %},{% endunless %}
+      {%- endfor -%}
+    ]
+  }
+</script>
+    <style>
+      p{
+        text-transform:none !important;
+    
+      }
+      span{
+         text-transform:none !important;
+      }
+    </style>
+<!-- Start of Judge.me code -->
+  <div class="uk-container">
+      <div style='clear:both'></div>
+      <div id='judgeme_product_reviews' class='jdgm-widget jdgm-review-widget' data-product-title='{{ product.title | escape }}' data-id='{{ product.id }}' data-auto-install='false'>
+        {{ product.metafields.judgeme.widget }}
+      </div>
+    </div>
+      <!-- End of Judge.me code -->

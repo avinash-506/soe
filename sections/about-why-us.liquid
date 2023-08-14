@@ -1,0 +1,111 @@
+  <div class="why-us" style="background-color:#F5F5F5; ">
+
+            <div class="uk-flex uk-flex-center " style="display:flex; justify-content:center;">
+                <div>
+                    <h3 class="uk-text-center" style="font-size:44px; padding-top:30px;">Why Us</h3>
+                </div>
+                <div style=" padding:15px 15px; "><img src="{{ 'earth-around.png' | asset_url }}" alt="" width="158px" /></div>
+
+
+            </div>
+
+            <div class="uk-flex uk-flex-center" style=""><video
+                    src="https://cdn.shopify.com/videos/c/o/v/96f1d97c03714b84b8fbf8df3f7a4aa8.mp4" width="820px"  loop muted playsinline
+                    uk-video="autoplay: inview"></video></div>
+
+
+           <div class="uk-text-center  uk-child-width-1-4@m" uk-grid>
+      <div>
+        <div>
+        
+        <h3 style="color:#8BB73F;">{{ section.settings['head1'] }}</h3>
+                        <p class="uk-padding-small uk-padding-remove-top">{{ section.settings['content1'] }}</p>
+        </div>
+      </div>
+      <div>
+        <div>
+        
+          <h3 style="color:#8BB73F;">{{ section.settings['head2'] }}</h3>
+                        <p class="uk-padding-small uk-padding-remove-top">{{ section.settings['content2'] }}</p>
+        </div>
+      </div>
+       <div>
+        <div>
+         
+          <h3 style="color:#8BB73F;">{{ section.settings['head3'] }}</h3>
+                        <p class="uk-padding-small uk-padding-remove-top">{{ section.settings['content3'] }}</p>
+        </div>
+      </div>
+      <div>
+        <div>
+         
+          <h3 style="color:#8BB73F;">{{ section.settings['head4'] }}</h3>
+                        <p class="uk-padding-small uk-padding-remove-top">{{ section.settings['content4'] }}</p>
+        </div>
+      </div>
+      </div>
+       
+     
+     
+    </div>
+
+
+
+            
+
+
+        </div>
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": [
+      {
+        "type":"text",
+        "id":"head1",
+        "label":"head 1"
+      },
+      {
+        "type":"text",
+        "id":"content1",
+        "label":"content "
+      },
+      {
+        "type":"text",
+        "id":"head2",
+        "label":"head 2"
+      },
+      {
+        "type":"text",
+        "id":"content2",
+        "label":"content "
+      },
+      {
+        "type":"text",
+        "id":"head3",
+        "label":"head 3"
+      },
+      {
+        "type":"text",
+        "id":"content3",
+        "label":"content "
+      },
+      {
+        "type":"text",
+        "id":"head4",
+        "label":"head 4"
+      },
+      {
+        "type":"text",
+        "id":"content4",
+        "label":"content "
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

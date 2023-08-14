@@ -1,0 +1,337 @@
+<div class="uk-section uk-container  uk-visible@m">
+  <div class="uk-flex uk-flex-between">
+    <h1 class="uk-margin-bottom uk-text-left" style="font-weight:500">Account</h1>
+    <a class="" href="/collections/all" style="text-decoration:underline;">Continue Shopping</a>
+  </div>
+  <div class="uk-flex uk-flex-center uk-padding-remove " uk-grid>
+    <div class="uk-width-1-3">
+      <ul class="uk-tab-left" uk-tab="connect: #component-tab-left; animation: uk-animation-fade">
+        <li class="main-title uk-margin-small">
+          <a href="#"><h3 class="headh3">Account details</h3></a>
+        </li>
+        <li class="main-title uk-margin-small">
+          <a href="#"><h3 class="headh3">Orders details</h3></a>
+        </li>
+      </ul>
+
+      <div class="" style="margin:auto;">
+        <a class="uk-flex uk-flex-middle uk-flex-center" href="{{ routes.account_logout_url }}"
+          ><img width="22px" style="margin-right:10px" loading="lazy" src="{{ "exit.svg" | asset_url }}">
+          <h3 style="margin:0px;">Log-out</h3>
+        </a>
+      </div>
+    </div>
+
+    <div class="uk-width-2-3">
+      <ul id="component-tab-left" class="uk-switcher uk-width-1-1">
+        <li>
+          <div class=" ">
+            <h3 class="uk-margin" style="font-weight:500">Account details</h3>
+            {{ customer.default_address | format_address }}
+
+            <p>
+              Your email id : <span style="color:black">{{ customer.email }}</span>
+            </p>
+
+            <p>
+              Your phone number : <span style="color:black">{{ customer.phone }}</span>
+            </p>
+
+            <p>
+              Total orders : <a href="" style="color:black;">{{ customer.orders_count }}</a>
+            </p>
+            <p>
+              Your order id's :
+              <span style="color:black">
+                {% for order in customer.orders %}
+                  {{ order.id }} ,
+                {% endfor %}
+              </span>
+            </p>
+            <p>
+              Newsletter signup : <span style="color:black">{{ customer.accepts_marketing }}</span>
+            </p>
+            <a style="color:black; text-decoration:underline;" href="https://youfiel.myshopify.com/account/addresses"
+              >Edit Address</a
+            >
+          </div>
+        </li>
+
+        <li>
+          <div class="uk-flex flexi">
+            {% assign number_of_orders = customer.orders | size %}
+            {% if number_of_orders > 0 %}
+              <div class="uk-width-1-1">
+                <h3 class="uk-margin" style="font-weight:500">Order history</h3>
+
+                {% paginate customer.orders by 3 %}
+                  <div class="uk-margin-top " uk-grid>
+                    {% for order in customer.orders %}
+                      <div class="uk-width-1-3@m uk-width-1-1">
+                        <div class="uk-width-1-1 uk-cover-container uk-overflow-hidden uk-border-rounded">
+                          {% if order.line_items.first.image %}
+                            <img
+                              class="uk-width-1-1 uk-height-1-1"
+                              src="{{ order.line_items.first.image | img_url: 'medium' }}"
+                              alt="{{ order.line_items.first.image.alt }}" loading="lazy"
+                            >
+                          {% else %}
+                            {{ 'product-1' | placeholder_svg_tag: 'uk-width-1-1 uk-height-1-1' }}
+                          {% endif %}
+                        </div>
+
+                        <div class="uk-margin">
+                          <div class="">
+                            <p
+                              style="box-sizing: border-box; background-color: #F4EFEB ; border-radius:25px; padding:5px 10px; margin-bottom:8px;"
+                              class="uk-text-center"
+                            >
+                              <span style="color:black">Total order value : </span>{{ order.total_price | money }}
+                            </p>
+                          </div>
+
+                          <p
+                            style="margin-top:0px;"
+                            class="uk-text-center"
+                          >
+                            {{ order.fulfillment_status_label }} - {{ order.financial_status_label }}
+                          </p>
+
+                          <p
+                            style="box-sizing: border-box; background-color: black ;  border-radius:5px; padding:12px 5px;"
+                            class="uk-text-center"
+                          >
+                            <a style="color:white !important;" href="{{ order.customer_url }}">view detail</a>
+                          </p>
+                        </div>
+                      </div>
+                    {% endfor %}
+                  </div>
+
+                  <div class="max-w-6xl mx-auto">
+                    {% render 'pagination', pagination: paginate %}
+                  </div>
+                {% endpaginate %}
+              </div>
+            {% else %}
+              <div class="uk-width-1-1 uk-width-3-4@m uk-flex uk-flex-middle uk-flex-center uk-padding">
+                <h4 class="text-base md:text-2xl font-medium">You currently don't have any orders</h4>
+              </div>
+            {% endif %}
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="uk-section uk-container uk-hidden@m">
+    <h1 class="uk-margin-bottom uk-text-left" style="font-weight:500">Account</h1>
+    
+  <div>
+
+    <ul class="uk-overflow-auto uk-overflow-scroll scrollno" style="flex-wrap:nowrap;" uk-tab>
+
+      <li>
+         <a href="#"><h4>Account details</h4></a>
+      </li>
+
+      <li>
+         <a href="#"><h4>Orders details</h4></a>
+      </li>
+
+    </ul>
+
+
+    <ul class="uk-switcher">
+
+      <li>
+
+        <div class=" ">
+          {{ customer.default_address | format_address }}
+
+          <p>
+            Your email id : <span style="color:black">{{ customer.email }}</span>
+          </p>
+
+          <p>
+            Your phone number : <span style="color:black">{{ customer.phone }}</span>
+          </p>
+
+          <p>
+            Total orders : <a href="" style="color:black;">{{ customer.orders_count }}</a>
+          </p>
+          <p>
+            Your order id's :
+            <span style="color:black">
+              {% for order in customer.orders %}
+                {{ order.id }} ,
+              {% endfor %}
+            </span>
+          </p>
+          <p>
+            Newsletter signup : <span style="color:black">{{ customer.accepts_marketing }}</span>
+          </p>
+          <a style="color:black; text-decoration:underline;" href="https://youfiel.myshopify.com/account/addresses"
+            >Edit Address</a
+          >
+        </div>
+
+      </li>
+
+      <li>
+
+        <div class="uk-flex">
+          {% assign number_of_orders = customer.orders | size %}
+          {% if number_of_orders > 0 %}
+            <div class="uk-width-1-1">
+              <h3 class="uk-margin" style="font-weight:500">Order history</h3>
+
+              <div class="uk-margin-top " uk-grid>
+                {% for order in customer.orders %}
+                  <div class="uk-width-1-1" uk-grid>
+                    <div class="uk-width-1-3 uk-cover-container uk-overflow-hidden uk-border-rounded">
+                      {% if order.line_items.first.image %}
+                        <img
+                          class=""
+                          src="{{ order.line_items.first.image | img_url: 'medium' }}"
+                          alt="{{ order.line_items.first.image.alt }}" loading="lazy"
+                        >
+                      {% else %}
+                        {{ 'product-1' | placeholder_svg_tag: '' }}
+                      {% endif %}
+                    </div>
+
+                    <div class="uk-margin uk-width-2-3" style="margin-top:0px !important;">
+                      <div class="">
+                        <p
+                          style="margin-bottom:8px;"
+                          class=""
+                        >
+                          <span style="color:black">Total order value : </span>{{ order.total_price | money }}
+                        </p>
+                      </div>
+
+                      <p
+                        style="margin-top:0px; margin-bottom:8px;"
+                        class=""
+                      >
+                        {{ order.fulfillment_status_label }} - {{ order.financial_status_label }}
+                      </p>
+
+                      <p
+                        style="box-sizing: border-box; background-color: black ; margin-top:0px; border-radius:5px; padding:12px 5px;"
+                        class="uk-text-center"
+                      >
+                        <a style="color:white !important;" href="{{ order.customer_url }}">view detail</a>
+                      </p>
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          {% else %}
+            <div class="uk-width-1-1 uk-width-3-4@m uk-flex uk-flex-middle uk-flex-center uk-padding">
+              <h4 class="text-base md:text-2xl font-medium">You currently don't have any orders</h4>
+            </div>
+          {% endif %}
+        </div>
+
+      </li>
+
+    </ul>
+
+  </div>
+
+    
+    <a class="uk-flex uk-flex-center uk-flex-middle uk-section-small" style="margin:auto; padding-bottom:0px;" href="{{ routes.account_logout_url }}"
+      ><img width="22px" style="margin-right:10px" src="{{ "exit.svg" | asset_url }}">
+      <h3 style="margin:0px;">Log-out</h3>
+    </a>
+  
+</div>
+
+<style>
+      h3{
+        color:black;
+      }
+
+        .main-title{
+        border:1px solid #F4EFEB;
+        margin: auto;
+        padding: 1rem 0rem;
+        border-radius:15px;
+        width:23rem;
+        }
+
+      .headh3{
+        margin:auto;
+      }
+
+        .main-title-l{
+        border:1px solid #FF6969;
+        margin: auto;
+        padding: 1rem 0rem;
+        border-radius:15px;
+        width:23rem;
+        }
+
+      .headh3-l{
+        margin:auto;
+      }
+
+      .uk-tab-left:before {
+      border:none;
+      }
+
+
+    .main-title.uk-active h3{
+     color:black !important;
+    }
+
+      .main-title-l.uk-active{
+        background-color:#FF6969;
+      }
+
+    .main-title-l.uk-active h3{
+     color:white !important;
+    }
+
+      .main-title.uk-active{
+        background-color:#F4EFEB;
+      }
+
+    @media only screen and (min-width: 900px) {
+      .uk-tab > .uk-active > a {
+          border:none !important;
+
+    }
+
+  /*
+
+        } */
+</style>
+
+<style>
+    @media only screen and (max-width: 600px) {
+    .flexi {
+      display:block;
+      padding-left:0px;
+    }
+   .uk-tab:before {
+    border:none;
+    }
+  }
+</style>
+{% schema %}
+{
+  "name": "template-customer-account",
+  "settings": []
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

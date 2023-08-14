@@ -1,0 +1,1063 @@
+<header class="uk-position-relative">
+  <div uk-sticky="offset: 0" style="background-color: white;border-bottom: .5px solid #6E6E6E;">
+  <div class="uk-position-top-right uk-visible@m">
+    <img loading="lazy" src="{{ 'leaveHeader.svg' | asset_url }}" alt="" loading="lazy"  />
+  </div>
+  <nav class="uk-navbar-container uk-container" uk-navbar>
+    <div class="uk-navbar-left uk-position-relative">
+      <ul class="uk-navbar-nav">
+        <li class="uk-active">
+          <a href="/" style="padding-left: 0">
+            <img class="logo" src="{{ 'logo01.png' | asset_url }}" alt="" loading="lazy"  />
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="uk-navbar-center uk-visible@m ">
+      <ul class="uk-navbar-nav" class="uk-subnav">
+        <li class="uk-active">
+          <a href="{{ section.settings['head-1-url'] }}" >{{ section.settings['head-1'] }}</a>
+
+              <!-- Mega Menu  -->
+              <div class="uk-dropbar uk-dropbar-top" uk-drop="stretch: x">
+                <div class="uk-container uk-border-rounded" style="border: 1px solid #dddddd; background:#fff !important;max-height:316px;">
+                  <div class="uk-padding-small">
+                    <div class="uk-flex-between uk-child-width-1-2@m" uk-grid>
+                      <div>
+                        <div class="uk-child-width-1-4@m" uk-grid>
+                          <div>
+                            <h4>{{ section.settings['heading-1'] }}</h4>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-w-feature-1-url'] }}">{{ section.settings['sub-tag-w-feature-1'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-w-feature-2-url'] }}">{{ section.settings['sub-tag-w-feature-2'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-w-feature-3-url'] }}">{{ section.settings['sub-tag-w-feature-3'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-w-feature-4-url'] }}">{{ section.settings['sub-tag-w-feature-4'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-w-feature-5-url'] }}">{{ section.settings['sub-tag-w-feature-5'] }}</a>
+                            </div>
+                          </div>
+                          <div>
+                            <h4>{{ section.settings['heading-2'] }}</h4>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-w-category-1-url'] }}">{{ section.settings['sub-tag-w-category-1'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-w-category-2-url'] }}">{{ section.settings['sub-tag-w-category-2'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-w-category-3-url'] }}">{{ section.settings['sub-tag-w-category-3'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-w-category-4-url'] }}">{{ section.settings['sub-tag-w-category-4'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-w-category-5-url'] }}">{{ section.settings['sub-tag-w-category-5'] }}</a>
+                            </div>
+                          </div>
+                          <div>
+                            <h4>{{ section.settings['heading-4'] }}</h4>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-w-collections-1-url'] }}">{{ section.settings['sub-tag-w-collections-1'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-w-collections-2-url'] }}">{{ section.settings['sub-tag-w-collections-2'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-w-collections-3-url'] }}">{{ section.settings['sub-tag-w-collections-3'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-w-collections-4-url'] }}">{{ section.settings['sub-tag-w-collections-4'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-w-collections-5-url'] }}">{{ section.settings['sub-tag-w-collections-5'] }}</a>
+                            </div>
+                          </div>
+  
+                          
+                         {% if section.settings.women_enable_checkbox %}
+                         <div>
+                            <h4>{{ section.settings['heading-3'] }}</h4>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-w-occasion-1-url'] }}">{{ section.settings['sub-tag-w-occasion-1'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-w-occasion-2-url'] }}">{{ section.settings['sub-tag-w-occasion-2'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-w-occasion-3-url'] }}">{{ section.settings['sub-tag-w-occasion-3'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-w-occasion-4-url'] }}">{{ section.settings['sub-tag-w-occasion-4'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-w-occasion-5-url'] }}">{{ section.settings['sub-tag-w-occasion-5'] }}</a>
+                            </div>
+                          </div>
+  {% endif %}
+
+                        </div>
+                      </div>
+                      <div>
+                        <div class="uk-grid-small uk-child-width-1-2@m" uk-grid>
+                          <div>
+                        <a  href="{{ section.settings['women01-url'] }}" >    <img style="width:275px;height:275px;" src="{{section.settings['womenimg01'] | img_url:'master'}}" loading="lazy"  /></a>
+<!--                             <a class="uk-text-small uk-margin-small-top" href="/collections/all">Red Season</a> -->
+                          </div>
+                          <div>
+                          <a  href="{{ section.settings['women02-url'] }}" >     <img style="width:275px;height:275px;"src="{{section.settings['womenimg02'] | img_url:'master'}}" loading="lazy" /></a>
+<!--                             <a class="uk-text-small uk-margin-small-top" href="/collections/all">Upcycled</a> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="uk-margin-large-bottom"></div>
+                </div>
+              </div>
+              <!-- !!!!!!!!!!! Mega Menu !!!!!!!! -->
+        </li>
+        <li class="uk-active"><a href="{{ section.settings['head-2-url'] }}" >{{ section.settings['head-2'] }}</a>
+        <!-- Mega Menu  -->
+              <div class="uk-dropbar uk-dropbar-top" uk-drop="stretch: x">
+                <div class="uk-container uk-border-rounded" style="border: 1px solid #dddddd; background:#fff !important;max-height:316px;">
+                  <div class="uk-padding-small">
+                    <div class="uk-flex-between uk-child-width-1-2@m" uk-grid>
+                      <div>
+                        <div class="uk-child-width-1-4@m" uk-grid>
+                          <div>
+                            <h4>{{ section.settings['heading-1-m'] }}</h4>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-m-feature-1-url'] }}">{{ section.settings['sub-tag-m-feature-1'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-m-feature-2-url'] }}">{{ section.settings['sub-tag-m-feature-2'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-m-feature-3-url'] }}">{{ section.settings['sub-tag-m-feature-3'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-m-feature-4-url'] }}">{{ section.settings['sub-tag-m-feature-4'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-m-feature-5-url'] }}">{{ section.settings['sub-tag-m-feature-5'] }}</a>
+                            </div>
+                          </div>
+                          <div>
+                            <h4>{{ section.settings['heading-2-m'] }}</h4>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-m-category-1-url'] }}">{{ section.settings['sub-tag-m-category-1'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-m-category-2-url'] }}">{{ section.settings['sub-tag-m-category-2'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-m-category-3-url'] }}">{{ section.settings['sub-tag-m-category-3'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-m-category-4-url'] }}">{{ section.settings['sub-tag-m-category-4'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-m-category-5-url'] }}">{{ section.settings['sub-tag-m-category-5'] }}</a>
+                            </div>
+                          </div>
+                         
+                          <div>
+                            <h4>{{ section.settings['heading-4-m'] }}</h4>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-m-collections-1-url'] }}">{{ section.settings['sub-tag-m-collections-1'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-m-collections-2-url'] }}">{{ section.settings['sub-tag-m-collections-2'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-m-collections-3-url'] }}">{{ section.settings['sub-tag-m-collections-3'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-m-collections-4-url'] }}">{{ section.settings['sub-tag-m-collections-4'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-m-collections-5-url'] }}">{{ section.settings['sub-tag-m-collections-5'] }}</a>
+                            </div>
+                          </div>
+                          {% if section.settings.men_enable_checkbox %}
+                               <div>
+                            <h4>{{ section.settings['heading-3-m'] }}</h4>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-m-occasion-1-url'] }}">{{ section.settings['sub-tag-m-occasion-1'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-m-occasion-2-url'] }}">{{ section.settings['sub-tag-m-occasion-2'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-m-occasion-3-url'] }}">{{ section.settings['sub-tag-m-occasion-3'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-m-occasion-4-url'] }}">{{ section.settings['sub-tag-m-occasion-4'] }}</a>
+                            </div>
+                            <div class="uk-margin-small-bottom">
+                              <a class="uk-text-small" href="{{ section.settings['sub-tag-m-occasion-5-url'] }}">{{ section.settings['sub-tag-m-occasion-5'] }}</a>
+                            </div>
+                            
+                          </div>
+                          {% endif %}
+
+
+                          
+                        </div>
+                      </div>
+                      <div>
+                        <div class="uk-grid-small uk-child-width-1-2@m" uk-grid>
+                          <div>
+                       <a  href="{{ section.settings['men01-url'] }}" >        <img style="width:275px;height:275px;" src="{{section.settings['menimg01'] | img_url:'master'}}" /></a>
+<!--                             <a class="uk-text-small uk-margin-small-top" href="#">Red Season</a> -->
+                          </div>
+                          <div>
+                      <a  href="{{ section.settings['men02-url'] }}" >         <img style="width:275px;height:275px;" src="{{section.settings['menimg02'] | img_url:'master'}}" /></a>
+<!--                             <a class="uk-text-small uk-margin-small-top" href="#">Upcycled</a> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="uk-margin-large-bottom"></div>
+                </div>
+              </div>
+              <!-- !!!!!!!!!!! Mega Menu !!!!!!!! -->
+        </li>
+        <li class="uk-active"><a href="/pages/sustainability" >{{ section.settings['head-3'] }}</a>
+        <!-- Mega Menu  -->
+          <div class="uk-dropbar uk-dropbar-top" uk-drop="stretch: x" >
+            <div class="uk-container uk-border-rounded" style="border: 1px solid #dddddd; background:#fff !important">
+              <div class="uk-padding-small">
+                <div class="" uk-grid>
+                  
+                    
+                    <div class="uk-flex-between uk-child-width-1-4@m uk-grid-medium" uk-grid>
+                      <div>
+                        <a href="/pages/sustainability#product"> <img src="{{ 'Group 44747.png' | asset_url }}" loading="lazy" /> </a> 
+                        
+                      </div>
+                      <div>
+                        <a href="/pages/sustainability#people"> <img src="{{ 'Group 44746.png' | asset_url }}"loading="lazy"  /> </a>                         
+                      </div>
+                      <div>
+                        <a href="/pages/sustainability#planet"> <img src="{{ 'Group 44745.png' | asset_url }}" loading="lazy" /> </a> 
+                        
+                      </div>
+                      <div>
+                        <a href="/pages/sustainability#path"> <img src="{{ 'Group 44748.png' | asset_url }}"loading="lazy"  /> </a> 
+                        
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="uk-active"><a href="/pages/about-us" >{{ section.settings['head-4'] }}</a></li>
+        <li class="uk-active"><a href="/blogs/news/" >{{ section.settings['head-5'] }}</a>
+                 <div class="uk-dropbar uk-dropbar-top" uk-drop="stretch: x" style="left:-179px !important;">
+            <div class="uk-container uk-border-rounded" style="border: 1px solid #dddddd; background:#fff !important;width:900px;" >
+              <div class="uk-padding-small" style="margin-left:150px;">
+                  <div class="uk-flex uk-flex-center" uk-grid>
+                    <div class=" uk-child-width-1-3@m " uk-grid>
+                      <div style="width:27%;">
+                        <a href="/blogs/news/understanding-organic-cotton-its-advantages-and-benefits"> <img src="{{ 'Group 44749.png' | asset_url }}" /> </a> 
+                    </div>
+                    <div style="width:27%;">
+                          <a  href="/blogs/news/how-sustainable-fashion-can-help-us-move-beyond-fast-fashion"> <img src="{{ 'Group 44750.png' | asset_url }}" /> </a>                         
+                    </div>
+                    <div style="width:27%;">
+                          <a  href="/blogs/news/why-choose-ethical-and-sustainable-fashion"> <img src="{{ 'Group 44751.png' | asset_url }}" /> </a> 
+                    </div> 
+                  </div>
+              </div>
+            </div>
+            </div>
+                 </div>
+        </li>
+        <li class="uk-active"><a href="/pages/faq" >{{ section.settings['head-6'] }}</a>
+          <!-- Mega Menu  -->
+          <div class="uk-dropbar uk-dropbar-top" uk-drop="stretch: x" >
+            <div class="uk-container uk-border-rounded" style="border: 1px solid #dddddd; background:#fff !important">
+              <div class="uk-padding-small">
+                <div class="uk-inline uk-flex uk-flex-center" uk-grid style="margin:auto;">
+                  
+                    
+                    <div class="uk-flex-between uk-child-width-1-4@m uk-grid-medium uk-grid-collapse uk-container" uk-grid style="margin-left:46px;">
+                      <div class="nav-hov ">
+                        <a href="/pages/faq#section01"> <img src="{{ 'Group 43180.png' | asset_url }}"  width="65%;" loading="lazy" /> </a> 
+                      </div>
+                      <div class="nav-hov ">
+                        <a href="/pages/faq#section02"> <img src="{{ 'Group 43181.png' | asset_url }}" width="65%;"loading="lazy"  /> </a> 
+                      </div>
+                      <div class="nav-hov ">
+                        <a href="/pages/faq#section03"> <img src="{{ 'Group 43182.png' | asset_url }}" width="65%;"loading="lazy" loading="lazy"  /> </a> 
+                      </div>
+                      <div class="nav-hov ">
+                        <a href="/pages/faq#section04"> <img src="{{ 'Group 43183.png' | asset_url }}" width="65%;"loading="lazy"  /> </a> 
+                      </div>
+<!--                       <div class="nav-hov ">
+                        <a href="/pages/faq#section05"> <img src="{{ 'Group 43184.png' | asset_url }}" width="65%;"loading="lazy"  /> </a> 
+                      </div> -->
+                     
+                      <div class="nav-hov ">
+                        <a href="/pages/faq#section06"> <img src="{{ 'Group 43186.png' | asset_url }}" width="65%;"loading="lazy"  /> </a> 
+                      </div>
+                      <div class="nav-hov ">
+                        <a href="/pages/faq#section09"> <img src="{{ 'Group 43188.png' | asset_url }}" width="65%;"loading="lazy"  /> </a> 
+                      </div>
+                       <div class="nav-hov ">
+                        <a href="/pages/faq#section08"> <img src="{{ 'Group 43185.png' | asset_url }}" width="65%;"loading="lazy"  /> </a> 
+                      </div>
+                      <div class="nav-hov ">
+                        <a href="/pages/faq#section07"> <img src="{{ 'Group 43187.png' | asset_url }}" width="65%;"loading="lazy"  /> </a> 
+                      </div>
+                      
+                    </div>
+                 
+               
+              </div></div></div>
+            </div>
+        </li>
+        <img style="width: 58px; position: relative; left: 0px" loading="lazy" src="{{ 'headerWool.svg' | asset_url }}" alt="" />
+        <li class="uk-active"><a href="#"></a></li>
+      </ul>
+    </div>
+    <!--     </div> -->
+    <div class="uk-navbar-right uk-position-relative uk-visible@m">
+      <ul class="uk-navbar-nav">
+        <li class="uk-active">
+           <div  class="gf-custom-search">
+                <form action="/search">
+                    <img style="width: 26px" loading="lazy" src="{{ 'searchIcon.svg' | asset_url }}" alt="" />
+                    <input class="globo-search-activator" type="search" name="q" placeholder="Search..." value="" autocapitalize="off" autocomplete="off" autocorrect="off">
+                </form>
+            </div>       
+        </li>
+        <li class="uk-active">
+          <a href="/cart">
+            <!-- <mini-cart></mini-cart> -->
+                 <img style="width: 26px;"loading="lazy"  src="{{ 'g2007.png' | asset_url }}" alt="" />
+          </a>
+        </li>
+        <li class="uk-active">
+          <a href="/account"><img style="width: 26px" loading="lazy" src="{{ 'g360.png' | asset_url }}" alt="" /></a>
+        </li>
+      </ul>
+    </div>
+    <style></style>
+
+    <div class="uk-navbar-right uk-hidden@m">
+      <ul class="uk-navbar-nav">
+        <li class="uk-active">
+          <a href="javascript:;" style="padding-inline:0px" >
+              <form  class="gf-search" action="/search">
+                    <img style="width: 17px"loading="lazy"  src="{{ 'searchIcon.svg' | asset_url }}" alt="" />
+                    <input  class="globo-search-activator" type="search" name="q" placeholder="Search..." value="" autocapitalize="off" autocomplete="off" autocorrect="off">
+              </form>
+          </a>
+          </li >
+        <li class="uk-active" style="">
+          <a href="/cart" style="padding-right:0px">
+            <!-- <mini-cart></mini-cart> -->
+            <img style="width: 26px;" loading="lazy" src="{{ 'g2007.png' | asset_url }}" alt="" />
+          </a>
+        </li>
+        <li class="uk-active">
+          <a href="/account" style="padding-right:0px"><img style="width: 26px;" loading="lazy" src="{{ 'g360.png' | asset_url }}" alt="" /></a>
+        </li>
+        <li class="uk-active">
+          <a href="#mobMenu" style="padding-right:0px" uk-toggle> <span style="margin: 24px 0px;" uk-icon="icon: menu; ratio: 1.4"></span> </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+</header>
+
+        
+
+<!-- <div id="mobMenu" uk-offcanvas> -->
+<div id="mobMenu" uk-offcanvas="overlay: false; flip: true" style="font-size:16px !important;">
+  <div class="uk-offcanvas-bar uk-flex uk-flex-column scrollno">
+    <div class="uk-flex uk-flex-left">
+      <button class="uk-offcanvas-close" type="button" uk-close></button>
+    </div>
+    
+    <ul class="uk-nav uk-nav-primary" style="margin-top:40px;">
+      <ul uk-accordion="multiple: false">
+          <li class="">
+              <a  class="uk-accordion-title" href="" style="font-size:16px !important;">{{ section.settings['head-1'] }}</a>
+              <div class="uk-accordion-content">
+                <ul uk-accordion="multiple: false">
+                  
+                         <li  class="uk-margin-remove">   <a class="uk-margin-medium-left" href="{{ section.settings['sub-tag-w-feature-1-url'] }}">{{ section.settings['sub-tag-w-feature-1'] }}</a></li>
+                      <li class="uk-margin-remove">      <a class="uk-margin-medium-left" href="{{ section.settings['sub-tag-w-feature-2-url'] }}">{{ section.settings['sub-tag-w-feature-2'] }}</a></li>
+                         <li class="uk-margin-remove">   <a class="uk-margin-medium-left" href="{{ section.settings['sub-tag-w-feature-3-url'] }}">{{ section.settings['sub-tag-w-feature-3'] }}</a></li>
+
+                    
+                
+              
+                       
+                  
+                  <li class="uk-margin-remove">  <a class="uk-margin-medium-left" href="{{ section.settings['sub-tag-w-category-1-url'] }}">{{ section.settings['sub-tag-w-category-1'] }}</a></li>
+                        <li class="uk-margin-remove">    <a class="uk-margin-medium-left" href="{{ section.settings['sub-tag-w-category-2-url'] }}">{{ section.settings['sub-tag-w-category-2'] }}</a></li>
+                         <li class="uk-margin-remove">   <a class="uk-margin-medium-left" href="{{ section.settings['sub-tag-w-category-3-url'] }}">{{ section.settings['sub-tag-w-category-3'] }}</a></li>
+                        <li class="uk-margin-remove">    <a class="uk-margin-medium-left" href="{{ section.settings['sub-tag-w-category-4-url'] }}">{{ section.settings['sub-tag-w-category-4'] }}</a></li>
+                        <li class="uk-margin-remove">    <a class="uk-margin-medium-left" href="{{ section.settings['sub-tag-w-category-5-url'] }}">{{ section.settings['sub-tag-w-category-5'] }}</a></li>
+                       
+                   
+                   
+                  
+                        
+                      
+                          <li class="uk-margin-remove">  <a class="uk-margin-medium-left" href="{{ section.settings['sub-tag-w-collections-1-url'] }}">{{ section.settings['sub-tag-w-collections-1'] }}</a></li>
+                          <li class="uk-margin-remove">  <a class="uk-margin-medium-left" href="{{ section.settings['sub-tag-w-collections-2-url'] }}">{{ section.settings['sub-tag-w-collections-2'] }}</a></li>
+                          <li class="uk-margin-remove">  <a class="uk-margin-medium-left" href="{{ section.settings['sub-tag-w-collections-3-url'] }}">{{ section.settings['sub-tag-w-collections-3'] }}</a></li>
+                            
+                  
+               
+                      {% if section.settings.women_enable_checkbox %}
+                 
+                       
+                       
+                         <li class="uk-margin-remove">   <a class="uk-margin-medium-left" href="{{ section.settings['sub-tag-w-occasion-1-url'] }}">{{ section.settings['sub-tag-w-occasion-1'] }}</a></li>
+                          <li class="uk-margin-remove">  <a class="uk-margin-medium-left" href="{{ section.settings['sub-tag-w-occasion-2-url'] }}">{{ section.settings['sub-tag-w-occasion-2'] }}</a></li>
+                          <li class="uk-margin-remove">  <a class="uk-margin-medium-left" href="{{ section.settings['sub-tag-w-occasion-3-url'] }}">{{ section.settings['sub-tag-w-occasion-3'] }}</a></li>
+                          <li class="uk-margin-remove"> <a class="uk-margin-medium-left" href="{{ section.settings['sub-tag-w-occasion-4-url'] }}">{{ section.settings['sub-tag-w-occasion-4'] }}</a></li>
+                         
+                      
+                  
+                    {% endif %}
+                </ul>
+              </div>
+          </li>
+          <li>
+              <a class="uk-accordion-title" href="{{ section.settings['head-2-url'] }}">{{ section.settings['head-2'] }}</a>
+              <div class="uk-accordion-content">
+                  <ul uk-accordion="multiple: false">
+                  
+
+                       
+                          <li class="uk-margin-remove">  <a class="uk-margin-medium-left" href="{{ section.settings['sub-tag-m-feature-1-url'] }}">{{ section.settings['sub-tag-m-feature-1'] }}</a></li>
+                           <li class="uk-margin-remove"> <a class="uk-margin-medium-left" href="{{ section.settings['sub-tag-m-feature-2-url'] }}">{{ section.settings['sub-tag-m-feature-2'] }}</a></li>
+                           <li class="uk-margin-remove"> <a class="uk-margin-medium-left" href="{{ section.settings['sub-tag-m-feature-3-url'] }}">{{ section.settings['sub-tag-m-feature-3'] }}</a></li>
+                          
+                      
+                 
+                       
+                      
+                           <li class="uk-margin-remove"> <a class="uk-margin-medium-left" href="{{ section.settings['sub-tag-m-category-1-url'] }}">{{ section.settings['sub-tag-m-category-1'] }}</a></li>
+                           <li class="uk-margin-remove"> <a class="uk-margin-medium-left" href="{{ section.settings['sub-tag-m-category-2-url'] }}">{{ section.settings['sub-tag-m-category-2'] }}</a></li>
+                          <li class="uk-margin-remove"><a class="uk-margin-medium-left" href="{{ section.settings['sub-tag-m-category-3-url'] }}">{{ section.settings['sub-tag-m-category-3'] }}</a></li>
+                         
+                  
+                       
+                     
+                       <li class="uk-margin-remove">  <a class="uk-margin-medium-left" href="{{ section.settings['sub-tag-m-collections-1-url'] }}">{{ section.settings['sub-tag-m-collections-1'] }}</a></li>
+                        <li class="uk-margin-remove">   <a class="uk-margin-medium-left" href="{{ section.settings['sub-tag-m-collections-2-url'] }}">{{ section.settings['sub-tag-m-collections-2'] }}</a></li>
+                  
+                
+                        {% if section.settings.women_enable_checkbox %}
+
+                     
+                       
+                           <li class="uk-margin-remove"> <a class="uk-margin-medium-left" href="{{ section.settings['sub-tag-m-occasion-1-url'] }}">{{ section.settings['sub-tag-m-occasion-1'] }}</a></li>
+                           <li class="uk-margin-remove"> <a class="uk-margin-medium-left" href="{{ section.settings['sub-tag-m-occasion-2-url'] }}">{{ section.settings['sub-tag-m-occasion-2'] }}</a></li>
+                           <li class="uk-margin-remove"> <a class="uk-margin-medium-left" href="{{ section.settings['sub-tag-m-occasion-3-url'] }}">{{ section.settings['sub-tag-m-occasion-3'] }}</a></li>
+                           <li class="uk-margin-remove"> <a class="uk-margin-medium-left" href="{{ section.settings['sub-tag-m-occasion-4-url'] }}">{{ section.settings['sub-tag-m-occasion-4'] }}</a></li>
+                            
+                      
+                 
+                      {% endif %}
+                </ul>
+              </div>
+          </li>
+         <li>
+             <a class="" href="/pages/sustainability">{{ section.settings['head-3'] }}</a>
+          </li>
+
+          <li>
+            <a class="" style="font-size:16px;" href="/pages/about-us">{{ section.settings['head-4'] }}</a>
+          </li>
+        
+          <li>
+              <a class="" href="/blogs/news/">{{ section.settings['head-5'] }}</a>
+          </li>
+        
+          <li>
+              <a class="" href="/pages/faq">{{ section.settings['head-6'] }}</a>
+          </li>
+
+       
+
+         
+         
+      </ul>
+      <li class="uk-nav-divider"></li>
+      <ul class="uk-navbar-nav">
+<!--         <li class="uk-active" style="margin-top:-30px;">
+          <a href="javascript:;" class="globo-search-activator"><img style="width: 26px" src="{{ 'searchIcon.svg' | asset_url }}" alt="" /></a>
+        </li> -->
+        <li class="uk-active" style="margin-top:-8px;">
+          <a href="/account"><img style="width: 26px" src="{{ 'g360.png' | asset_url }}" alt="" /></a>
+        </li>
+        <li class="uk-active" style="margin-top: -10px">
+      
+            <!-- <mini-cart></mini-cart> -->
+               <a href="/cart"><img style="width: 26px" src="{{ 'g2007.png' | asset_url }}" alt="" /></a>
+       
+        </li>
+      </ul>
+    </ul>
+  </div>
+</div>
+
+
+
+<style>
+  
+/* @media only screen and (max-width: 600px) {
+  .header-border-line {
+    
+    
+  }
+} */
+  
+</style>
+
+
+{% schema %} 
+  { "name": "Header",
+    "settings": [
+      //logo
+      {
+       "type": "image_picker",
+       "id"  : "logo",
+       "label" : "Logo"
+      },
+
+
+
+
+      
+      // Women
+
+      
+      {
+      "type": "text",
+      "id"  : "head-1",
+      "label" : "Nav 1 Text"
+      },
+      {
+      "type": "url",
+      "id"  : "head-1-url",
+      "label" : "Nav 1 Target"
+      },
+      {
+      "type": "text",
+      "id"  : "heading-1",
+      "label" : "Col 1 Heading"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-w-feature-1",
+      "label" : "Sub Col 1, 1st heading"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-w-feature-1-url",
+      "label" : "Sub Links 1 Url"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-w-feature-2",
+      "label" : "Sub Col 1, 2nd heading"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-w-feature-2-url",
+      "label" : "Sub Links 2 Url"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-w-feature-3",
+      "label" : "Sub Col 1, 3rd heading"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-w-feature-3-url",
+      "label" : "Sub Links 3 Url"
+      },
+     
+      {
+      "type": "text",
+      "id"  : "heading-2",
+      "label" : "Col 2 Heading"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-w-category-1",
+      "label" : "Sub Col 2, 1st heading"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-w-category-1-url",
+      "label" : "Sub Col 2, 2nd Url"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-w-category-2",
+      "label" : "Sub Col 2, 2nd heading"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-w-category-2-url",
+      "label" : "Sub Col 2, 2nd Url"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-w-category-3",
+      "label" : "Sub Col 2, 3rd heading"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-w-category-3-url",
+      "label" : "Sub Col 2, 3rd Url"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-w-category-4",
+      "label" : "Sub Col 2, 4th heading"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-w-category-4-url",
+      "label" : "Sub Col 2, 4th Url"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-w-category-5",
+      "label" : "Sub Col 2, 5th heading"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-w-category-5-url",
+      "label" : "Sub Col 2, 5th Url"
+      },
+      
+
+      
+   
+      
+        
+      {
+      "type": "text",
+      "id"  : "heading-4",
+      "label" : "Col 4 Heading"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-w-collections-1",
+      "label" : "Sub Col 4, 1st heading"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-w-collections-1-url",
+      "label" : "Sub Col 4, 2nd Url"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-w-collections-2",
+      "label" : "Sub Col 4, 2nd heading"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-w-collections-2-url",
+      "label" : "Sub Col 4, 2nd Url"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-w-collections-3",
+      "label" : "Sub Col 4, 3rd heading"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-w-collections-3-url",
+      "label" : "Sub Col 4, 3rd Url"
+      },
+  
+   
+      {
+      "type":"checkbox",
+      "id":"women_enable_checkbox",
+      "label":"Enable section"
+      },
+         {
+      "type": "text",
+      "id"  : "heading-3",
+      "label" : "Col 3 Heading"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-w-occasion-1",
+      "label" : "Sub Col 3, 1st heading"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-w-occasion-1-url",
+      "label" : "Sub Col 3, 2nd Url"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-w-occasion-2",
+      "label" : "Sub Col 3, 2nd heading"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-w-occasion-2-url",
+      "label" : "Sub Col 3, 2nd Url"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-w-occasion-3",
+      "label" : "Sub Col 3, 3rd heading"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-w-occasion-3-url",
+      "label" : "Sub Col 3, 3rd Url"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-w-occasion-4",
+      "label" : "Sub Col 3, 4th heading"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-w-occasion-4-url",
+      "label" : "Sub Col 3, 4th Url"
+      },
+      
+      {
+       "type": "image_picker",
+       "id"  : "nav-w-img1",
+       "label" : "sub menu heading 1 Img 1"
+      },
+      {
+      "type": "url",
+      "id"  : "nav-w-img1-url",
+      "label" : "sub menu heading 1 Target 2"
+      },
+      {
+       "type": "image_picker",
+       "id"  : "nav-w-img2",
+       "label" : "sub menu heading 1 Img 2"
+      },
+      {
+      "type": "url",
+      "id"  : "nav-w-img2-url",
+      "label" : "sub menu heading 1 Target 2"
+      },
+      {
+      "type": "image_picker",
+      "id"  : "womenimg01",
+      "label" : "women header image 1"
+      },
+      {
+      "type": "url",
+      "id"  : "women01-url",
+      "label" : "url"
+      },
+      {
+      "type": "image_picker",
+      "id"  : "womenimg02",
+      "label" : "women header image 2"
+      },
+       {
+      "type": "url",
+      "id"  : "women02-url",
+      "label" : "url"
+      },
+
+  //men 
+
+      
+      {
+      "type": "text",
+      "id"  : "head-2",
+      "label" : "Nav 2 Text"
+      },
+      {
+      "type": "url",
+      "id"  : "head-2-url",
+      "label" : "Nav 2 Target"
+      },
+      {
+      "type": "text",
+      "id"  : "heading-1-m",
+      "label" : "Col 1 Heading"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-m-feature-1",
+      "label" : "Sub Col 1, 1st heading"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-m-feature-1-url",
+      "label" : "Sub Links 1 Url"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-m-feature-2",
+      "label" : "Sub Col 2, 2nd heading"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-m-feature-2-url",
+      "label" : "Sub Links 2 Url"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-m-feature-3",
+      "label" : "Sub Col 3, 3rd heading"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-m-feature-3-url",
+      "label" : "Sub Links 3 Url"
+      },
+     
+      {
+      "type": "text",
+      "id"  : "heading-2-m",
+      "label" : "Col 2 Heading"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-m-category-1",
+      "label" : "Sub Col 2, 1st heading"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-m-category-1-url",
+      "label" : "Sub Col 2, 2nd Url"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-m-category-2",
+      "label" : "Sub Col 2, 2nd heading"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-m-category-2-url",
+      "label" : "Sub Col 2, 2nd Url"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-m-category-3",
+      "label" : "Sub Col 2, 3rd heading"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-m-category-3-url",
+      "label" : "Sub Col 2, 3rd Url"
+      },
+     
+      
+   
+     
+        
+      {
+      "type": "text",
+      "id"  : "heading-4-m",
+      "label" : "Col 4 Heading"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-m-collections-1",
+      "label" : "Sub Col 4, 1st heading"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-m-collections-1-url",
+      "label" : "Sub Col 4, 2nd Url"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-m-collections-2",
+      "label" : "Sub Col 4, 2nd heading"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-m-collections-2-url",
+      "label" : "Sub Col 4, 2nd Url"
+      },
+     
+      {
+      "type": "text",
+      "id"  : "sub-tag-m-collections-5",
+      "label" : "Sub Col 4, 5th heading"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-m-collections-5-url",
+      "label" : "Sub Col 4, 5th Url"
+      },
+         {
+      "type": "text",
+      "id"  : "heading-3-m",
+      "label" : "Col 3 Heading"
+      },
+      {
+      "type":"checkbox",
+      "id":"men_enable_checkbox",
+      "label":"Enable section"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-m-occasion-1",
+      "label" : "Sub Col 3, 1st heading"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-m-occasion-1-url",
+      "label" : "Sub Col 3, 2nd Url"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-m-occasion-2",
+      "label" : "Sub Col 3, 2nd heading"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-m-occasion-2-url",
+      "label" : "Sub Col 3, 2nd Url"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-m-occasion-3",
+      "label" : "Sub Col 3, 3rd heading"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-m-occasion-3-url",
+      "label" : "Sub Col 3, 3rd Url"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-m-occasion-4",
+      "label" : "Sub Col 3, 4th heading"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-m-occasion-4-url",
+      "label" : "Sub Col 3, 4th Url"
+      },
+      {
+       "type": "image_picker",
+       "id"  : "nav-m-img1",
+       "label" : "sub menu heading 2 Img 1"
+      },
+      {
+      "type": "url",
+      "id"  : "nav-m-img1-url",
+      "label" : "sub menu heading 2 Target 1"
+      },
+      {
+       "type": "image_picker",
+       "id"  : "nav-m-img2",
+       "label" : "sub menu heading 2 Img 2"
+      },
+      {
+      "type": "url",
+      "id"  : "nav-m-img2-url",
+      "label" : "sub menu heading 2 Target 2"
+      },
+      {
+      "type": "image_picker",
+      "id"  : "menimg01",
+      "label" : "men header image 1"
+      },
+       {
+      "type": "url",
+      "id"  : "men01-url",
+      "label" : "url"
+      },
+      {
+      "type": "image_picker",
+      "id"  : "menimg02",
+      "label" : "men header image 2"
+      },
+       {
+      "type": "url",
+      "id"  : "men02-url",
+      "label" : "url"
+      },
+     
+      
+//sustainability
+      
+      {
+      "type": "text",
+      "id"  : "head-3",
+      "label" : "Nav 3 Text"
+      },
+      {
+      "type": "url",
+      "id"  : "head-3-url",
+      "label" : "Nav 3 Target"
+      },
+//ourstory
+      {
+      "type": "text",
+      "id"  : "head-4",
+      "label" : "Nav 4 Text"
+      },
+      {
+      "type": "url",
+      "id"  : "head-4-url",
+      "label" : "Nav 4 Target"
+      },
+//shadesoflife
+      {
+      "type": "text",
+      "id"  : "head-5",
+      "label" : "Nav 5 Text"
+      },
+      {
+      "type": "url",
+      "id"  : "head-5-url",
+      "label" : "Nav 5 Target"
+      },
+//info
+      {
+      "type": "text",
+      "id"  : "head-6",
+      "label" : "Nav 6 Text"
+      },
+      {
+      "type": "url",
+      "id"  : "head-6-url",
+      "label" : "Nav 6 Target"
+      }
+    ] 
+  } 
+  {% endschema %} 
+
+{% stylesheet %}
+  .uk-accordion-title{
+    font-size:16px !important;
+  }
+{% endstylesheet %}
+

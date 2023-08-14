@@ -1,0 +1,49 @@
+<section style="background-color: #f1efea" class="uk-section-default uk-section blogSec">
+  <div class="uk-container">
+    <div style="border-radius: 14px; background: white; overflow: hidden">
+      <div class="uk-flex uk-flex-middle uk-child-width-1-2@m" uk-grid>
+        {% for article in blogs[section.settings.blog].articles limit:1 %}
+        <div>
+          <a class="uk-link-reset" href="{{ article.url }}">
+            <div style="height:536px;">
+              <div class="uk-cover-container uk-border-rounded" style="height: 298px">
+                <img src="{{ article.image | img_url : '' }}" uk-cover />
+              </div>
+            </div>
+          </a>
+        </div>
+        <div>
+          <div class="uk-card uk-card-body uk-card-small">
+            <p class="uk-text-uppercase uk-text-secondary uk-margin-remove-bottom" style="font-size: 14px !important">Featured {{ blog.title }}</p>
+            <h2 class="uk-margin-small-top" style="margin-bottom: 16px">{{ article.title }}</h2>
+            <p>
+              {{ article.metafields.blog.small_description.value }}
+            </p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<section style="background-color: #f1efea" class="uk-section uk-section-default">
+  <div class="uk-container">
+    <h1 class="headingForSection">Recent articles</h1>
+    <div class="uk-child-width-1-3@m" uk-grid>
+      {% for article in blogs[section.settings.blog].articles %}
+      <div>
+        <a class="uk-link-reset" href="{{ article.url }}">
+          <div>
+            <div class="uk-cover-container uk-border-rounded" style="height: 204px">
+              <img src="{{ article.image | img_url : '' }}" uk-cover />
+            </div>
+            <p class="uk-text-uppercase uk-text-secondary uk-margin-remove-bottom" style="font-size: 14px !important">Featured {{ blog.title }}</p>
+            <h3 class="uk-margin-small-top">{{ article.title }}</h3>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% schema %} { "name": "Custom blogs", "settings": [ { "type":"blog", "id":"blog", "label":"Blogs" }, { "type":"header", "content":"Category Blog" }, { "type":"blog", "id":"blog_cat", "label":"Blog category" } ] } {% endschema %}

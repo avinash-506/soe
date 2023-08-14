@@ -1,0 +1,71 @@
+<div class="how-we-do-it" style="padding-top:50px;">
+   <div class="uk-container">
+        <div class=" uk-text-center">
+            <h1 class="uk-margin-remove">{{ section.settings['head'] }}</h1>
+          <p  style="font-size:18px;" class="uk-margin-remove uk-padding-small">{{ section.settings['content'] }}</p>
+
+        </div>
+        <div class="uk-text-center  uk-flex uk-flex-center  uk-child-width-1-3@m" uk-grid style="padding-top:40px;">
+            <div>
+                <div>
+                    <img style="width:128px" src="{{ 'measure.svg' | asset_url }}" alt="" loading="lazy" />
+                
+                    <p  style="font-size:18px;" class="uk-margin-remove uk-padding-small">{{ section.settings['measure'] }}</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img style="width: 128px" src="{{ 'co2.svg' | asset_url }}" alt="" loading="lazy"  />
+                    
+                    <p  style="font-size:18px;" class="uk-margin-remove uk-padding-small">{{ section.settings['co2'] }}</p>
+                </div>
+            </div>
+            <div>
+                <img style="width: 128px" src="{{ 'climate.svg' | asset_url }}" alt="" loading="lazy"  />
+              
+                <p  style="font-size:18px;" class="uk-margin-remove uk-padding-small">{{ section.settings['offset'] }}</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": [
+      {
+        "type":"text",
+        "id":"head",
+        "label":"head"
+      },
+      {
+        "type":"text",
+        "id":"content",
+        "label":"main content"
+      },
+      {
+        "type":"text",
+        "id":"measure",
+        "label":"measure content"
+      },
+      {
+        "type":"text",
+        "id":"co2",
+        "label":"co2 content"
+      },
+      {
+        "type":"text",
+        "id":"offset",
+        "label":"offset content"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

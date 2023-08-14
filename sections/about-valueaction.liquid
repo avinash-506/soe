@@ -1,0 +1,165 @@
+
+    <div class="uk-flex uk-flex-center uk-flex-wrap uk-container ">
+                    <h1 class="uk-text-center uk-padding-small uk-padding-remove">{{ section.settings['main-head'] }}</h1>
+                </div>
+<!--               dumm -->
+
+               <div class="uk-text-center uk-container uk-flex uk-flex-center  uk-child-width-1-3 uk-position-relative" uk-grid
+                    style="padding-top:40px;margin:auto;">
+                
+                    <div class="uk-padding-remove">
+                       <div class="uk-flex uk-flex-center uk-padding-remove"><img src="{{ 'consumer-first.png' | asset_url }}" alt=""
+                                width="110px" class="uk-flex uk-flex-center" /></div>
+                        <div class=" uk-text-center">
+                            <h4 class="uk-margin-remove">{{ section.settings['head1'] }}</h4>
+                        </div>
+                        <div class="uk-flex uk-flex-center" style="padding-top: 10px;">
+                            <p class="smallop uk-text-center " style="width:199px">{{ section.settings['content1'] }}</p>
+                        </div>
+                    </div>
+                      <div class="uk-width-1-3@m uk-padding-remove">
+                        <div class="uk-flex uk-flex-center uk-padding-remove" ><img src="{{ 'inspired-like.png' | asset_url }}" alt=""
+                                width="84px" class="uk-flex uk-flex-center" /></div>
+                       <div class=" uk-text-center">
+                            <h4 class="uk-margin-remove">{{ section.settings['head2'] }}</h4>
+                        </div>
+                        <div class="uk-flex uk-flex-center" style="padding-top: 10px;">
+                            <p class=" uk-text-center " style="width:199px">{{ section.settings['content2'] }}</p>
+                        </div>
+                    </div>
+                    <div class="uk-width-1-3@m uk-padding-remove" style="padding-top:9px;">
+                        <div class="uk-flex uk-flex-center uk-padding-remove"><img src="{{ 'authentic.png' | asset_url }}" alt=""
+                                width="90px" class="uk-flex uk-flex-center" /></div>
+                       <div class=" uk-text-center">
+                            <h4 class="uk-margin-remove">{{ section.settings['head3'] }}</h4>
+                        </div>
+                        <div class="uk-flex uk-flex-center" style="padding-top: 10px;">
+                            <p class=" uk-text-center " style="width:199px">{{ section.settings['content3'] }}</p>
+                        </div>
+                    </div>
+                 </div>
+               </div>
+
+
+
+
+
+
+
+               <div class="inte uk-text-center  uk-flex uk-flex-center  uk-child-width-1-3 uk-container " uk-grid
+                    style="padding-top:40px;margin:auto;">
+                    <div class="uk-padding-remove">
+                       <div class="uk-flex uk-flex-center"><img src="{{ 'integrity.png' | asset_url }}" alt=""
+                                width="110px" class="uk-flex uk-flex-center" /></div>
+                        <div class=" uk-text-center">
+                            <h4 class="uk-margin-remove">{{ section.settings['head4'] }}</h4>
+                        </div>
+                        <div class="uk-flex uk-flex-center" style="padding-top: 10px;">
+                            <p class="smallop uk-text-center " style="width:199px">{{ section.settings['content4'] }}</p>
+                        </div>
+                    </div>
+                      <div class="uk-width-1-3@m uk-padding-remove">
+                      <div class="uk-flex uk-flex-center"><img src="{{ 'sustainable-growth.png' | asset_url }}" alt=""
+                                width="110px" class="uk-flex uk-flex-center" /></div>
+                       <div class=" uk-text-center">
+                            <h4 class="uk-margin-remove">{{ section.settings['head5'] }}</h4>
+                        </div>
+                        <div class="uk-flex uk-flex-center" style="padding-top: 10px;">
+                            <p class=" uk-text-center " style="width:199px">{{ section.settings['content5'] }}</p>
+                        </div>
+                    </div>
+                    <div class="uk-width-1-3@m uk-padding-remove" style="">
+                        <div class="uk-flex uk-flex-center"><img src="{{ 'collective-effort.png' | asset_url }}" alt=""
+                                width="70px" class="uk-flex uk-flex-center" /></div>
+                        <div class=" uk-text-center">
+                            <h4 class="uk-margin-remove">{{ section.settings['head6'] }}</h4>
+                        </div>
+                        <div class="uk-flex uk-flex-center" style="padding-top: 10px;">
+                            <p class=" uk-text-center " style="width:199px">{{ section.settings['content6'] }}</p>
+                        </div>
+                    </div>
+               </div>
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": [
+      {
+        "type":"text",
+        "id":"main-head",
+        "label":"main-head"
+      },
+      {
+        "type":"text",
+        "id":"head1",
+        "label":"head1"
+      },
+      {
+        "type":"text",
+        "id":"content1",
+        "label":"content1"
+      },
+      {
+        "type":"text",
+        "id":"head2",
+        "label":"head2"
+      },
+      {
+        "type":"text",
+        "id":"content2",
+        "label":"content2"
+      },
+      {
+        "type":"text",
+        "id":"head3",
+        "label":"head3"
+      },
+      {
+        "type":"text",
+        "id":"content3",
+        "label":"content3"
+      },
+      {
+        "type":"text",
+        "id":"head4",
+        "label":"head4"
+      },
+      {
+        "type":"text",
+        "id":"content4",
+        "label":"content4"
+      },
+      {
+        "type":"text",
+        "id":"head5",
+        "label":"head5"
+      },
+      {
+        "type":"text",
+        "id":"content5",
+        "label":"content5"
+      },
+      {
+        "type":"text",
+        "id":"head6",
+        "label":"head6"
+      },
+      {
+        "type":"text",
+        "id":"content6",
+        "label":"content6"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+@media screen and (max-width: 650px)
+{
+  .smallop{
+    min-width:199px !important;
+  }
+}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

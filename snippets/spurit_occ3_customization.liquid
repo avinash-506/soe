@@ -1,0 +1,183 @@
+<style>
+  .spurit-occ3-checkout,
+  .spurit-occ3__slide-drawer-footer .spurit-occ3__btn:not(.go-to-cart) {    
+    display: none !important;
+  }
+  #occ3-popup-mobile {
+    top: 25vh;
+    height: 50vh;
+  }
+  .spurit-occ3-popup.spurit-occ3-popup-mobile {
+    height: 50vh;
+  }
+  .spurit-occ3-popup.spurit-occ3-popup-mobile .spurit-occ3-body {
+    margin-bottom: 0;
+  }
+  .spurit-occ3__item-titles .occ3-properties:last-child {
+    display: none;
+  }
+  @media (max-width: 480px) {
+    .spurit-occ3__slide-drawer {
+      width: 83%;
+    }
+    .spurit-occ3__slide-drawer-header,
+    .spurit-occ3__cart-main,
+    .spurit-occ3__slide-drawer-footer {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    .spurit-occ3__product-card .spurit-occ3__thumbnail {
+      width: 70px;
+    }
+    .spurit-occ3__item-info-top .spurit-occ3__btn_plain {
+      min-width: 15px;
+    }
+    .spurit-occ3__item-info-bottom .spurit-occ3__price {
+      justify-content: flex-start;
+      margin-top: 10px;
+    }
+    .spurit-occ3__item-info-top {
+      margin-bottom: 12px;
+    }
+  }  
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() { 
+  var occInit = setInterval(function() {        
+    var slideDrawer = document.querySelector('#occ3-drawer .spurit-occ3__slide-drawer'),
+      checkoutBtn = document.querySelector('.spurit-occ3__slide-drawer-footer .spurit-occ3__btn'),
+      goToCart = document.querySelector('.spurit-occ3__slide-drawer-footer .go-to-cart');
+    
+    if (slideDrawer !== null && checkoutBtn !== null && goToCart == null) {
+      var goToCartBtn = checkoutBtn.cloneNode(true);
+
+      goToCartBtn.textContent = 'Go to cart';
+      goToCartBtn.href = '/cart';
+      goToCartBtn.removeAttribute('data-occ3');
+      goToCartBtn.classList.add('go-to-cart');
+
+      document.querySelector('.spurit-occ3__slide-drawer-footer').appendChild(goToCartBtn);
+    }
+  }, 500);
+});
+</script>
+
+{% if template contains 'product' %}
+<script>
+document.addEventListener('DOMContentLoaded', function() { 
+  var occIndex = 0;
+  var occListenVariants = setInterval(function() {        
+    var variantsSelector = document.querySelectorAll('#productPage .variantsSelector'),
+      variantIdInput = document.querySelector('#productPage input[name="id"]');
+
+    if (variantsSelector.length > 0 && variantIdInput !== null) {
+      clearInterval(occListenVariants);
+
+      if (typeof(Spurit) !== 'undefined' && Spurit.OneClickCheckout3.snippet.product) {
+        var currentVariant = Spurit.OneClickCheckout3.snippet.product.selected_or_first_available_variant,
+          currentOption1 = currentVariant.option1,
+          currentOption2 = currentVariant.option2,
+          currentOption3 = currentVariant.option3,
+          availableVariants = Spurit.OneClickCheckout3.snippet.product.variants,
+          availableOptions = Spurit.OneClickCheckout3.snippet.product.options,
+          options1 = availableOptions[0] ? availableOptions[0].values : [],
+          options2 = availableOptions[1] ? availableOptions[1].values : [],
+          options3 = availableOptions[2] ? availableOptions[2].values : [];
+
+        Spurit.global.atc.onBeforeEventPrevented((event, target) => {
+            return true;
+        });
+        Spurit.global.atc.onBefore(function(event, target, lineItems, mode, next){
+          if (isCustomVariant(lineItems, availableVariants)) {
+            lineItems = generateCustomLineItems(variantIdInput.value);
+          }         
+          
+          next(Spurit.global.constants.ATC.SUBMIT_MODE_AJAX, lineItems);
+        });
+        Spurit.global.atc.onAfter(function(event, target, lineItems, mode){
+        });
+
+        variantsSelector.forEach(variant => {
+          if (variant.parentNode.firstElementChild === variant) {
+            variant.click();
+          }
+          
+          variant.addEventListener('click', () => {
+            var variantValue = variant.innerText;
+            
+            if (options1.includes(variantValue)) {
+              currentOption1 = variantValue;
+            } else if (options2.includes(variantValue)) {
+              currentOption2 = variantValue;
+            } else if (options3.includes(variantValue)) {
+              currentOption3 = variantValue;
+            }
+
+            var chosenVariant = availableVariants.find(
+              availableVariant => availableVariant.option1 === currentOption1 
+                && availableVariant.option2 === currentOption2 
+                && availableVariant.option3 === currentOption3
+            );
+
+            if (chosenVariant) {
+              variantIdInput.value = chosenVariant.id;
+            }              
+          });
+        });    
+      }    
+    }
+
+    if (++occIndex > 50) {
+      clearInterval(occListenVariants);
+    }
+  }, 500);
+
+  function isCustomVariant(lineItems, availableVariants) {
+    if (!lineItems.length) {
+      return true;
+    }
+
+    var id = lineItems[0].id,
+      customVariant = availableVariants.find(
+        variant => variant.id === id && (variant.option1 === 'Custom' || variant.option2 === 'Custom' || variant.option3 === 'Custom')
+      );
+    
+    return customVariant !== undefined;
+  }
+      
+  function generateCustomLineItems(chosenId) {
+    var customProperties = {},
+      customSizes = document.querySelectorAll('#size-qv-form input'),
+      customInstructions = document.querySelector('#size-qv-form textarea');
+
+    if (customSizes.length > 0 && customInstructions !== null) {
+      customProperties["Custom size"] = 
+        'Height in feet: ' + customSizes[0].value  + ' | ' +
+        'Height in Inches: ' + customSizes[1].value + ' | ' +
+        'Bust: ' + customSizes[2].value + ' | ' +
+        'Waist: '+ customSizes[3].value + ' | ' +
+        'Hip: ' + customSizes[4].value + ' | ' +
+        'Special Instructions: ' + customInstructions.value;        
+
+      customProperties.custom_size = {
+        "waist": customSizes[3].value,
+        "hip": customSizes[4].value,
+        "chest": customSizes[2].value,
+        "inFeet": customSizes[0].value,
+        "inInches": customSizes[1].value,
+        "instructions": customInstructions.value
+      };
+    }
+    
+    var lineItems = [{
+      id: chosenId,
+      quantity: 1,
+      properties: customProperties
+    }];
+
+    return lineItems;
+  } 
+});
+</script>
+{% endif %}

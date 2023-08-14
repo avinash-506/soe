@@ -1,0 +1,121 @@
+<section class=" uk-section position-relative uk-visible@m uk-padding-remove-bottom">
+  <div class="uk-container">
+    <h2 class="uk-margin-remove">
+      {{ section.settings['main_heading']}} <img style="width: 58px; margin-left: -2px" src="{{ 'earImg.svg' | asset_url }}">
+    </h2>
+    <p class="uk-margin-remove-top" style="font-size:18px">
+      {{ section.settings['main_para'] }}
+    </p>
+    <h4 style="margin-top:0" class="uk-margin-remove-bottom">{{ section.settings['secondary_heading'] }}</h4>
+    <a href="https://app.getgreenspark.com/dashboard/1684991288373/shades-of-earth"><img  loading="lazy"  src="{{ section.settings['un-banner'] | img_url : 'master' }}" alt=""></a>
+    <div class="uk-grid-column-large uk-child-width-1-2@m" uk-grid>
+      <div style="margin-top:10%">
+          <p  class="uk-margin-remove-top" style="font-size:18px">{{ section.settings['secondary_para'] }}</p>
+          <div class="uk-margin-medium-top">
+            <a href="{{ section.settings['cta_link'] }}" class="uk-button uk-button-primary" style="font-weight:bolder;">{{ section.settings['cta_text'] }}</a>
+          </div>
+      </div>
+      <div>
+        <div>
+          <video src="https://cdn.shopify.com/videos/c/o/v/633325e94c8c428bbabd5b4b27de5190.mp4" loading="lazy"  loop muted playsinline uk-video="autoplay: inview"></video>
+        </div>
+      </div>
+      <div>
+        <div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mobile View -->
+
+<section class="uk-section position-relative uk-hidden@m" style="padding-bottom:0;">
+  <div class="uk-container">
+    <h2 class="uk-margin-remove" style="">
+      {{ section.settings['main_heading']}} <img style="width: 58px;" src="{{ 'earImg.svg' | asset_url }}">
+    </h2>
+    <p class="uk-margin-remove-top  uk-margin-large-bottom">
+      {{ section.settings['main_para'] }}  
+    </p>
+    <div class="uk-grid-column-large uk-child-width-1-2@m" uk-grid>
+      <div>
+        <div>
+          <h5 class="uk-margin-remove-bottom">{{ section.settings['secondary_heading'] }}</h5>
+          <a href="https://app.getgreenspark.com/dashboard/1684991288373/shades-of-earth"><img  loading="lazy" style="width:100%" src="{{ section.settings['un-banner-mob'] | img_url : 'master' }}" loading="lazy"  alt=""></a>
+          <p>{{ section.settings['secondary_para'] }}</p>
+        </div>
+      </div>
+      </div>
+      <div>
+        <div>
+          <video src="https://cdn.shopify.com/videos/c/o/v/633325e94c8c428bbabd5b4b27de5190.mp4" loading="lazy"  loop muted playsinline uk-video="autoplay: inview"></video>
+          <div class="suscta uk-margin-medium-top uk-text-center">
+            <a  href="{{ section.settings['cta_link']}}" class="uk-button uk-button-primary" style="font-weight:bolder;">{{ section.settings['cta_text']}}</a>
+          </div>
+        </div>
+      </div>
+      
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "UN Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "main_heading",
+        "label": "Main Header"
+      },
+      {
+        "type": "text",
+        "id": "main_para",
+        "label": "Main Paragraph"
+      },
+      {
+        "type": "text",
+        "id": "secondary_heading",
+        "label": "secondary Header"
+      },
+      {
+        "type": "text",
+        "id": "secondary_para",
+        "label": "secondary Paragraph"
+      },
+      {
+        "type": "text",
+        "id": "cta_text",
+        "label": "CTA Text"
+      },
+      {
+        "type": "url",
+        "id": "cta_link",
+        "label": "CTA Link"
+      },
+      { "type": "image_picker", "id": "un-banner", "label": "UN banner web grid" },
+      { "type": "image_picker", "id": "un-banner-mob", "label": "UN banner mob grid" }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+@media screen and (max-width: 900px) {
+.suscta{
+  margin-bottom:52px !important;
+  
+}
+}
+@media screen and (max-width: 650px) {
+.suscta{
+  margin-bottom:0px !important;
+  
+}
+}
+  
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

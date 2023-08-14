@@ -1,0 +1,49 @@
+<section class="mainBG uk-section-default uk-section faq">
+  <div class="uk-container">
+    <h1 class="uk-text-center headingForSection">{{ section.settings.heading }}</h1>
+    <div class="uk-margin-medium-top">
+      <ul style="background-color: #f0e6d6" uk-accordion>
+        {% for block in section.blocks %}
+          <li class="uk-padding {% if forloop.index == 1 %}uk-open{% endif %}">
+          <a class="uk-accordion-title" href="#">
+            <h2 class="uk-margin-remove">{% if forloop.index < 10 %}0{{ forloop.index }}. {% else %}{{ forloop.index }}{% endif %}{{ block.settings.faq_question }}</h2>
+          </a>
+          <div class="uk-accordion-content" style="margin-top: 6px">
+            <p>{{ block.settings.faq_ans }}</p>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Product faq",
+    "settings": [
+      {
+        "type":"text",
+        "id":"heading",
+        "label":"Heading"
+      }
+    ],
+    "blocks":[
+      {
+        "name":"Product faq",
+        "type":"product_faq",
+        "settings":[
+          {
+            "type":"text",
+            "id":"faq_question",
+            "label":"Faq Question"
+          },
+          {
+            "type":"textarea",
+            "id":"faq_ans",
+            "label":"Faq Answer"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

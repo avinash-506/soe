@@ -1,0 +1,18 @@
+<section class="uk-container headerMargin uk-section uk-section-default cartPage uk-background-cover" style="background-image: url('{{ 'mainSmokeBG.png' | asset_url }}'); background-position: inherit;">
+    <cart-component img-size='{{ product.metafields.product.cart_image_size.value }}'></cart-component>
+    <div style="margin-top:40px"></div>
+<!--     {% include 'greenspark-cart' %} -->
+  {% if cart.item_count != 0 %}
+    {% section 'cart-greenspark' %}
+  {% endif %}
+  {% if cart.item_count == 0 %}
+    <h2 class="uk-text-center">Your cart is empty.</h2>
+   {% endif %}
+    
+</section>
+
+{% if settings.mlvedaACS_isMessageDisplay %}
+<p class="mlvedaCartNote" style="display:none">
+  {{ settings.mlvedaACS_messageContent | replace: "<<shop.name>>", shop.name | replace:"<<shop.currency>>",shop.currency|replace:"<<shop.selected_currency>>","<span class='selected-currency'></span>"}}
+</p>
+{% endif %}{% render 'shooraai-widgets' %}

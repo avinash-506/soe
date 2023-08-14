@@ -1,0 +1,32 @@
+
+<div class="uk-container">
+  <div style="margin: 18px 0">
+    <a href="/blogs/news/" style="text-decoration: underline">Go back</a>
+  </div>
+</div>
+<div class="uk-section uk-section-default headerMargin" style="margin:15px;padding-top: 0">
+  <div class="uk-margin-auto" style="max-width: 980px">
+    <div>
+<!--       <div id="blogHero" class="uk-section-default uk-background-cover uk-border-rounded" style="background-image: url('{{ article.image.src | img_url : '2000x' }}'); width:100%; height:446px; object-fit:cover;  "> -->
+<!--         <div class="uk-section uk-light"></div> -->
+      </div>
+      <h1 class="uk-containeruk-article-title">
+        {{ article.title }}
+      </h1>
+
+      <p class="uk-article-meta">
+        Written by <a href="#">{{ article.author }}</a> on {{ article.created_at | date : '%d %b %Y' }}
+      </p>
+    </div>
+
+    <div class="uk-margin-large-top" uk-grid>
+      <div class="uk-width-1-1">
+        <article class="uk-article">
+          <div class="uk-margin-auto" style="max-width: 980px">
+            {{ article.content }}
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>

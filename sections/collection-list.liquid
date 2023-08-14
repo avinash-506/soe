@@ -1,0 +1,29 @@
+<section class="mainBG uk-section-default uk-section-large uk-padding-remove-bottom">
+  <div class="uk-container">
+    <div class="uk-text-center" style="margin-top: -44px !important">
+      <img src="{{ 'after_hero_ele.svg' | asset_url }}" style="height: 48px" alt="" />
+    </div>
+    <p class="uk-text-center uk-margin-auto" style="max-width: 630px; margin-bottom: 28px">Elevate your everyday routine with artisanal coffee products</p>
+
+    <div class="uk-flex-center uk-child-width-1-2@m" uk-grid>
+      {% for block in section.blocks %} {% assign collection = block.settings.collection %}
+      <div>
+        <a class="uk-link-reset" href="{{ collection.url }}">
+          <div style="background: {{ block.settings.color }}; padding-top: 32px; padding-bottom: 32px" class="uk-border-rounded uk-flex uk-flex-middle uk-child-width-1-2@m">
+            <div class="uk-padding-small">
+              <img style="transform: scale({{ collection.metafields.custom.scale }});" src="{{ collection.image | img_url : '1000x1000' }}" />
+            </div>
+            <div class="uk-padding-small">
+              <h1 class="uk-margin-remove uk-text-secondary">
+                {{ collection.title }}
+              </h1>
+              <div class="badge uk-text-secondary uk-margin-small-top">{{ collection.metafields.custom.collection_tag }}</div>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% schema %} { "name": "collection list", "settings": [], "blocks":[ { "type":"collection", "name":"Collection", "settings":[ { "type":"color", "id":"color", "label":"Color" }, { "type":"collection", "id":"collection", "label":"Collection" } ] } ] } {% endschema %} {% stylesheet %} {% endstylesheet %} {% javascript %} {% endjavascript %}

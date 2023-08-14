@@ -1,0 +1,504 @@
+<section>
+  <div class="uk-container">
+    <div class="uk-background-cover uk-margin-auto uk-flex uk-flex-middle uk-flex-center uk-visible@m" style="background-image: url('{{ 'subGb.png' | asset_url }}'); max-width: 814px; border-radius: 12px; padding: 34px 0 158px 0;margin-top:46px; ">
+      <div style="max-width: 408px; width: 96%" class="uk-margin-auto">
+        <p class="uk-margin-remove uk-text-center" style="margin-bottom: 16px !important">{{ section.settings['newshead'] }}</p>
+         {% form 'customer', class: 'newsletter-form' %}
+          <div class="subscribe uk-position-relative uk-flex" style="position:relative; z-index:2;text-transform:none !important;">
+         <input type="email" name="contact[email]" value="{{ form.email }}" autocomplete="email" {% if form.errors %} autofocus aria-invalid="true" aria-describedby="Newsletter-error--{{ section.id }}" {% elsif form.posted_successfully? %} aria-describedby="Newsletter-success--{{ section.id }}" {% endif %} placeholder="Enter email address" style="text-transform:none !important ;width:261px;max-height:53px;" required />
+<!--             <button onClick="displayText()" type="submit" class="showTextButton uk-button uk-button-default uk-position-absolute" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">Subscribe</button> -->
+       
+                
+            <button class="uk-button uk-button-default"   type="submit" class="showTextButton uk-button uk-button-default uk-position-absolute" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">Subscribe</button>
+               </div>
+           
+          {%- if form.posted_successfully? -%}
+         <h5 class="form-status form-status-list form__message uk-text-center uk-margin-remove uk-padding-small uk-text-center" style="color:#69a600;z-index:99;position:relative; " tabindex="-1" autofocus>
+         Thanks for subscribing . 
+        </h5>
+        {%- elsif form.errors -%}
+        <div class="form__message">
+        <h5 class="form-status caption-large text-body uk-text-center uk-margin-remove uk-padding-small" role="alert" tabindex="-1" autofocus>
+         Something went wrong.Try again later.
+         </h5>
+        </div>
+  
+      {%- endif -%}
+        {% endform %}
+      
+        
+      </div>
+    </div>
+
+    <div class="uk-background-cover uk-margin-auto uk-flex uk-flex-middle uk-flex-center uk-hidden@m" style="background-image: url('{{ 'subGb.png' | asset_url }}'); max-width: 814px; border-radius: 12px; padding: 34px 0 54px 0;">
+      <div style="max-width: 408px; width: 96%" class="uk-margin-auto">
+        <p class="uk-margin-remove uk-text-center" style="margin-bottom: 16px !important; font-weight:500; font-size: 18px">{{ section.settings['newshead'] }}</p>
+  {% form 'customer', class: 'newsletter-form' %}
+        <div class="subscribe uk-position-relative ">
+          <input type="hidden" name="contact[tags]" value="newsletter" />
+          <input  type="email" name="contact[email]" value="{{ form.email }}" autocomplete="email" {% if form.errors %} autofocus aria-invalid="true" aria-describedby="Newsletter-error--{{ section.id }}" {% elsif form.posted_successfully? %} aria-describedby="Newsletter-success--{{ section.id }}" {% endif %} placeholder="Enter email address" required style="text-transform:none !important;width:100%;"  />
+<!--           <button style="width:100%;margin:0 !important;" name="commit" type="submit" class="uk-button uk-button-primary uk-width-1-1 uk-margin-top" style="top:80px" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">Subscribe</button> -->
+       <button  style="width:100%;margin:0 !important;"  class="uk-button uk-button-default" href="#modal-center" uk-toggle onClick="displayText()" type="submit" class="showTextButton uk-button uk-button-default uk-position-absolute" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">Subscribe</button>
+               </div>
+            <div  id="myText" class="uk-text-bold" style="color:#8BB73F;display: none;">
+
+<div id="modal-center" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+
+        <p> Thank you for subscribing</p>
+
+    </div>
+</div>
+       </div>
+ 
+        {% endform %}
+      </div>
+    </div>
+  </div>
+</section>
+<script type="application/javascript" defer>
+  window.addEventListener('load', function (event) {
+    waveAlign();
+  });
+
+  function waveAlign() {
+    var wave = document.getElementById('footerImg');
+    // var waveQuiz = document.getElementById('waveQuiz');
+    wave.style.top = `-${wave.clientHeight / 1.4}px`;
+
+    // var resWaveTB = window.innerWidth >= 1024 ? 36 : 4;
+
+    // waveQuiz.style.top = `-${waveQuiz.clientHeight - resWaveTB}px`;
+    // document.getElementById('bestsellerMT').style.marginTop = `-${wave.clientHeight}px`;
+    // document.getElementById('merchMarginTop').style.marginTop = `-${waveQuiz.clientHeight}px`;
+  }
+</script>
+
+<footer class="uk-position-relative uk-visible@m">
+  <div class="uk-position-absolute" id="footerImg">
+    <img src="{{ 'footerMainBG.svg' | asset_url }}" alt="" loading="lazy"  style="position:relative;z-index:0;" />
+  </div>
+  <div class="uk-container uk-position-relative" style="z-index: 99">
+    <div class="" uk-grid>
+      <div class="uk-width-2-3@m">
+        <div>
+          <div class="uk-grid-small uk-child-width-1-2 uk-child-width-1-3@m" uk-grid>
+            <div class="footerTopMargin">
+              <img style="width: 80%" src="{{ section.settings['team_img_1'] | img_url : 'master' }}" loading="lazy"  />
+              <p class="uk-text-primary" style="font-size: 14px">{{ section.settings['about-us'] }}</p>
+            </div>
+            <div class="footerTopMargin">
+              <h3>{{ section.settings['heading-1'] }}</h3>
+
+              <div>
+                <div class="uk-margin-small-bottom">
+                  <a href="{{ section.settings['sub-tag-about-1-url'] }}">{{ section.settings['sub-tag-about-1'] }}</a>
+                </div>
+                <div class="uk-margin-small-bottom">
+                  <a href="#modal-full" uk-toggle>{{ section.settings['sub-tag-about-2'] }}</a>
+                  <div id="modal-full" class="uk-modal-container" uk-modal>
+                      <div class="uk-modal-dialog uk-modal-body">
+                          <button class="uk-modal-close-default" type="button" uk-close></button>
+                          <img src="{{ 'wash instruction (1)_page-0001.jpg' | asset_url }}" loading="lazy" >
+                      </div>
+                  </div>
+                </div>
+                <div class="uk-margin-small-bottom">
+                  <a href="{{ section.settings['sub-tag-about-3-url'] }}">{{ section.settings['sub-tag-about-3'] }}</a>
+                </div>
+                <div class="uk-margin-small-bottom">
+                  <a href="{{ section.settings['sub-tag-about-4-url'] }}">{{ section.settings['sub-tag-about-4'] }}</a>
+                </div>
+                <div class="uk-margin-small-bottom">
+                  <a href="{{ section.settings['sub-tag-about-5-url'] }}">{{ section.settings['sub-tag-about-5'] }}</a>
+                </div>
+                <div class="uk-margin-small-bottom">
+                  <a href="{{ section.settings['sub-tag-about-6-url'] }}">{{ section.settings['sub-tag-about-6'] }}</a>
+                </div>
+              </div>
+            </div>
+            <div class="footerTopMargin">
+             <h3>{{ section.settings['heading-2'] }}</h3>
+
+              <div class="">
+                <div class="uk-margin-small-bottom">
+                 <a href="{{ section.settings['sub-tag-story-1-url'] }}">{{ section.settings['sub-tag-story-1'] }}</a>
+                </div>
+                <div class="uk-margin-small-bottom">
+                 <a href="{{ section.settings['sub-tag-story-2-url'] }}">{{ section.settings['sub-tag-story-2'] }}</a>
+                </div>
+                <div class="uk-margin-small-bottom">
+               <a href="{{ section.settings['sub-tag-story-3-url'] }}">{{ section.settings['sub-tag-story-3'] }}</a>
+                </div>
+                <div class="uk-margin-small-bottom">
+               <a href="{{ section.settings['sub-tag-story-4-url'] }}">{{ section.settings['sub-tag-story-4'] }}</a>
+                </div>
+                <div class="uk-margin-small-bottom">
+                  <a href="{{ section.settings['sub-tag-story-5-url'] }}">{{ section.settings['sub-tag-story-5'] }}</a>
+                </div>
+                <div class="uk-margin-small-bottom">
+                 <a href="{{ section.settings['sub-tag-story-6-url'] }}">{{ section.settings['sub-tag-story-6'] }}</a>
+                </div>
+              </div>
+            </div>
+            <div class="footerTopMargin">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="uk-width-1-3@m">
+        <div class="footerTopMargin">
+          <h3>{{ section.settings['heading-3'] }}</h3>
+          <div class="uk-margin-small-bottom">
+            <a href=""><img style="width: 22px; margin-right: 10px" src="{{ 'phoneIcon.svg' | asset_url }}" alt="" loading="lazy"  />{{ section.settings['number-1'] }}<span> | </span>{{ section.settings['number-2'] }}</a>
+          </div>
+          <div class="uk-margin-small-bottom">
+            <a href="{{ section.settings['email-url'] }}" style="text-transform: lowercase !important;"><img style="width: 20px; margin-right: 10px;" src="{{ 'envelopeIcon.svg' | asset_url }}" alt="" loading="lazy"  />{{ section.settings['email'] }}</a>
+          </div>
+          <div class="uk-flex uk-margin-small-bottom">
+                <div >
+                 <a href="{{ section.settings['instagram'] }}"><i style="color:#8BB73F; " class="fa-brands fa-instagram"></i></a> 
+                   <a href="{{ section.settings['facebook'] }}">  <i style="color:#8BB73F; margin-left:15px" class="fa-brands fa-facebook"></i></a> 
+                   <a href="{{ section.settings['youtube'] }}">  <i style="color:#8BB73F; margin-left:15px" class="fa-brands fa-youtube"></i></a> 
+                    <a href="{{ section.settings['email-url'] }}"> <i style="color:#8BB73F; margin-left:15px" class="fa-solid fa-envelope"></i></a> 
+                  
+                </div>
+              </div>
+            </div> 
+        </div>
+      </div>
+    </div>
+  <div class="uk-text-small copyright uk-text-center uk-visible@m"  style="border-top: .5px solid #6E6E6E;">
+    <div class="uk-container uk-flex uk-flex-between uk-padding-small">
+      <div><a href="/pages/privacy-policy" style="color: #6e6e6e!important;">Privacy policy</a></div>
+      <div style="color: #6e6e6e!important;">© Copyright 2023. All rights reserved</div>
+      <div><a href="/pages/terms-and-conditions" style="color: #6e6e6e!important;">Terms & conditions</a></div>
+    </div>
+  </div>
+</footer>
+
+
+<!--Mobile View-->
+<div class="uk-position-absolute uk-hidden@m uk-hidden@m" id="footerImg">
+    <img src="{{ 'footerMainBG.svg' | asset_url }}" alt="" loading="lazy" />
+  </div>
+<footer class="uk-position-relative uk-hidden@m" style="padding:15px;">
+  
+  <div style="uk-margin-top">
+  <ul uk-accordion style="margin-bottom:0px">
+  <li >
+      <a class="uk-accordion-title" href=".accordian-item1" style="margin-top:100px;"><h3 style="margin-bottom:0 !important;">{{ section.settings['heading-1'] }}</h3></a>
+      <div class="uk-accordion-content accordian-item1">
+        <div class="uk-margin-small-bottom">
+            <a href="{{ section.settings['sub-tag-about-1-url'] }}">{{ section.settings['sub-tag-about-1'] }}</a>
+        </div>
+        <div class="uk-margin-small-bottom">
+           <a href="#modal-full" uk-toggle>{{ section.settings['sub-tag-about-2'] }}</a>
+          <div id="modal-full" class="uk-modal-container" uk-modal>
+              <div class="uk-modal-dialog uk-modal-body">
+                  <button class="uk-modal-close-default" type="button" uk-close></button>
+                  <img src="{{ 'wash instruction (1)_page-0001.jpg' | asset_url }}" loading="lazy" >
+              </div>
+          </div>
+        </div>
+        <div class="uk-margin-small-bottom">
+           <a href="{{ section.settings['sub-tag-about-3-url'] }}">{{ section.settings['sub-tag-about-3'] }}</a>
+          
+        </div>
+        <div class="uk-margin-small-bottom">
+           <a href="{{ section.settings['sub-tag-about-4-url'] }}">{{ section.settings['sub-tag-about-4'] }}</a>
+        </div>
+        <div class="uk-margin-small-bottom">
+           <a href="{{ section.settings['sub-tag-about-5-url'] }}">{{ section.settings['sub-tag-about-5'] }}</a>
+        </div>
+        <div class="uk-margin-small-bottom">
+           <a href="{{ section.settings['sub-tag-about-6-url'] }}">{{ section.settings['sub-tag-about-6'] }}</a>
+        </div>
+      </div>
+  </li>
+  <li style="padding-top:16px; width:100%; border-top: 1px solid #6e6e6e;">
+      <a class="uk-accordion-title" href=".accordian-item2" style="margin-top:0px; margin-bottom:0px"><h3>{{ section.settings['heading-2'] }}</h3></a>
+      <div class="uk-accordion-content accordian-item2">
+        <div class="uk-margin-small-bottom">
+        <a href="{{ section.settings['sub-tag-story-1-url'] }}">{{ section.settings['sub-tag-story-1'] }}</a>
+        </div>
+        <div class="uk-margin-small-bottom">
+            <a href="{{ section.settings['sub-tag-story-2-url'] }}">{{ section.settings['sub-tag-story-2'] }}</a>
+        </div>
+        <div class="uk-margin-small-bottom">
+                    <a href="{{ section.settings['sub-tag-story-3-url'] }}">{{ section.settings['sub-tag-story-3'] }}</a>
+                </div>
+                <div class="uk-margin-small-bottom">
+               <a href="{{ section.settings['sub-tag-story-4-url'] }}">{{ section.settings['sub-tag-story-4'] }}</a>
+                </div>
+                <div class="uk-margin-small-bottom">
+                     <a href="{{ section.settings['sub-tag-story-5-url'] }}">{{ section.settings['sub-tag-story-5'] }}</a>
+                </div>
+        <div class="uk-margin-small-bottom">
+            <a href="{{ section.settings['sub-tag-story-6-url'] }}">{{ section.settings['sub-tag-story-6'] }}</a>
+        </div>
+      </div>
+  </li>
+</ul>
+  </div>
+      
+      <div ></div>
+      <div style="width:100%; border-top: 1px solid #6e6e6e;" class="uk-width-1-3@m">
+        <div class="uk-flex uk-flex-center">
+          <div>
+            <h4 class=" uk-text-center" style="    margin-top: 25px;">{{ section.settings['heading-3'] }}</h4>
+            <div class="uk-margin-small-bottom uk-text-center">
+              <a href=""><img style="width: 22px; margin-right: 10px" src="{{ 'phoneIcon.svg' | asset_url }}" loading="lazy"  alt="" />{{ section.settings['number-1'] }}<span> | </span> {{ section.settings['number-2'] }}</a>
+            </div>
+            <div class="uk-margin-small-bottom uk-text-center">
+              <a href="{{ section.settings['email-url'] }}" style="text-transform: lowercase !important;"><img style="width: 20px; margin-right: 10px; text-transform: none;" src="{{ 'envelopeIcon.svg' | asset_url }}" alt="" loading="lazy" />{{ section.settings['email'] }}</a>
+            </div>
+          </div>
+        </div>
+    </div>
+           <div class="uk-flex uk-flex-center uk-margin-small-bottom uk-hidden@m">
+              <div>
+                <h4 class="uk-text-center">Follow Us On</h4>
+                <div>
+                  <a href="{{ section.settings['instagram'] }}"><i style="color:#8BB73F ; width:36px" class="fa-brands fa-instagram"></i></a>
+                  <a href="{{ section.settings['facebook'] }}"><i style="color:#8BB73F ; width:36px" class="fa-brands fa-facebook"></i></a>
+                  <a href="{{ section.settings['youtube'] }}"><i style="color:#8BB73F ; width:36px" class="fa-brands fa-youtube"></i></a>
+                  <a href="{{ section.settings['email-url'] }}"><i style="color:#8BB73F ; width:36px" class="fa-solid fa-envelope"></i></a>
+                </div>
+              </div>
+            </div>       
+
+  <div class="uk-text-small copyright-mobile uk-hidden@m">
+    <div class="uk-container">
+      <div class=" uk-flex uk-flex-between">
+        <div><a href="/pages/privacy-policy">Privacy policy</a></div>
+        <div><a href="/pages/terms-and-conditions">Terms & conditions</a></div>
+      </div>
+      <div style="margin-top:16px">© Copyright 2023. All rights reserved</div>
+      
+    </div>
+  </div>
+</footer>
+
+
+{% schema %} 
+  { "name": "Footer",
+    "settings": [
+
+      //newsletterheAD
+       {
+      "type": "text",
+      "id"  : "newshead",
+      "label" : "Newsletter heading"
+      },
+      //logo
+      {
+       "type": "image_picker",
+       "id"  : "team_img_1",
+       "label" : "Logo Image"
+      },
+      //nj-para
+      {
+      "type": "text",
+      "id"  : "about-us",
+      "label" : "Tag line para"
+      },
+      //Guides
+      {
+      "type": "text",
+      "id"  : "heading-1",
+      "label" : "Heading 1"
+      },
+      {
+      "type": "url",
+      "id"  : "heading-1-url",
+      "label" : "Heading 1 target"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-about-1",
+      "label" : "Sub Links 1"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-about-1-url",
+      "label" : "Sub Links 1 Url"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-about-2",
+      "label" : "Sub Links 2"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-about-2-url",
+      "label" : "Sub Links 2 Url"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-about-3",
+      "label" : "Sub Links 3"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-about-3-url",
+      "label" : "Sub Links 3 Url"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-about-4",
+      "label" : "Sub Links 4"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-about-4-url",
+      "label" : "Sub Links 4 Url"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-about-5",
+      "label" : "Sub Links 5"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-about-5-url",
+      "label" : "Sub Links 5 Url"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-about-6",
+      "label" : "Sub Links 6"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-about-6-url",
+      "label" : "Sub Links 6 Url"
+      },
+      
+      //Info
+      
+      {
+      "type": "text",
+      "id"  : "heading-2",
+      "label" : "Heading 2"
+      },
+      {
+      "type": "url",
+      "id"  : "heading-2-url",
+      "label" : "Heading 2 target"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-story-1",
+      "label" : "Sub Links 1"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-story-1-url",
+      "label" : "Sub Links 1 Url"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-story-2",
+      "label" : "Sub Links 2"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-story-2-url",
+      "label" : "Sub Links 2 Url"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-story-3",
+      "label" : "Sub Links 3"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-story-3-url",
+      "label" : "Sub Links 3 Url"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-story-4",
+      "label" : "Sub Links 4"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-story-4-url",
+      "label" : "Sub Links 4 Url"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-story-5",
+      "label" : "Sub Links 5"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-story-5-url",
+      "label" : "Sub Links 5 Url"
+      },
+      {
+      "type": "text",
+      "id"  : "sub-tag-story-6",
+      "label" : "Sub Links 6"
+      },
+      {
+      "type": "url",
+      "id"  : "sub-tag-story-6-url",
+      "label" : "Sub Links 6 Url"
+      },
+      //Help
+      {
+      "type": "text",
+      "id"  : "heading-3",
+      "label" : "Connect Heading"
+      },
+      {
+      "type": "text",
+      "id"  : "number-1",
+      "label" : "Phone Number 1"
+      },
+      {
+      "type": "text",
+      "id"  : "number-2",
+      "label" : "Phone Number 2"
+      },
+      {
+      "type": "text",
+      "id"  : "email",
+      "label" : "Contact Email"
+      },{
+         "type": "url",
+      "id"  : "email-url",
+      "label" : "email link"
+      },
+      {
+      "type": "url",
+      "id"  : "instagram",
+      "label" : "instagram"
+      },
+      {
+      "type": "url",
+      "id"  : "facebook",
+      "label" : "facebook"
+      },
+      {
+      "type": "url",
+      "id"  : "youtube",
+      "label" : "youtube"
+      }
+    ] 
+  } 
+  {% endschema %} 
+{% javascript %}
+   document.getElementById('Subscribe').addEventListener('click', function() {
+    var text = document.getElementById('myText');
+    text.style.display = "block"; 
+  });
+//   function displayText() {
+//   var p = document.getElementById("myText");
+//   p.style.display = "block";  	 
+// }
+{% endjavascript %}

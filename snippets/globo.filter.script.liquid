@@ -1,0 +1,115 @@
+{%- assign globo_search = true -%}
+{%- assign home_filter = false -%}
+{%- assign has_form = false -%}
+{%- if request.page_type != 'index' -%}{%- assign home_filter = false -%}{%- endif -%}
+{%- if globo_search or request.page_type == 'collection' or request.page_type == 'search' or home_filter or has_form -%}
+{%- assign assets_url = 'product-1.png' | asset_img_url: '50x' | split: 'product-1_50x.png' -%}
+{%- assign files_url  = 'product-1.png' | file_img_url: '50x' | split: 'product-1_50x.png' -%}
+{%- assign primary_locale = 'null' -%}
+{%- for locale in shop.published_locales -%}{%- if locale.primary -%}{%- assign primary_locale = locale.iso_code | json -%}{%- endif -%}{%- endfor -%}
+<style>.spf-filter-loading #gf-products > *:not(.spf-product--skeleton), .spf-filter-loading [data-globo-filter-items] > *:not(.spf-product--skeleton){visibility: hidden; opacity: 0}</style>
+<link rel="preconnect" href="https://filter-v9.globosoftware.net" />
+<script>
+  document.getElementsByTagName('html')[0].classList.add('spf-filter-loading');
+  window.addEventListener("globoFilterRenderCompleted",function(e){document.getElementsByTagName('html')[0].classList.remove('spf-filter-loading')})
+  window.sortByRelevance = false;
+  window.moneyFormat = "{{ shop.money_format | replace: '"', "'" }}";
+  window.GloboMoneyFormat = "{{ shop.money_format | replace: '"', "'" }}";
+  window.GloboMoneyWithCurrencyFormat = "{{ shop.money_with_currency_format | replace: '"', "'" }}";
+  window.filterPriceRate = 1;
+  window.filterPriceAdjustment = 1;
+
+  window.shopCurrency = {{shop.currency | json}};
+  window.currentCurrency = {{cart.currency.iso_code | json}};
+
+  window.isMultiCurrency = {% assign enabled_currencies_size = shop.enabled_currencies | size %}{% if enabled_currencies_size > 1 and true %}true{% else %}false{% endif %};
+  window.globoFilterAssetsUrl = '{{ assets_url[0] }}';
+  window.assetsUrl = '{{ assets_url[0] }}';
+  window.filesUrl = '{{ files_url[0] }}';
+  var page_id = {% if request.page_type contains 'collection' %}{% if collection.id %}{{collection.id | default: 1}}{% else %}1{% endif %}{% elsif request.page_type contains 'search' %}2{% else %}0{% endif %};
+  var globo_filters_json = {"default":2817}
+  var GloboFilterConfig = {
+    api: {
+      filterUrl: "https://filter-v9.globosoftware.net/filter",
+      searchUrl: "https://filter-v9.globosoftware.net/search",
+      url: "https://filter-v9.globosoftware.net",
+    },
+    shop: {
+      name: "{{ shop.name | escape }}",
+      url: "{{ shop.url }}",
+      domain: "{{ shop.permanent_domain }}",
+      is_multicurrency: {% assign is_multicurrency = shop.enabled_currencies | size %}{% if is_multicurrency > 1 and false and false %}true{% else %}false{% endif %},
+      currency: {{shop.currency | json}},
+      cur_currency: {{cart.currency.iso_code | json}},
+      cur_locale: {{request.locale.iso_code | json}},
+      cur_country: {{ localization.country.iso_code | json}},
+      locale: {{primary_locale}},
+      root_url: "{%- if routes.root_url != "/" -%}{{ routes.root_url }}{%- endif -%}",
+      country_code: {{shop.address.country_code | json}},
+      product_image: {width: 360, height: 478.8},
+      no_image_url: "https://cdn.shopify.com/s/images/themes/product-1.png",
+      themeStoreId: 0,
+      swatches:  {{ shop.metafields.globo.swatches | json }},
+      newUrlStruct: true,
+      translation: {"default":{"search":{"suggestions":"Suggestions","collections":"Collections","pages":"Pages","product":"Product","products":"Products","view_all":"Search for","view_all_products":"View all products","not_found":"Sorry, nothing found for","product_not_found":"No products were found","no_result_keywords_suggestions_title":"Popular searches","no_result_products_suggestions_title":"However, You may like","zero_character_keywords_suggestions_title":"Suggestions","zero_character_popular_searches_title":"Popular searches","zero_character_products_suggestions_title":"Trending products"},"form":{"heading":"Search products","select":"-- Select --","search":"Search","submit":"Search","clear":"Clear"},"filter":{"filter_by":"Filter By","clear_all":"Clear All","view":"View","clear":"Clear","in_stock":"In Stock","out_of_stock":"Out of Stock","ready_to_ship":"Ready to ship","search":"Search options","choose_values":"Choose values"},"sort":{"sort_by":"Sort By","manually":"Featured","availability_in_stock_first":"Availability","relevance":"Relevance","best_selling":"Best Selling","alphabetically_a_z":"Alphabetically, A-Z","alphabetically_z_a":"Alphabetically, Z-A","price_low_to_high":"Price, low to high","price_high_to_low":"Price, high to low","date_new_to_old":"Date, new to old","date_old_to_new":"Date, old to new","sale_off":"% Sale off"},"product":{"add_to_cart":"Add to cart","unavailable":"Unavailable","sold_out":"Sold out","sale":"Sale","load_more":"Load more","limit":"Show","search":"Search products","no_results":"Sorry, there are no products in this collection"}}},
+      redirects: {{ shop.metafields.globo.redirects | json }},
+      images: ["001.png","002.png","003.png","004.png","111.png","112.png","113.png","114.png","115.png","116.png","117.png","118.png","2.png","3.png","4.png","45-55.png","about-us-banner.png","akshaya mob.png","akshaya web.png","akshaya-desk.png","akshaya-tab.png","ArtboardW.png","artisans.png","authentic.png","bar-rect.png","bg-cir.png","blogImg.png","blurb1.png","blurb2.png","blurb3.png","carbon.png","certified-warranty-guarantee-insurance-assurance-concept.jpg","circle background.png","cleaner.png","colBg01.jpg","colBg02.png","colBg03.png","colBg04.png","colBg05.png","colBg06.png","collective-effort.png","compareBottomImg.png","consumer-first.png","Corozo-button.png","cotton.jpg","cultivating-min.png","Cultivating.png","Cultivation.jpg","Cut and Sew-min.png","Cut n Sew.jpg","Cutandsew.png","daily-wear.png","daily-wear2.png","daily-wear3.png","detail-green-leaf.png","digram.png","digramLeftImg.png","Dress1.png","Dress2.png","Dress3.png","Dress4.png","Dress5.png","Dress6.png","Dress7.png","Dress8.png","DSC04920 copy-min.jpg","DSC04920 copy.jpg","DSC05175 copy 2-min.jpg","Dyeing.jpg","Dying-min.png","Dying.png","e001.png","earth positive (2).png","earth positive (3).png","earth positive (4).png","earth positive 1.png","earth-around.png","earth-hand.png","earth-overlaty.png","earth-positive01-mobile.png","earth-positive02-mobile.png","earth-yarn.png","earth.png","Earthpos.png","earthpos01.png","earthpos02.png","earthPov.png","eco-friendly.png","environ.png","equa-people.png","equa-planet.png","ethical-labour.png","ethical.png","Fabric-min.png","Fabric.jpg","Fabric.png","farm-desk.png","farm-mob.png","farm-pond.png","farm-tab.png","Fibergraulate.jpg","framing.png","get-in-touch.png","Getintouch.png","gots.png","green-dot.png","green01.jpg","green02.jpg","Group 190.png","Group 191.png","Group 24551.png","Group 24593.png","Group 24597.png","Group 24630.png","Group 24657.png","Group 43170.png","Group 43171.png","Group 43172.png","Group 43173.png","Group 43174.png","Group 43175.png","Group 43176.png","Group 43180.png","Group 43181.png","Group 43182.png","Group 43183.png","Group 43184.png","Group 43185.png","Group 43186.png","Group 43187.png","Group 43188.png","Group 44745.png","Group 44746.png","Group 44747.png","Group 44748.png","Group 44749.png","Group 44750.png","Group 44751.png","Group 44862.png","Group 44863.png","Group 58.png","Group-custom-size-icon.png","Group24637.png","Group24638.png","hand desk.png","hand mob.png","hand tab.png","hand-tab.png","hand.png","handcrafted.jpg","happy-work.png","heart element.png","Hemp.png","hero-bannerr.png","home_col1.png","home_col2.png","home_col3.png","home_col4.png","home_col5.png","home_col6.png","icon01.png","icon02.png","icon03.png","icon04.png","icon05.png","icon1.png","icon2.png","icon3.png","icon4.png","icon5.png","Icons homepage.png","individuals.png","inhouse.png","inr invested.png","inspired-like.png","insta-1.png","insta-2.png","insta-3.png","insta-4.png","insta-5.png","insta-6.png","insta-7.png","Instapng.png","integrity.png","leaf.png","leaves.png","Light pink tiered ruffled top 1.jpg","logo.png","made-to-order.png","maiContro.png","mainBgColl.jpg","mainBlogImg.jpg","mainBreaking.jpg","mainHeroImg.jpg","mainProdImg.jpg","mainProdImg2.jpg","maiRe.png","man desk.png","man mobile.png","man-tab.png","manmade.jpg","Mask-Group-34.png","Mask-Group-35.png","Mask-Group-36.png","Mask-Group-37.png","material-reuse.png","material.png","measure-main.png","Membership.png","men.png","men01.png","men02.png","menmenu.png","menmenu2.png","natuaral-cellulose.png","natural desk.png","natural mob.png","natural-tab.png","nav-path-01.png","nav-path-02.png","nav-path-03.png","nav-path-04.png","non-toxic.png","offset-carbon.png","offset.png","Order.png","Organic-cotton.png","organic-farming.png","our-story-tree.png","packaging.png","Path-forward.png","path-mob.png","path-new.png","path01.png","path02.png","path03.png","path04.png","path05.png","pathway.png","Payment.png","people-hov.png","people-new.png","people-nob.png","People1.png","planet-hov.png","planet-mob.png","planet-new.png","Planet1.png","plastic.png","plusicon.png","potential day of livelihood.png","power-plant.png","price transparency (1).png","price transprency.png","Product care.png","product-hov.png","product-main.png","product-mob.png","product-new.png","Product1.png","quote.png","Rectangle 240.png","Rectangle 241.png","Rectangle 242.png","Rectangle 243.png","Rectangle 244.png","Rectangle 247.png","Rectangle 45.png","Rectangle 46.png","Rectangle 47.png","Rectangle 48.png","recycled desk.png","recycled mob.png","recycled-tab.png","recyledsynthetic.jpg","reduce-main.png","researchers-looking-alternative-energy-souces.jpg","Returns.png","reviewMainHero.jpg","rural.png","Shipping.png","shopLook01.png","size_chart_0.png","size_chart_1.png","size_chart_2.png","size_chart_3.png","size_chart_4.png","sizing.png","social-investment.png","soe-x.png","SOE.png","soelogo.png","soEx.png","subGb.png","sus-banner-img.png","sus-equa-01.png","sus-equa-02.png","sus-equa-mob-01.png","sus-equa-mob-02.png","sustainability.png","sustainable-growth.png","tag.png","textile desk.png","textile mob.png","textile-tab.png","textilewaste.jpg","trace-illu-mob.png","trace-tab.png","traceability-illu-desk.png","traceability-illu-mob.png","traceability-illu.png","traceability.png","transparency.png","trash-to-wash.png","trashtofash.jpg","tree-planted.png","trends-accessories.png","typeImg.png","vac1.png","Vector.png","Viscose.png","VLR06370-1-min.jpg","VLR06380-1-min.jpg","Warehouse-min.png","Warehouse.jpg","Warehouse.png","water-manage.png","way-forward-hov.png","way-forward-main.png","way-forward.png","we-support.png","why-us-news.png","why-us-shirt.png","windmill-main.png","women-top.png","women-topp.png","women.png","Yarn-min.png","Yarn.jpg","yarn.png","zeroenergy.jpg","zerovirgin.jpg","zerowaste.jpg"],
+      settings: {{ settings | json }},
+      separate_options: null,
+      home_filter: {{home_filter}},
+      page: {{request.page_type | json}},
+      cache: {% if shop.metafields.globo.cacheInitRequest == false %}false{% else %}true{% endif %},
+      layout: "app",
+      useCustomTemplate: false
+    },
+    taxes: null,
+    special_countries: null,
+    adjustments: null,
+
+    year_make_model: {
+      id: null
+    },
+    filter: {
+      id: globo_filters_json[page_id] || globo_filters_json['default'] || 0,
+      layout: 1,
+      showCount: false,
+      showRefine: true,
+      isLoadMore: 0,
+      filter_on_search_page: true
+    },
+    search:{
+      enable: {{globo_search}},
+      zero_character_suggestion: false,
+      layout: 3,
+    },
+    collection: {
+      id: {%- if request.page_type == 'collection' -%}{{ collection.id | default: 0 }}{%- else -%}0{%- endif -%},
+      handle: {%- if request.page_type == 'collection' -%}'{{ collection.handle }}'{%- else -%}''{%- endif -%},
+      sort: {% if request.page_type contains 'search' %}'relevance'{% else %}'featured'{% endif %},
+      tags: {% if current_tags %}[{% for tag in current_tags %}{{ tag | json }},{{ tag | handle | json }}{% unless forloop.last %},{% endunless %}{% endfor %}]{% else %}null{% endif %},
+      vendor: {{ collection.current_vendor | json }},
+      type: {{ collection.current_type | json }},
+      term: {{ search.terms | escape | json }},
+      limit: 12,
+      products_count: {{collection.products_count | default: 0}},
+      enableCollectionSearch: false,
+      showSelectedVariantInfo: true,
+      excludeTags: null
+    },
+    customer: {% if customer %}{id: {{customer.id}}, tags: {{customer.tags | json}}}{% else %}false{% endif %},
+    selector: {
+      sortBy: '.collection-sorting',
+      pagination: '.pagination:first, .paginate:first, .pagination-custom:first, #pagination:first, #gf_pagination_wrap',
+      products: '.grid.grid-collage'
+    }
+  };
+
+</script>
+<script defer src="{{ 'v5.globo.filter.lib.js' | asset_url }}"></script>
+{% if request.page_type == 'collection' or request.page_type == 'search' or home_filter or has_form %}<link rel="preload stylesheet" href="{{ 'v5.globo.filter.css' | asset_url }}" as="style">
+{% endif %}
+{% if globo_search %}<link rel="preload stylesheet" href="{{ 'v5.globo.search.css' | asset_url }}" as="style">
+{% endif %}
+{% endif %}
+
+

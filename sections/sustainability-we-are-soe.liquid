@@ -1,0 +1,30 @@
+  <div class=" uk-grid-item-match uk-padding-remove" style="height:528px;">
+            <div  class=" uk-flex-middle uk-container" style="margin:auto;">
+                 <h1 style="" class="uk-flex uk-flex-center uk-padding-small uk-text-center uk-flex-middle uk-margin-remove">{{ section.settings['soe-head'] }}</h1>
+                <p class=" uk-flex uk-flex-center uk-padding-small uk-padding-remove-top uk-padding-remove-bottom  uk-text-center uk-flex-middle  " style="margin-top:0px;  font-size:18px;">{{ section.settings['soe-para'] }}</p>
+            </div>
+       </div>
+     
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": [
+      {
+        "type":"text",
+        "id":"soe-head",
+        "label":"soe header"
+      },
+      {
+        "type":"text",
+        "id":"soe-para",
+        "label":"soe text"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
